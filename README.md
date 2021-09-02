@@ -1,6 +1,6 @@
 Welcome, Discover Supervisor Services currently available.
 
-#vSAN Data Persistence platform (vDPP) Partner Services: 
+# vSAN Data Persistence platform (vDPP) Partner Services: 
 
 ## MinIO
 MinIO is a high-performance, cloud-native object store. Compatible with the Amazon S3 API, it scales seamlessly to hundreds of PBs and is simple to deploy and manage.
@@ -15,7 +15,7 @@ MinIO is a high-performance, cloud-native object store. Compatible with the Amaz
 - Download [Cloudian v1.0.0 Supervisor Service Definition](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/1.0.0/hyperstore-supervisorservice-1.0.0.yaml)
 - Download [Cloudian v2.0.0 Supervisor Service Definition](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/2.0.0/hyperstore-supervisorservice-2.0.0.yaml)
 
-#Backup & Recovery Services
+# Backup & Recovery Services
 ## Velero
 - Documentation
 - Download [Velero Supervisor Service Definition](https://vmwaresaas.jfrog.io/ui/repos/tree/General/vDPP-Partner-YAML)
