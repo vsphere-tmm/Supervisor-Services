@@ -2,7 +2,7 @@ Welcome, Discover Supervisor Services currently available.
 
 ## vSAN Data Persistence platform (vDPP) Partner Services: 
 
-### MinIO <p align="right">
+### MinIO <p align="left">
   <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/minio%20logo.svg" width="350" title="MinIO Logo">
 </p>
 MinIO is a high-performance, cloud-native object store. Compatible with the Amazon S3 API, it scales seamlessly to hundreds of PBs and is simple to deploy and manage.
