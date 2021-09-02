@@ -17,7 +17,8 @@ MinIO is a high-performance, cloud-native object store. Compatible with the Amaz
 
 # Backup & Recovery Services
 ## Velero
-- Documentation
+- [Documentation](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/blob/main/docs/supervisor.md) for Velero Install
+- Download [Velero CLI](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.1.0/velero-vsphere-1.1.0-linux-amd64.tar.gz) this is a prerequisite for a cluster admin install. 
 - Download [Velero Supervisor Service Definition](https://vmwaresaas.jfrog.io/ui/repos/tree/General/vDPP-Partner-YAML)
 
 
