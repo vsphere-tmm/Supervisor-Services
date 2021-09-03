@@ -1,4 +1,11 @@
-Welcome, Discover Supervisor Services currently available.
+<p align="left">
+  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/vmw-logo-vmware-logo-grey.svg" width="350" title="MinIO Logo">
+</p>
+#vSphere Service Catalog
+Discover the current vSphere Services offered to support your Modern Applications on vSphere with Tanzu. 
+New Service will be added overtime with the goal to continue to empower your DevOps communities.
+
+**Supervisor Service are only avalaible with Supervisor Cluster enabled using NSX-T**
   
     
 ## vSAN Data Persistence platform (vDPP) Partner Services: 
@@ -44,7 +51,7 @@ Cloudian HyperStore® is a scale-out object storage system designed to manage ma
 Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes.
 
 - [Documentation](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/blob/main/docs/supervisor.md) for Velero Install
-- Download [Velero CLI](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.1.0/velero-vsphere-1.1.0-linux-amd64.tar.gz) this is a prerequisite for a cluster admin install. 
+- Download [Velero CLI](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.1.0/velero-vsphere-1.1.0-linux-amd64.tar.gz) a prerequisite for a cluster admin install. 
 
 **Versions:**
 - Download [Velero v1.0.0](https://vmwaresaas.jfrog.io/ui/repos/tree/General/vDPP-Partner-YAML)
