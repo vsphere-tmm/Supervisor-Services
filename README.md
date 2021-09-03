@@ -28,10 +28,9 @@ Cloudian HyperStore® is a scale-out object storage system designed to manage ma
 **Versions:**
   - Download [Cloudian v1.0.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/1.0.0/hyperstore-supervisorservice-1.0.0.yaml)
   - Download [Cloudian v2.0.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/2.0.0/hyperstore-supervisorservice-2.0.0.yaml)
-  
-    
-      
-      
+&nbsp;
+&nbsp;
+&nbsp;
 ## Backup & Recovery Services
 
 <p align="left">
