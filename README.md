@@ -1,10 +1,9 @@
 Welcome, Discover Supervisor Services currently available.
----
----
----
+  
+    
 ## vSAN Data Persistence platform (vDPP) Partner Services: 
----
----
+  
+    
 <p align="left">
   <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/minio%20logo.svg" width="350" title="MinIO Logo">
 </p>
@@ -15,9 +14,9 @@ MinIO is a high-performance, cloud-native object store. Compatible with the Amaz
 
 **Versions:**
  - Download [MinIO v1.0.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/MinIO/MinIO/SupervisorService/1.0.0/minio-supervisorservice-1.0.0.yaml)
----
----
----
+  
+  
+  
 <p align="left">
   <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/cloudian-logo.png" width="350" title="Cloudian Logo">
 </p>
@@ -25,7 +24,9 @@ Cloudian HyperStore® is a scale-out object storage system designed to manage ma
 
 - Service install [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F68B264E-76A3-4A6D-A3B0-17153DDF7A18.html) 
 - Cloudian service documentation
-
+  
+    
+    
 **Versions:**
   - Download [Cloudian v1.0.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/1.0.0/hyperstore-supervisorservice-1.0.0.yaml)
   - Download [Cloudian v2.0.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/2.0.0/hyperstore-supervisorservice-2.0.0.yaml)
