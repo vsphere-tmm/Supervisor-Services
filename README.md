@@ -1,8 +1,10 @@
 <p align="left">
   <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/vmw-logo-vmware-logo-grey.svg" width="500" title="MinIO Logo">
 </p>
-#vSphere Service Catalog
-Discover the current vSphere Services offered to support your Modern Applications on vSphere with Tanzu. 
+
+# vSphere Service Catalog
+
+Discover the current vSphere Services offered to support your Modern Applications on vSphere with Tanzu.  
 New Service will be added overtime with the goal to continue to empower your DevOps communities.
 
 **Supervisor Service are only avalaible with Supervisor Cluster enabled using NSX-T**
