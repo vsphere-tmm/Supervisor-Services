@@ -23,16 +23,15 @@ MinIO is a high-performance, cloud-native object store. Compatible with the Amaz
 Cloudian HyperStore® is a scale-out object storage system designed to manage massive amounts of unstructured data.
 
 - Service install [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F68B264E-76A3-4A6D-A3B0-17153DDF7A18.html) 
-- Cloudian service documentation
-  
-    
-    
+- Cloudian service documentation  
+
 **Versions:**
   - Download [Cloudian v1.0.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/1.0.0/hyperstore-supervisorservice-1.0.0.yaml)
   - Download [Cloudian v2.0.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/2.0.0/hyperstore-supervisorservice-2.0.0.yaml)
----
----
----
+  
+    
+      
+      
 ## Backup & Recovery Services
 
 <p align="left">
