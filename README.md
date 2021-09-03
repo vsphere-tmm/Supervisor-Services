@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/vmw-logo-vmware-logo-grey.svg" width="350" title="MinIO Logo">
+  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/vmw-logo-vmware-logo-grey.svg" width="500" title="MinIO Logo">
 </p>
 #vSphere Service Catalog
 Discover the current vSphere Services offered to support your Modern Applications on vSphere with Tanzu. 
@@ -14,7 +14,7 @@ New Service will be added overtime with the goal to continue to empower your Dev
   </br>
     
 <p align="left">
-  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/minio%20logo.svg" width="350" title="MinIO Logo">
+  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/minio%20logo.svg" width="250" title="MinIO Logo">
 </p>
 MinIO is a high-performance, cloud-native object store. Compatible with the Amazon S3 API, it scales seamlessly to hundreds of PBs and is simple to deploy and manage.
 
@@ -27,7 +27,7 @@ MinIO is a high-performance, cloud-native object store. Compatible with the Amaz
   </br>
 
 <p align="left">
-  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/cloudian-logo.png" width="350" title="Cloudian Logo">
+  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/cloudian-logo.png" width="250" title="Cloudian Logo">
 </p>
 Cloudian HyperStore® is a scale-out object storage system designed to manage massive amounts of unstructured data.
 
@@ -46,7 +46,7 @@ Cloudian HyperStore® is a scale-out object storage system designed to manage ma
 </br>
 
 <p align="left">
-  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/Velero.svg" width="350" title="Velero Logo">
+  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/Velero.svg" width="250" title="Velero Logo">
 </p>
 Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes.
 
