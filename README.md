@@ -17,8 +17,6 @@ New Service will be added overtime with the goal to continue to empower your Dev
 </p>
 MinIO is a high-performance, cloud-native object store. Compatible with the Amazon S3 API, it scales seamlessly to hundreds of PBs and is simple to deploy and manage.
 
-</br>
-
 - Service install [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F68B264E-76A3-4A6D-A3B0-17153DDF7A18.html)
 - MinIO partner [documentation](https://docs.min.io/minio/vsphere/core-concepts/core-concepts.html) 
 
@@ -33,8 +31,6 @@ MinIO is a high-performance, cloud-native object store. Compatible with the Amaz
   <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/cloudian-logo.png" width="250" title="Cloudian Logo">
 </p>
 Cloudian HyperStore® is a scale-out object storage system designed to manage massive amounts of unstructured data.
-
-</br>
 
 - Service install [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F68B264E-76A3-4A6D-A3B0-17153DDF7A18.html) 
 - Cloudian service documentation  
@@ -54,9 +50,7 @@ Cloudian HyperStore® is a scale-out object storage system designed to manage ma
 </p>
 Velero vSphere Operator helps users install Velero and its vSphere plugin on a vSphere with Kubernetes Supervisor cluster. Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes.
 
-</br>
-
-- Service install [Documentation](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/blob/main/docs/supervisor.md)
+- Service install [documentation](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/blob/main/docs/supervisor.md)
 - Download [Velero CLI](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.1.0/velero-vsphere-1.1.0-linux-amd64.tar.gz) a prerequisite for a cluster admin install. 
 
 **Versions:**
