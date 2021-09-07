@@ -6,7 +6,7 @@ New Service will be added overtime with the goal to continue to empower your Dev
 **Supervisor Service are only avalaible with Supervisor Cluster enabled using NSX-T**
   
     
-## vSAN Data Persistence platform (vDPP) Partner Services: 
+## Object Stores: 
   
   </br>
   </br>
