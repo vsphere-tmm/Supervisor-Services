@@ -48,12 +48,12 @@ Cloudian HyperStore® is a scale-out object storage system designed to manage ma
 <p align="left">
   <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/Velero.svg" width="250" title="Velero Logo">
 </p>
-Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes.
+Velero vSphere Operator helps users install Velero and its vSphere plugin on a vSphere with Kubernetes Supervisor cluster. Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes.
 
 - [Documentation](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/blob/main/docs/supervisor.md) for Velero Install
 - Download [Velero CLI](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.1.0/velero-vsphere-1.1.0-linux-amd64.tar.gz) a prerequisite for a cluster admin install. 
 
 **Versions:**
-- Download [Velero v1.0.0](https://vmwaresaas.jfrog.io/ui/repos/tree/General/vDPP-Partner-YAML)
+- Download [Velero v1.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Velero%252FVelero%252FSupervisorService%252F1.0.0%252Fvelero-supervisorservice-1.0.0.yaml)
 
 
