@@ -3,8 +3,9 @@
 Discover current vSphere Services offered to support Modern Applications on vSphere with Tanzu.  
 New Service will be added overtime with the goal to continue to empower your DevOps communities.
 
-**Supervisor Service are only avalaible with Supervisor Cluster enabled using NSX-T**
-  
+*Supervisor Service are only avalaible with Supervisor Cluster enabled using NSX-T*
+  </br>
+  </br>  
     
 ## Object Stores: 
   
