@@ -1,7 +1,3 @@
-<p align="left">
-  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/vmw-logo-vmware-logo-grey.svg" width="500" title="MinIO Logo">
-</p>
-
 # vSphere Service Catalog
 
 Discover current vSphere Services offered to support Modern Applications on vSphere with Tanzu.  
