@@ -1,13 +1,13 @@
 # vSphere Service Catalog
 
-Discover current vSphere Services offered to support Modern Applications on vSphere with Tanzu.  
+Discover current vSphere Services offered to support modern applications on vSphere with Tanzu.  
 New Service will be added overtime with the goal to continue to empower your DevOps communities.
 
 *Supervisor Service are only avalaible with Supervisor Cluster enabled using NSX-T*
   </br>
   </br>  
     
-## Object Stores: 
+## Object Storage: 
   
   </br>
   </br>
@@ -21,9 +21,11 @@ MinIO is a high-performance, cloud-native object store. Compatible with the Amaz
 - MinIO partner [documentation](https://docs.min.io/minio/vsphere/core-concepts/core-concepts.html) 
 
 **Versions:**
- - Download [MinIO v1.0.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/MinIO/MinIO/SupervisorService/1.0.0/minio-supervisorservice-1.0.0.yaml)
+ - Download [MinIO v1.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=MinIO%252FMinIO%252FSupervisorService%252F1.0.0%252Fminio-supervisorservice-1.0.0.yaml)
+  - Download [MinIO v2.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=MinIO%252FMinIO%252FSupervisorService%252F2.0.0%252Fminio-supervisorservice-2.0.0.yaml)
   </br>
   </br>
+
 
 <p align="left">
   <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/cloudian-logo.png" width="250" title="Cloudian Logo">
@@ -34,8 +36,7 @@ Cloudian HyperStore® is a scale-out object storage system designed to manage ma
 - Cloudian service documentation  
 
 **Versions:**
-  - Download [Cloudian v1.0.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/1.0.0/hyperstore-supervisorservice-1.0.0.yaml)
-  - Download [Cloudian v2.0.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/2.0.0/hyperstore-supervisorservice-2.0.0.yaml)
+  - Download [Cloudian v1.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.0.0%252Fhyperstore-supervisorservice-1.0.0.yaml)
 </br>
 </br>
 
