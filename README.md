@@ -1,6 +1,6 @@
-# vSphere Service Catalog
+# Supervisor Service Catalog
 
-Discover current vSphere Services offered to support modern applications on vSphere with Tanzu.  
+Discover current Supervisor Services offered to support modern applications through vSphere Services.  
 New Service will be added overtime with the goal to continue to empower your DevOps communities.
 
 *Supervisor Service are only avalaible with Supervisor Cluster enabled using NSX-T*
