@@ -1,9 +1,9 @@
-# Supervisor Service Catalog
+# Supervisor Services Catalog
 
 Discover current Supervisor Services offered to support modern applications through vSphere Services.  
 New service will be added overtime with the goal to continue to empower your DevOps communities.
 
-*Supervisor Services are only avalaible with Supervisor Clusters enabled using NSX-T*
+*Supervisor Services are only available with Supervisor Clusters enabled using NSX-T*
   </br>
   </br>  
     
