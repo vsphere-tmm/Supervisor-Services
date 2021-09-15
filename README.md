@@ -21,8 +21,9 @@ MinIO is a high-performance, cloud-native object store. Compatible with the Amaz
 - MinIO partner [documentation](https://docs.min.io/minio/vsphere/core-concepts/core-concepts.html) 
 
 **Versions:**
+  - Download latest version: [MinIO v2.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=MinIO%252FMinIO%252FSupervisorService%252F2.0.0%252Fminio-supervisorservice-2.0.0.yaml)
  - Download [MinIO v1.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=MinIO%252FMinIO%252FSupervisorService%252F1.0.0%252Fminio-supervisorservice-1.0.0.yaml)
-  - Download [MinIO v2.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=MinIO%252FMinIO%252FSupervisorService%252F2.0.0%252Fminio-supervisorservice-2.0.0.yaml)
+
   </br>
   </br>
 
@@ -36,7 +37,7 @@ Cloudian HyperStore® is a scale-out object storage system designed to manage ma
 - Cloudian service [documentation](https://cloudian.com/vmware/)  
 
 **Versions:**
-  - Download [Cloudian v1.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.0.0%252Fhyperstore-supervisorservice-1.0.0.yaml)
+  - Download latest version: [Cloudian v1.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.0.0%252Fhyperstore-supervisorservice-1.0.0.yaml)
 </br>
 </br>
 
@@ -54,6 +55,6 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
 - Download [Velero vSphere Operator CLI](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.1.0/velero-vsphere-1.1.0-linux-amd64.tar.gz) a prerequisite for a cluster admin install. 
 
 **Versions:**
-- Download [Velero vSphere Operator v1.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Velero%252FVelero%252FSupervisorService%252F1.0.0%252Fvelero-supervisorservice-1.0.0.yaml)
+- Download latest version: [Velero vSphere Operator v1.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Velero%252FVelero%252FSupervisorService%252F1.0.0%252Fvelero-supervisorservice-1.0.0.yaml)
 
 
