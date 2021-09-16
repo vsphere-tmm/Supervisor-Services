@@ -12,7 +12,7 @@ New service will be added overtime with the goal to continue to empower your Dev
   vSphere with Tanzu offers the vSAN Data Persistence platform. The platform provides a framework that enables third parties to integrate their cloud native service applications with underlying vSphere infrastructure, so that third-party software can run on vSphere with Tanzu optimally.
 
 - Using vSAN Data Persistence Platform (vDPP) with vSphere with Tanzu [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F7223607-30A5-4B2D-9B06-A55A65FEAA11.html)
-- Avaliable vDPP Services [documentation](Waiting on vDPP) 
+- Avaliable vDPP Services [documentation](www.Waiting-on-vDPP.com) 
 
 Object Storage with vDPP: 
 - MinIO
