@@ -37,6 +37,5 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
 - Download [Velero vSphere Operator CLI](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.1.0/velero-vsphere-1.1.0-linux-amd64.tar.gz) a prerequisite for a cluster admin install. 
 
 **Versions:**
-- Download latest version: [Velero vSphere Operator v1.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Velero%252FVelero%252FSupervisorService%252F1.0.0%252Fvelero-supervisorservice-1.0.0.yaml)
-
+- Download latest version: [Velero vSphere Operator v1.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.0.0%252Fvelero-supervisorservice-1.0.0.yaml)
 
