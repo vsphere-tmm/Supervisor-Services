@@ -38,9 +38,11 @@ The CA issuer represents a Certificate Authority whose certificate and private k
 `
 
 4. Deploy the Secret
+
 `kubectl apply -f ca-secret.yaml`
 
 5. Create a CA Issuer yaml and add the secret name above to the secretName field (saved as my-ca-issuer.yaml)
+
 `
   apiVersion: cert-manager.io/v1
   kind: Issuer
@@ -53,12 +55,15 @@ The CA issuer represents a Certificate Authority whose certificate and private k
 `
 
 6. Deploy the CA Issuer
+
 `kubectl apply -f my-ca-issuer.yaml`
 
 7. Check to see that the CA Issuer was deployed
+
 `kubectl get issuers ca-issuer -n my-namespace`
 
 8. Create a Certificate resource (saved as my-cert.yaml)
+
 `
 apiVersion: cert-manager.io/v1
 kind: Certificate
@@ -97,10 +102,13 @@ spec:
     kind: Issuer
     group: cert-manager.io
 `
+
 9. Deploy the Certificate request
+
 `kubectl apply -f my-cert.yaml`
 
 10. Check on the state of the Certificate request
+
 `kubectl get certificate -n my-namespace`
 
 
