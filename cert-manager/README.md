@@ -22,8 +22,29 @@ The CA issuer represents a Certificate Authority whose certificate and private k
 ⚠️ CA issuers are generally either for trying cert-manager out or else for advanced users with a good idea of how to run a PKI. To be used safely in production, CA issuers introduce complex planning requirements around rotation, trust store distribution and disaster recovery.
 
 
-1. Create a certificate and private key (see XXX for examples on how to create a CA Certificate)
+1. Create or provide a certificate and private key (⚠️ Warning You should use enterprise provide certs when possible)
+```
+#Create a certificate and private key pair using OpenSSL
+#Create a .csr and .key file
+openssl req -new -newkey rsa:2048 -nodes -out CA_CSR.csr -keyout CA_private_key.key -sha256
+#Fill out certificate request fields
+
+#Generate the CA Certificate (CA_certificate.crt)
+openssl x509 -signkey CA_private_key.key -days 90 -req -in CA_CSR.csr -out CA_certificate.crt -sha256
+```
+
 2. Encode the certifcate and private key using base64
+
+```
+#Run each command seperatly
+cat CA_private_key.key | base64 -w0
+#Use output for tls.key field in step 3
+
+cat CA_certificate.crt | base64 -w0
+#Use output for tls.crt field in step 3
+```
+
+
 3. Create a Kubernentes secret that contains the encoded certificate and private key (saved as ca-secret.yaml)
 
 ```
@@ -58,15 +79,19 @@ kubectl apply -f ca-secret.yaml
 
 6. Deploy the CA Issuer
 
-`kubectl apply -f my-ca-issuer.yaml`
+```
+kubectl apply -f my-ca-issuer.yaml
+```
 
 7. Check to see that the CA Issuer was deployed
 
-`kubectl get issuers ca-issuer -n my-namespace`
+```
+kubectl get issuers ca-issuer -n my-namespace
+```
 
 8. Create a Certificate resource (saved as my-cert.yaml)
 
-`
+```
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
@@ -103,15 +128,19 @@ spec:
     name: ca-issuer
     kind: Issuer
     group: cert-manager.io
-`
+```
 
 9. Deploy the Certificate request
 
-`kubectl apply -f my-cert.yaml`
+```
+kubectl apply -f my-cert.yaml
+```
 
 10. Check on the state of the Certificate request
 
-`kubectl get certificate -n my-namespace`
+```
+kubectl get certificate -n my-namespace
+```
 
 
 ## Deploy a Self-Signed Issuer and request a Certificate
