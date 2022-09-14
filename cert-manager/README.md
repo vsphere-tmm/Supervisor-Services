@@ -39,11 +39,13 @@ The CA issuer represents a Certificate Authority whose certificate and private k
 
 4. Deploy the Secret
 
-`kubectl apply -f ca-secret.yaml`
+```
+kubectl apply -f ca-secret.yaml
+```
 
 5. Create a CA Issuer yaml and add the secret name above to the secretName field (saved as my-ca-issuer.yaml)
 
-`
+```
   apiVersion: cert-manager.io/v1
   kind: Issuer
   metadata:
@@ -52,7 +54,7 @@ The CA issuer represents a Certificate Authority whose certificate and private k
   spec:
     ca:
       secretName: my-ca-key-pair
-`
+```
 
 6. Deploy the CA Issuer
 
