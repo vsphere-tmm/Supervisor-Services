@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/cert-manager/cer-manager-logo.png" width="250" title="Cert-man Logo">
+  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/exploration/cert-manager/cer-manager-logo.png" width="250" title="Cert-man Logo">
 </p>
 
 
@@ -13,8 +13,10 @@ CA & Selfsigned Issuer
 
 ## Tutorials
 [Deploy a CA Issuer and request a Certificate](https://github.com/vsphere-tmm/Supervisor-Services/tree/exploration/cert-manager#deploy-a-ca-issuer-and-request-a-certificate)
+
 [Deploy a Self-Signed Issuer and request a Certificate](https://github.com/vsphere-tmm/Supervisor-Services/tree/exploration/cert-manager#deploy-a-self-signed-issuer-and-request-a-certificate)
-[Deploy a Cluster Scoped Issuer (CA ClusterIssuer)](https://github.com/vsphere-tmm/Supervisor-Services/tree/exploration/cert-manager#deploy-a-cluster-scoped-issuer-ca-clusterissuer)
+
+[Request a Certificate from a Cluster Scoped Issuer (CA ClusterIssuer)](https://github.com/vsphere-tmm/Supervisor-Services/tree/exploration/cert-manager#Request-a-Certificate-from-a-Cluster-Scoped-Issuer-ca-clusterissuer)
 
 ## Deploy a CA Issuer and request a Certificate
 
@@ -149,8 +151,10 @@ kubectl get certificate -n my-namespace
 
 ## Deploy a Self-Signed Issuer and request a Certificate
 
-## Deploy a Cluster Scoped Issuer (CA ClusterIssuer)
+## Request a Certificate from a Cluster Scoped Issuer (CA ClusterIssuer)
+This is an admin task and can be done using vCenter > Workload Management > Supervisor Services. 
 
+Donwload: [Example CA ClusterIssuer Supervisor Service Definition](https://github.com/vsphere-tmm/Supervisor-Services)
 
   </br>
   </br>  
