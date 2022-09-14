@@ -12,21 +12,24 @@ CA & Selfsigned ClusterIssuer (Cluster Admin Only)
 CA & Selfsigned Issuer
 
 ## Tutorials
-Deploy a CA Issuer and request a Certificate
-Deploy a Self-Signed Issuer and request a Certificate
-Deploy a Cluster Scoped Issuer (CA ClusterIssuer)
+[Deploy a CA Issuer and request a Certificate](https://github.com/vsphere-tmm/Supervisor-Services/tree/exploration/cert-manager#deploy-a-ca-issuer-and-request-a-certificate)
+[Deploy a Self-Signed Issuer and request a Certificate](https://github.com/vsphere-tmm/Supervisor-Services/tree/exploration/cert-manager#deploy-a-self-signed-issuer-and-request-a-certificate)
+[Deploy a Cluster Scoped Issuer (CA ClusterIssuer)](https://github.com/vsphere-tmm/Supervisor-Services/tree/exploration/cert-manager#deploy-a-cluster-scoped-issuer-ca-clusterissuer)
 
 ## Deploy a CA Issuer and request a Certificate
 
 The CA issuer represents a Certificate Authority whose certificate and private key are stored inside the cluster as a Kubernetes Secret. The issuer is scoped to a namespace and will issue certificate requests within the same namespace. In this workflow, you will create a certificate and private key, base64 encode it, and store it as a Secret. Then you will use this Secret to configure a CA Issuer. Once the Issuer is deployed you will then create a Certificate request and have a Certificate issued that is signed by the Certificate Authority you just created. 
+
 ⚠️ CA issuers are generally either for trying cert-manager out or else for advanced users with a good idea of how to run a PKI. To be used safely in production, CA issuers introduce complex planning requirements around rotation, trust store distribution and disaster recovery.
 
 
-1. Create or provide a certificate and private key (⚠️ Warning You should use enterprise provide certs when possible)
+1. Create or provide a certificate and private key (⚠️Warning You should use enterprise provide certs when possible)
 ```
 #Create a certificate and private key pair using OpenSSL
+
 #Create a .csr and .key file
 openssl req -new -newkey rsa:2048 -nodes -out CA_CSR.csr -keyout CA_private_key.key -sha256
+
 #Fill out certificate request fields
 
 #Generate the CA Certificate (CA_certificate.crt)
@@ -37,6 +40,7 @@ openssl x509 -signkey CA_private_key.key -days 90 -req -in CA_CSR.csr -out CA_ce
 
 ```
 #Run each command seperatly
+
 cat CA_private_key.key | base64 -w0
 #Use output for tls.key field in step 3
 
