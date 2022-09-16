@@ -1,45 +1,22 @@
-# Supervisor Services Catalog
+![vsphere with tanzu Logo](https://gitlab.eng.vmware.com/jwolf/vsphere-with-tanzu-dev-center/-/blob/main/source/images/vspheretanzudev.png)
 
-Discover current Supervisor Services offered to support modern applications through vSphere Services.  
-New service will be added overtime with the goal to continue to empower your DevOps communities.
+Welcome to the center of the DevOps focused experience where you can discover services, strategies, best practices, and solutions that will assist you in meeting the needs of your lines of bussiness objectives. vSphere with Tanzu provides an enterprise ready modern application platform enabling DevOps consumers to deploy and manage their workloads quickly and effectively vSphere with Tanzu is capable of providing Modern runtimes like desired state Virtual machines and Tanzu Kubernetes Clusters, while also providing a extensible IaaS Catalog of service. The products listed in the IaaS Service Catalog are avalaible for you Infrastructure admin to install and empower you to consume the service using a full self-service experinse. These Services are foundational IaaS Service designed to give you the tooling you need to deploy your application and leverage the value-added service you need. You will find tutorials, api examples, reference architectures and solutions-based instructions.
 
-*Supervisor Services are only available with Supervisor Clusters enabled using NSX-T*
-  </br>
-  </br>  
+## The Ecosystem
+* [Virtual Machine Service]()
+* [Tanzu Kubernetes Cluster]()
+* [Volume Service]()
+* [Network Service]()
+* [Certificate Management Service](https://github.com/vsphere-tmm/Supervisor-Services/tree/exploration/cert-manager)
+* [Backup Service*]()
+* [Object Storage Service*]()
+
+**Service are no avalaible by default and will require your Infrastructure Admin or Platform Operator to install the service. Once the Service is installed you will have the ability to request instance using K8s CRDs*
     
-## vSAN Data Persistence Platform (vDPP): 
-  </br>
-  vSphere with Tanzu offers the vSAN Data Persistence platform. The platform provides a framework that enables third parties to integrate their cloud native service applications with underlying vSphere infrastructure, so that third-party software can run on vSphere with Tanzu optimally.</br>
-</br>
+## Solutions
+This is an area where we talk about outcome based solutions that utilizing the services within the ecosystem to enable specific DevOps goals.
+* Build VM Images using pipeline
+* Manage runtime and applications using GitOps Patterns
+* Enable a Backup and Recovery plan
+* Many more thing to come.....
 
-- Using vSAN Data Persistence Platform (vDPP) with vSphere with Tanzu [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F7223607-30A5-4B2D-9B06-A55A65FEAA11.html)
-- Avaliable vDPP Services [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F68B264E-76A3-4A6D-A3B0-17153DDF7A18.html) 
-
-Partner Documentation Links: 
-- MinIO partner [documentation](https://docs.min.io/minio/vsphere/core-concepts/core-concepts.html)
-- Cloudian partner [documentation](https://cloudian.com/vmware/)
-
-</br>
-</br>
-
-## Backup & Recovery Services
-
-</br>
-</br>
-
-<p align="left">
-  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/Velero.svg" width="250" title="Velero Logo">
-</p>
-Velero vSphere Operator helps users install Velero and its vSphere plugin on a vSphere with Kubernetes Supervisor cluster. Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes.</br>
-</br>
-
-- Service install [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-DA21BF67-160E-48D9-8D94-0D3690E51FD0.html)
-
-**Velero vSphere Operator CLI Versions:**     *This is a prerequisite for a cluster admin install.*
-- Download latest version: [Velero vSphere Operator CLI - v1.2.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.4.0/velero-vsphere-1.2.0-linux-amd64.tar.gz)
-- Download: [Velero vSphere Operator CLI - v1.1.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.1.0/velero-vsphere-1.1.0-linux-amd64.tar.gz)  
-
-
-**Versions:**
-- Download latest version: [Velero vSphere Operator v1.2.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.2.0%252Fvelero-supervisorservic-1.2.0.yaml)
-- Download version: [Velero vSphere Operator v1.1.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.0.0%252Fvelero-supervisorservice-1.0.0.yaml)

@@ -1,7 +1,4 @@
-<p align="left">
-  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/exploration/cert-manager/cer-manager-logo.png" width="250" title="Cert-man Logo">
-</p>
-
+![Cert-man Logo](https://gitlab.eng.vmware.com/jwolf/vsphere-with-tanzu-dev-center/-/blob/main/source/images/cer-manager-logo.png)
 
 # Cert-Manager vSphere IaaS Service
 
@@ -25,7 +22,7 @@ The CA issuer represents a Certificate Authority whose certificate and private k
 ⚠️ CA issuers are generally either for trying cert-manager out or else for advanced users with a good idea of how to run a PKI. To be used safely in production, CA issuers introduce complex planning requirements around rotation, trust store distribution and disaster recovery.
 
 
-1. Create or provide a certificate and private key (⚠️Warning You should use enterprise provide certs when possible)
+1. Create or provide a certificate and private key *⚠️Warning You should use enterprise provided certs when possible*
 ```
 #Create a certificate and private key pair using OpenSSL
 
