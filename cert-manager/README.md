@@ -1,4 +1,4 @@
-![Cert-man Logo](https://gitlab.eng.vmware.com/jwolf/vsphere-with-tanzu-dev-center/-/blob/main/source/images/cer-manager-logo.png)
+![Cert-man Logo](https://github.com/vsphere-tmm/Supervisor-Services/blob/exploration/cert-manager/cer-manager-logo.png)
 
 # Cert-Manager vSphere IaaS Service
 
