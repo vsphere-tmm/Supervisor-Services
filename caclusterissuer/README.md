@@ -63,7 +63,7 @@ ClusterIssuers are Kubernetes resources that represent certificate authorities (
 
 - Service install - Follow steps 1 - 5 and move to link below for step 6 [documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html) 
 
-- Service Config [caclusterissuer/README.md] > of the link above step 6.....update the value.yaml with base64 encoded cert and secret
+- Service Config [/caclusterissuer] > of the link above step 6.....update the value.yaml with base64 encoded cert and secret
 
 
 **CA Cluster Issuer Versions:**
