@@ -28,7 +28,7 @@ Partner Documentation Links:
 </br>
 
 <p align="left">
-  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/Velero.svg" width="250" title="Velero Logo">
+  <img src="Velero.svg" width="250" title="Velero Logo">
 </p>
 Velero vSphere Operator helps users install Velero and its vSphere plugin on a vSphere with Kubernetes Supervisor cluster. Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes.</br>
 </br>
@@ -50,25 +50,23 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
 </br>
 </br>
 
-## Certificate Managment
+## Certificate Management
 
 </br>
 </br>
 <p align="left">
-  <img src="https://github.com/vsphere-tmm/Supervisor-Services/blob/main/cert-manager-logo.PNG" width="250" title="Cert-Manager Logo">
+  <img src="cert-manager-logo.PNG" width="250" title="Cert-Manager Logo">
 </p>
 ClusterIssuers are Kubernetes resources that represent certificate authorities (CAs) that are able to generate signed certificates by honoring certificate signing requests. All cert-manager certificates require a referenced issuer that is in a ready condition to attempt to honor the request.</br>
 </br>
 
-
-- Service install - Follow steps 1 - 5 and move to link below for step 6 [documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html) 
-
-- Service Config [caclusterissuer/README.md] > of the link above step 6.....update the value.yaml with base64 encoded cert and secret
+- Service install - Follow steps 1 - 5 in the [documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html) then continue to the bullet point below.
+- Read [Service Configuration](caclusterissuer/README.md) to understand how to install your root CA into the ca-clusterissuer.
 
 
 **CA Cluster Issuer Versions:**
 - Download latest version: [CA Cluster - v0.0.1]()  
 
-
 **CA Cluster Issuer Sample values.yaml**
-- Download latest sample values.yaml: [values.yaml for v0.0.1]()
+- Download latest sample values.yaml: [values.yaml for
+  v0.0.1](caclusterissuer/values.yml)
