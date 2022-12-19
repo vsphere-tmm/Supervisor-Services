@@ -18,6 +18,7 @@ New service will be added overtime with the goal to continue to empower your Dev
 Partner Documentation Links: 
 - MinIO partner [documentation](https://docs.min.io/minio/vsphere/core-concepts/core-concepts.html)
 - Cloudian partner [documentation](https://cloudian.com/vmware/)
+- Dell ObjectScale partner [documentation](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/docs/vmware-dell-objectscale.pdf)
 
 </br>
 </br>
