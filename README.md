@@ -72,6 +72,7 @@ ClusterIssuers are Kubernetes resources that represent certificate authorities (
 - Download latest version: [values for v0.0.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=ca-clusterissuer/v0.0.1/ca-clusterissuer-data-values.yml)
 
 
+</br></br>
 ## Cloud Native Registry
 
 </br>
@@ -86,7 +87,7 @@ Harbor is an open source trusted cloud native registry project that stores, sign
 
 - The [contour package](#contour) is a prerequisite for Harbor, so that must be installed
   first. 
-- Service install - Follow steps 1 - 5 in the [documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-EB11DFDE-6ED4-4864-9E60-669F50D64397.html).
+- Follow the instructions under [Installing and Configuring Harbor on a Supervisor](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-8C645717-C473-4E67-8DEE-049B71447B86.html).
 
 
 **Versions:**
@@ -96,6 +97,7 @@ Harbor is an open source trusted cloud native registry project that stores, sign
 - Download the latest version: [values for v2.5.3](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.5.3/harbor-data-values.yml). For details about each of the required properties, [see the configuration details page](harbor/README.md).
 
 
+</br></br>
 ## Kubernetes Ingress Controller
 
 </br>
