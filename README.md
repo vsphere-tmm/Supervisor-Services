@@ -119,3 +119,31 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 **Contour Sample values.yaml**
 - Download the latest version: [values for v1.18.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.18.2/contour-data-values.yml). These values can be used _as-is_ and require no configuration changes. 
 
+
+</br></br>
+## Service Discovery with ExternalDNS
+
+</br>
+</br>
+<p align="left">
+  <img src="external-dns-logo.png" width="250" title="External DNS Logo" id="external-dns">
+</p>
+
+ExternalDNS publishes DNS records for applications to DNS servers, using a declarative, Kubernetes-native interface. This operator connects to your DNS server (not included here). For a list of supported DNS providers and their corresponding configuration settings, see the [upstream external-dns project](https://github.com/kubernetes-sigs/external-dns).
+</br>
+
+- On Supervisors where Harbor is deployed with Contour, ExternalDNS may be used to publish a DNS hostname for the Harbor service.
+
+**Versions:**
+- Download latest version: [ExternalDNS v0.11.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=external-dns/v0.11.0/external-dns.yml)
+
+**ExternalDNS data values**
+- Because of the large list of supported DNS providers, we do not supply complete sample configuration values here. If you're deploying ExternalDNS with Harbor and Contour, make sure to include `source=contour-httpproxy` in the configuration values. An *incomplete* example of the service configuration is included below. Make sure to setup API access to your DNS server and include authentication details with the service configuration.
+```
+deployment:
+  args:
+  - --source=contour-httpproxy
+  - --source=service
+  - --log-level=debug
+```
+
