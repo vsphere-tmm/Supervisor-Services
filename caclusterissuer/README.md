@@ -8,8 +8,7 @@ The ca-clusterissuer only needs to be supplied two values to function.
 - `tls_key` - This is the base64 encoded key/secret. 
 
 These values need to be supplied when attempting to install the ca-clusterissuer
-into a supervisor. We include a working [values.yml](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=ca-clusterissuer/v0.0.1/ca-clusterissuer-data-values.yml) file here for convenience, but
-this file should not be used in a production system. To generate a base64
+into a supervisor. The format of the file can be seen in [values.yml](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=ca-clusterissuer/v0.0.1/ca-clusterissuer-data-values.yml). We do not provide any defaults in this file, it exists only to demonstrate the structure. To generate a base64
 version of your certificate and your key, you can run the following commands: 
 
 ```
