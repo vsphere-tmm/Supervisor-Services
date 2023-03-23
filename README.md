@@ -3,7 +3,18 @@
 Discover current Supervisor Services offered to support modern applications through vSphere Services.  
 New service will be added overtime with the goal to continue to empower your DevOps communities.
 
-*Supervisor Services are only available with Supervisor Clusters enabled using NSX-T*
+Prior vSphere 8 Update 1, the Supervisor Services are only available with Supervisor Clusters enabled using VMware NSX. With vSphere 8 U1, Supervisor Services are also supported when using the vSphere Distributed Switch networking stack.
+
+| Supervisor Service | vSphere 7 | vSphere 8 |
+| :--: | :--: | :--: |
+| vSAN Data Persistence Platform Services - MinIO, Cloudian and Dell ObjectScale| ✅ | ✅ |
+| Backup \& Recovery Service - Velero | ✅ | ✅ |
+| Certificate Management Service - Cert-Manager | ❌ | ✅ |
+| Cloud Native Registry Service - Harbor | ❌ * | ✅ |
+| Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
+| External DNS Service - External DNS | ❌ | ✅ |
+*\* The embedded Harbor Registry feature is still available and supported on vSphere 7 and onwards.*
+
   </br>
   </br>  
     
@@ -121,7 +132,7 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 
 </br></br>
-## Service Discovery with ExternalDNS
+## External DNS Service
 
 </br>
 </br>
