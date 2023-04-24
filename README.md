@@ -18,7 +18,22 @@
 Discover current Supervisor Services offered to support modern applications through vSphere Services.
 New service will be added overtime with the goal to continue to empower your DevOps communities.
 
-Supervisor Services **are only** available with Supervisor Clusters enabled **using NSX-T**.
+Prior vSphere 8 Update 1, the Supervisor Services are only available with Supervisor Clusters enabled using VMware NSX-T. With vSphere 8 U1, Supervisor Services are also supported when using the vSphere Distributed Switch networking stack.
+
+| Supervisor Service | vSphere 7 | vSphere 8 |
+| :--: | :--: | :--: |
+| vSAN Data Persistence Platform Services - MinIO, Cloudian and Dell ObjectScale| ✅ | ✅ |
+| Backup \& Recovery Service - Velero | ✅ | ✅ |
+| Certificate Management Service - Cert-Manager | ❌ | ✅ |
+| Cloud Native Registry Service - Harbor | ❌ * | ✅ |
+| Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
+| External DNS Service - External DNS | ❌ | ✅ |
+*\* The embedded Harbor Registry feature is still available and supported on vSphere 7 and onwards.*
+    
+## vSAN Data Persistence Platform (vDPP): 
+  </br>
+  vSphere with Tanzu offers the vSAN Data Persistence platform. The platform provides a framework that enables third parties to integrate their cloud native service applications with underlying vSphere infrastructure, so that third-party software can run on vSphere with Tanzu optimally.</br>
+</br>
 
 ## vSAN Data Persistence Platform (vDPP) Services:
 
@@ -107,7 +122,7 @@ Contour Sample `values.yaml`
 
 - Download the latest version: [values for v1.18.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.18.2/contour-data-values.yml). These values can be used _as-is_ and require no configuration changes.
 
-## Service Discovery Service
+## External DNS Service
 
 <img src="external-dns-logo.png" width="250" title="External DNS Logo" id="external-dns">
 
@@ -115,7 +130,7 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 
 - On Supervisors where Harbor is deployed with Contour, ExternalDNS may be used to publish a DNS hostname for the Harbor service.
 
-### ExternalDNS Versions
+### External DNS Versions
 
 - Download latest version: [ExternalDNS v0.11.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=external-dns/v0.11.0/external-dns.yml)
 
