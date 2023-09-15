@@ -29,11 +29,6 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
 | External DNS Service - External DNS | ❌ | ✅ |
 *\* The embedded Harbor Registry feature is still available and supported on vSphere 7 and onwards.*
-    
-## vSAN Data Persistence Platform (vDPP): 
-  </br>
-  vSphere with Tanzu offers the vSAN Data Persistence platform. The platform provides a framework that enables third parties to integrate their cloud native service applications with underlying vSphere infrastructure, so that third-party software can run on vSphere with Tanzu optimally.</br>
-</br>
 
 ## vSAN Data Persistence Platform (vDPP) Services:
 
@@ -102,11 +97,14 @@ Harbor is an open source trusted cloud native registry project that stores, sign
 
 ### Harbor Versions
 
-- Download latest version: [Harbor v2.5.3](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.5.3/harbor.yml)
+- Download latest version: [Harbor v2.8.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.8.2/harbor.yml)
+- Download version: [Harbor v2.5.3](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.5.3/harbor.yml)
 
 Harbor Sample `values.yaml`
 
-- Download the latest version: [values for v2.5.3](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.5.3/harbor-data-values.yml). For details about each of the required properties, [see the configuration details page](harbor/README.md).
+- Download latest version: [values for v2.8.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.8.2/harbor-data-values.yml). For details about each of the required properties, [see the configuration details page](harbor/README.md).
+- Download version: [values for v2.5.3](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.5.3/harbor-data-values.yml). For details about each of the required properties, [see the configuration details page](https://github.com/vsphere-tmm/Supervisor-Services/blob/33a424992a03eff5c13fea45807f2b578e3b65d4/harbor/README.md).
+
 
 ## Kubernetes Ingress Controller Service
 
@@ -118,11 +116,12 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 ### Contour Versions
 
-- Download latest version: [Contour v1.18.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.18.2/contour.yml)
+- Download latest version: [Contour v1.24.4](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.24.4/contour.yml)
+- Download version: [Contour v1.18.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.18.2/contour.yml)
 
 Contour Sample `values.yaml`
 
-- Download the latest version: [values for v1.18.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.18.2/contour-data-values.yml). These values can be used _as-is_ and require no configuration changes.
+- Download [values for all versions](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.24.4/contour-data-values.yml). These values can be used _as-is_ and require no configuration changes.
 
 ## External DNS Service
 
