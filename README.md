@@ -9,7 +9,7 @@
     - [Harbor Versions](#harbor-versions)
   - [Kubernetes Ingress Controller Service](#kubernetes-ingress-controller-service)
     - [Contour Versions](#contour-versions)
-  - [Service Discovery Service](#service-discovery-service)
+  - [External DNS Service](#external-dns-service)
     - [ExternalDNS Versions](#externaldns-versions)
 
 
@@ -24,10 +24,10 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | :--: | :--: | :--: |
 | vSAN Data Persistence Platform Services - MinIO, Cloudian and Dell ObjectScale| ✅ | ✅ |
 | Backup \& Recovery Service - Velero | ✅ | ✅ |
-| Certificate Management Service - Cert-Manager | ❌ | ✅ |
+| Certificate Management Service - cert-manager | ❌ | ✅ |
 | Cloud Native Registry Service - Harbor | ❌ * | ✅ |
 | Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
-| External DNS Service - External DNS | ❌ | ✅ |
+| External DNS Service - ExternalDNS | ❌ | ✅ |
 *\* The embedded Harbor Registry feature is still available and supported on vSphere 7 and onwards.*
 
 ## vSAN Data Persistence Platform (vDPP) Services:
@@ -131,9 +131,10 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 
 - On Supervisors where Harbor is deployed with Contour, ExternalDNS may be used to publish a DNS hostname for the Harbor service.
 
-### External DNS Versions
+### ExternalDNS Versions
 
-- Download latest version: [ExternalDNS v0.11.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=external-dns/v0.11.0/external-dns.yml)
+- Download latest version: [ExternalDNS v0.13.4](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=external-dns/v0.13.4/external-dns.yml)
+- Download version: [ExternalDNS v0.11.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=external-dns/v0.11.0/external-dns.yml)
 
 ExternalDNS data `values.yaml`
 
