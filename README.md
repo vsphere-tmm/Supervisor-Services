@@ -11,6 +11,8 @@
     - [Contour Versions](#contour-versions)
   - [External DNS Service](#external-dns-service)
     - [ExternalDNS Versions](#externaldns-versions)
+  - [NSX Management Proxy](#nsx-management-proxy)
+    - [NSX Management Proxy Versions](#nsx-management-proxy-versions)
 
 
 # Supervisor Services Catalog
@@ -149,3 +151,15 @@ deployment:
   - --source=service
   - --log-level=debug
 ```
+
+## NSX Management Proxy
+
+NSX Management Proxy is for Antrea-NSX adapter in TKG workload cluster to reach NSX manager. We recommend to use NSX Management Proxy when there is isolation between management network and workload network and the workloads running in TKG workload clusters cannot reach NSX manager.
+
+### NSX Management Proxy Versions
+
+- Download latest version: [nsx-management-proxy v0.1.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy.yml)
+
+NSX Management Proxy Sample `values.yaml`
+
+- Download latest version: [values for v0.1.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy-data-values.yml). Make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
