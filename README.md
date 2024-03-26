@@ -13,6 +13,10 @@
     - [ExternalDNS Versions](#externaldns-versions)
   - [NSX Management Proxy](#nsx-management-proxy)
     - [NSX Management Proxy Versions](#nsx-management-proxy-versions)
+---
+- [Supervisor Services Labs Catalog](#supervisor-services-labs-catalog)
+  - [ArgoCD Operator](#argocd-operator)
+    - [ArgoCD Operator Versions](#argocd-operator-versions)
 
 
 # Supervisor Services Catalog
@@ -163,3 +167,31 @@ NSX Management Proxy is for Antrea-NSX adapter in TKG workload cluster to reach 
 NSX Management Proxy Sample `values.yaml`
 
 - Download latest version: [values for v0.1.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy-data-values.yml). Make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
+
+---
+---
+# Supervisor Services Labs Catalog
+
+## *Experemental* 
+
+The following Supervisor Services Labs catalog is only provided for testing and educational purposes. Please do not use these services in a production environment. These services are intended to demonstrate Supervisor Services' capabilities and usability. VMware will strive to provide regular updates to these services. The Labs services have been tested on vSphere 8.0. Over time, depending on usage and customer needs, some of these services may be included in the core product. 
+
+**WARNING** - By downloading and using these solutions from the Supervisor Services Labs catalog, you explicitly agree to the conditional use **[license agreement](supervisor-services-labs/licence-agreement.md)**.
+
+## ArgoCD Operator 
+
+<img src="supervisor-services-labs/argocd-operator/argocd.png" width="200" title="ArgoCD Logo" id="argocd">
+
+The Argo CD Operator manages the entire lifecycle of Argo CD and its components. The Operator aims to automate the tasks required to operate an Argo CD cluster. Beyond installation, the Operator helps automate the process of upgrading, backing up, and restoring as needed and removes the human toil as much as possible. For a detailed description of how to consume the ArgoCD Operator, see the [ArgoCD Operator project](https://argocd-operator.readthedocs.io/en/latest/)
+
+### ArgoCD Operator Versions
+
+- Download latest version: [ArgoCD Operator v0.8.0](supervisor-services-labs/argocd-operator/argocd-operator.yaml)
+
+ArgoCD Operator Sample `values.yaml` - None
+
+- We do not provide any default `values.yaml` for this package. This Operator requires minimal configurations, and the necessary pods get deployed in the `svc-argocd-operator-domain-xxx` namespace. 
+
+Usage:
+- Once the ArgoCD Operator has been deployed successfully on the Supervisor, deploy an ArgoCD object within your vSphere Namespace. You can refer to the [example](supervisor-services-labs/argocd-operator/argocd-instance.yaml) for a simple deployment. 
+- Check the links for [detailed reference](https://argocd-operator.readthedocs.io/en/latest/reference/argocd/) and [sample usage](https://argocd-operator.readthedocs.io/en/latest/usage/basics/)

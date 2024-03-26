@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1beta1
+kind: ArgoCD
+metadata:
+  name: my-demo-argocd
+  namespace: ${{MY_VSPHERE_NAMESPACE}}
+  labels:
+    example: basic
+spec:
+  nodePlacement:
+    nodeSelector:
+      kubernetes.io/os: CRX
+  server:
+    service:
+      type: LoadBalancer
+# Currently redis images are downloaded from Dockerhub and may be subject to download limits. To overcome this, use a proxy cache as an example
+  redis:
+    image: ${{MY_PROXY_CACHE_REPOSITORY}}/proxy-cache/library/redis
