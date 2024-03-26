@@ -57,7 +57,8 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
 
 *This is a prerequisite for a cluster admin install.*
 
-- Download latest version: [Velero vSphere Operator CLI - v1.5.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.5.1/velero-vsphere-1.5.0-linux-amd64.tar.gz)
+- Download latest version: [Velero vSphere Operator CLI - v1.6.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.5.3/velero-vsphere-1.6.0-linux-amd64.tar.gz)
+- Download: [Velero vSphere Operator CLI - v1.5.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.5.1/velero-vsphere-1.5.0-linux-amd64.tar.gz)
 - Download: [Velero vSphere Operator CLI - v1.4.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.5.1/velero-vsphere-1.4.0-linux-amd64.tar.gz)
 - Download: [Velero vSphere Operator CLI - v1.3.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.4.2/velero-vsphere-1.3.0-linux-amd64.tar.gz)
 - Download: [Velero vSphere Operator CLI - v1.2.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.4.0/velero-vsphere-1.2.0-linux-amd64.tar.gz)
@@ -65,7 +66,8 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
 
 ### Velero Versions
 
-- Download latest version: [Velero vSphere Operator v1.5.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.5.0%252Fvelero-vsphere-1.5.0-def.yaml)
+- Download latest version: [Velero vSphere Operator v1.6.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.6.0%252Fvelero-vsphere-1.6.0-def.yaml)
+- Download: [Velero vSphere Operator v1.5.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.5.0%252Fvelero-vsphere-1.5.0-def.yaml)
 - Download: [Velero vSphere Operator v1.4.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.4.0%252Fvelero-vsphere-1.4.0-def.yaml)
 - Download: [Velero vSphere Operator v1.3.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.3.0%252Fvelero-supervisorservice-1.3.0.yaml)
 - Download: [Velero vSphere Operator v1.2.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.2.0%252Fvelero-supervisorservic-1.2.0.yaml)
