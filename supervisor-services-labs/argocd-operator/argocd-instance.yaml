@@ -2,7 +2,6 @@ apiVersion: argoproj.io/v1beta1
 kind: ArgoCD
 metadata:
   name: my-demo-argocd
-  namespace: ${{MY_VSPHERE_NAMESPACE}}
   labels:
     example: basic
 spec:
@@ -12,6 +11,8 @@ spec:
   server:
     service:
       type: LoadBalancer
-# Currently redis images are downloaded from Dockerhub and may be subject to download limits. To overcome this, use a proxy cache as an example
-  redis:
-    image: ${{MY_PROXY_CACHE_REPOSITORY}}/proxy-cache/library/redis
+# Currently Redis images are downloaded from Dockerhub and may be subject to download rate limits. 
+# To overcome this, use a proxy cache or host the image on another registry.
+# In such scenarios, uncomment the next two lines, and update the registry image path accordingly.  
+#  redis:
+#    image: my-registry/proxy-cache/library/redis

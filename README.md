@@ -172,9 +172,9 @@ NSX Management Proxy Sample `values.yaml`
 ---
 # Supervisor Services Labs Catalog
 
-## *Experemental* 
+## *Experimental* 
 
-The following Supervisor Services Labs catalog is only provided for testing and educational purposes. Please do not use these services in a production environment. These services are intended to demonstrate Supervisor Services' capabilities and usability. VMware will strive to provide regular updates to these services. The Labs services have been tested on vSphere 8.0. Over time, depending on usage and customer needs, some of these services may be included in the core product. 
+The following Supervisor Services Labs catalog is only provided for testing and educational purposes. Please do not use these services in a production environment. These services are intended to demonstrate Supervisor Services' capabilities and usability. VMware will strive to provide regular updates to these services. The Labs services have been tested starting from vSphere 8.0. Over time, depending on usage and customer needs, some of these services may be included in the core product. 
 
 **WARNING** - By downloading and using these solutions from the Supervisor Services Labs catalog, you explicitly agree to the conditional use **[license agreement](supervisor-services-labs/licence-agreement.md)**.
 
@@ -182,16 +182,46 @@ The following Supervisor Services Labs catalog is only provided for testing and 
 
 <img src="supervisor-services-labs/argocd-operator/argocd.png" width="200" title="ArgoCD Logo" id="argocd">
 
-The Argo CD Operator manages the entire lifecycle of Argo CD and its components. The Operator aims to automate the tasks required to operate an Argo CD cluster. Beyond installation, the Operator helps automate the process of upgrading, backing up, and restoring as needed and removes the human toil as much as possible. For a detailed description of how to consume the ArgoCD Operator, see the [ArgoCD Operator project](https://argocd-operator.readthedocs.io/en/latest/)
+The Argo CD Operator manages the entire lifecycle of Argo CD and its components. The operator aims to automate the tasks required to operate an Argo CD deployment. Beyond installation, the operator helps automate the process of upgrading, backing up, and restoring as needed and removes the human toil as much as possible. For a detailed description of how to consume the ArgoCD Operator, see the [ArgoCD Operator project.](https://argocd-operator.readthedocs.io/en/latest/)
 
 ### ArgoCD Operator Versions
 
-- Download latest version: [ArgoCD Operator v0.8.0](supervisor-services-labs/argocd-operator/argocd-operator.yaml)
+- Download the latest version: [ArgoCD Operator v0.8.0](supervisor-services-labs/argocd-operator/argocd-operator.yaml)
 
 ArgoCD Operator Sample `values.yaml` - None
 
-- We do not provide any default `values.yaml` for this package. This Operator requires minimal configurations, and the necessary pods get deployed in the `svc-argocd-operator-domain-xxx` namespace. 
+- We do not provide any default `values.yaml` for this package. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-argocd-operator-domain-xxx` namespace. 
 
 Usage:
-- Once the ArgoCD Operator has been deployed successfully on the Supervisor, deploy an ArgoCD object within your vSphere Namespace. You can refer to the [example](supervisor-services-labs/argocd-operator/argocd-instance.yaml) for a simple deployment. 
-- Check the links for [detailed reference](https://argocd-operator.readthedocs.io/en/latest/reference/argocd/) and [sample usage](https://argocd-operator.readthedocs.io/en/latest/usage/basics/)
+- Once the ArgoCD Operator has been deployed successfully on the Supervisor, deploy an ArgoCD object within your vSphere Namespace. To do so, follow the steps below.
+1. Download the [example](supervisor-services-labs/argocd-operator/argocd-instance.yaml) as a reference for a simple deployment.
+2. Log in to the Supervisor - `10.220.3.18` is the Supervisor IP address in this example).
+```bash
+$ kubectl vsphere login --server 10.220.3.18 -u administrator@vsphere.local
+```
+3. To deploy ArgoCD to the vSphere Namespace - `demo1` in this example - set the context appropriately. 
+```bash
+$ kubectl config use-context demo1
+```
+4. Use kubectl to deploy the file -`argocd.yaml` in this example - that was downloaded in Step 1. 
+```bash
+$ kubectl apply -f argocd.yaml
+```
+5. Upon successful deployment, the following should be the status. Use the EXTERNAL-IP address of the argocd-server service to connect to the UI. `10.220.3.20` in this example.  
+```bash
+$ kubectl get pods
+NAME                                        READY   STATUS    RESTARTS   AGE
+demo1-argocd-application-controller-0       1/1     Running   0          5m9s
+demo1-argocd-redis-cd8c958fd-jltgd          1/1     Running   0          5m9s
+demo1-argocd-repo-server-6ccccfc999-rm4ng   1/1     Running   0          5m9s
+demo1-argocd-server-945597778-2qfjk         1/1     Running   0          5m9s
+
+$ kubectl get svc
+NAME                                          TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
+...
+demo1-argocd-server                           LoadBalancer   10.96.0.88    10.220.3.20   80:30803/TCP,443:30679/TCP   6m41s
+...
+```
+6. If you encounter a DockerHub rate-limiting for the Redis image, either use a proxy-cache or host the image on another registry. The sample `argocd.yaml` has an example of how to refeence the new image location.  
+
+- For advanced configurations, check the [detailed reference](https://argocd-operator.readthedocs.io/en/latest/reference/argocd/) and [sample usage](https://argocd-operator.readthedocs.io/en/latest/usage/basics/)

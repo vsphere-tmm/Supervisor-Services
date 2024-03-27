@@ -17,7 +17,7 @@ spec:
     Argo CD environment by configuring Prometheus and Grafana to aggregate, visualize
     and expose the metrics already exported by Argo CD.
   maintainers:
-  - name: vSphere IaaS and Consumption
+  - name: supervisor-services-labs.pdl@broadcom.com 
   providerName: VMware
   shortDescription: The Argo CD Operator manages the full lifecycle for Argo CD and
     its components.
