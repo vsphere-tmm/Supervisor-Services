@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1beta1
+kind: ArgoCD
+metadata:
+  name: my-demo-argocd
+  labels:
+    example: basic
+spec:
+  nodePlacement:
+    nodeSelector:
+      kubernetes.io/os: CRX
+  server:
+    service:
+      type: LoadBalancer
+# Currently Redis images are downloaded from Dockerhub and may be subject to download rate limits. 
+# To overcome this, use a proxy cache or host the image on another registry.
+# In such scenarios, uncomment the next two lines, and update the registry image path accordingly.  
+#  redis:
+#    image: my-registry/proxy-cache/library/redis
