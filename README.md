@@ -286,8 +286,8 @@ RabbitMQ Cluster Kubernetes Operator Sample `values.yaml` -
 
 #### Usage:
 
-- Once the RabbitMQ Cluster Kubernetes Operator has been deployed successfully on the Supervisor, deploy an RabbitMQ Cluster object within your vSphere Namespace. To do so, follow the steps below.
-1. Download the [example](supervisor-services-labs/rabbitmq-operator/rabbitmq-instance.yaml) as a reference for a simple deployment. You will need to modify the value of the `storageClassName` object. 
+- Once the RabbitMQ Cluster Kubernetes Operator has been deployed successfully on the Supervisor, deploy a RabbitMQ Cluster object within your vSphere Namespace. To do so, follow the steps below.
+1. Download the [example](supervisor-services-labs/rabbitmq-operator/rabbitmq-instance.yaml) as a reference for a simple deployment. You will need to modify the value of the `storageClassName` object as per your environment. 
 2. Log in to the Supervisor - `10.220.3.18` is the Supervisor IP address in this example - with a user that has owner/edit access to the vSphere Namespace - `user@vsphere.local` in this example. 
 ```bash
 $ kubectl vsphere login --server 10.220.3.18 -u user@vsphere.local
@@ -318,6 +318,6 @@ NAME                                                   ALLREPLICASREADY   RECONC
 rabbitmqcluster.rabbitmq.com/demo1-rabbitmq-cluster0   True               False              6d22h
 ...
 ```
-6. If you encounter a DockerHub rate-limiting for the RabbitMQ image, use a proxy-cache or host the image on another registry. The sample `rabbitmq-instance.yaml` shows how to reference an alternate image location.  
+6. If you encounter a Dockerhub rate limiting for the RabbitMQ image, use a proxy-cache or host the image on another registry. The sample `rabbitmq-instance.yaml` shows how to reference an alternate image location.  
 
 - For advanced configurations, check the [detailed reference](https://www.rabbitmq.com/kubernetes/operator/operator-overview).
