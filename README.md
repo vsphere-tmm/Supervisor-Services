@@ -19,6 +19,8 @@
     - [ArgoCD Operator Versions](#argocd-operator-versions)
   - [External Secrets Operator](#external-secrets-operator)
     - [External Secrets Operator Versions](#external-secrets-operator-versions)
+  - [RabbitMQ Cluster Kubernetes Operator](#rabbitmq-cluster-kubernetes-operator)
+    - [RabbitMQ Cluster Kubernetes Operator Versions](#rabbitmq-cluster-kubernetes-operator-versions)
 
 
 # Supervisor Services Catalog
@@ -267,3 +269,55 @@ $ kubectl apply -f external-secrets-example.yaml
 ```bash
 $ kubectl get secret -n demo1 workload-vsphere-tkg2-ssh -o json |jq -r '.data."ssh-privatekey"'|base64 -d
 ``` 
+
+## RabbitMQ Cluster Kubernetes Operator
+
+<img src="supervisor-services-labs/rabbitmq-operator/rabbitmq-logo.svg" width="150" title="RabbitMQ Logo" id="rabbitmq">
+
+The RabbitMQ Cluster Kubernetes Operator provides a consistent and easy way to deploy RabbitMQ clusters to Kubernetes and run them, including "day two" (continuous) operations. RabbitMQ clusters deployed using the Operator can be used by applications running on Kubernetes or outside of Kubernetes. For a detailed description of how to consume the RabbitMQ Cluster Kubernetes Operator, see the [RabbitMQ Cluster Kubernetes Operator project.](https://www.rabbitmq.com/kubernetes/operator/operator-overview)
+
+### RabbitMQ Cluster Kubernetes Operator Versions
+
+- Download latest version: [RabbitMQ Cluster Kubernetes Operator v2.8.0](supervisor-services-labs/rabbitmq-operator/rabbitmq-operator.yaml)
+
+RabbitMQ Cluster Kubernetes Operator Sample `values.yaml` - 
+
+- Modify the latest [values.yaml](supervisor-services-labs/rabbitmq-operator/values.yaml) by providing a new location for the RabbitMQ Cluster Kubernetes Operator image. The may be required to overcome DockerHub's rate limiting issues. The RabbitMQ Cluster Kubernetes Operator pods and related artifacts get deployed in the `svc-rabbitmq-operator-domain-xx` namespace.
+
+#### Usage:
+
+- Once the RabbitMQ Cluster Kubernetes Operator has been deployed successfully on the Supervisor, deploy an RabbitMQ Cluster object within your vSphere Namespace. To do so, follow the steps below.
+1. Download the [example](supervisor-services-labs/rabbitmq-operator/rabbitmq-instance.yaml) as a reference for a simple deployment. You will need to modify the value of the `storageClassName` object. 
+2. Log in to the Supervisor - `10.220.3.18` is the Supervisor IP address in this example - with a user that has owner/edit access to the vSphere Namespace - `user@vsphere.local` in this example. 
+```bash
+$ kubectl vsphere login --server 10.220.3.18 -u user@vsphere.local
+```
+3. To deploy RabbitMQ Cluster to the vSphere Namespace - `demo1` in this example - set the context appropriately. 
+```bash
+$ kubectl config use-context demo1
+```
+4. Use kubectl to deploy the file -`rabbitmq-instance.yaml` in this example - that was downloaded in Step 1. 
+```bash
+$ kubectl apply -f rabbitmq-instance.yaml
+```
+5. Upon successful deployment, the following should be the status. Use the EXTERNAL-IP address of the rabbitmq-cluster service to connect to the cluster - `10.220.8.1` in this example.  
+```bash
+$ kubectl get all
+NAME                                   READY   STATUS    RESTARTS   AGE
+pod/demo1-rabbitmq-cluster0-server-0   1/1     Running   0          6d22h
+
+$ kubectl get svc
+NAME                                    TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                                          AGE
+service/demo1-rabbitmq-cluster0         LoadBalancer   10.96.0.53    10.220.8.1    5672:31907/TCP,15672:30104/TCP,15692:32637/TCP   6d22h
+service/demo1-rabbitmq-cluster0-nodes   ClusterIP      None          <none>        4369/TCP,25672/TCP                               6d22h
+
+NAME                                              READY   AGE
+statefulset.apps/demo1-rabbitmq-cluster0-server   1/1     6d22h
+
+NAME                                                   ALLREPLICASREADY   RECONCILESUCCESS   AGE
+rabbitmqcluster.rabbitmq.com/demo1-rabbitmq-cluster0   True               False              6d22h
+...
+```
+6. If you encounter a DockerHub rate-limiting for the RabbitMQ image, use a proxy-cache or host the image on another registry. The sample `rabbitmq-instance.yaml` shows how to reference an alternate image location.  
+
+- For advanced configurations, check the [detailed reference](https://www.rabbitmq.com/kubernetes/operator/operator-overview).

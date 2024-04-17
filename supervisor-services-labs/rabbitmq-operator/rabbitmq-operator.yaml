@@ -1,0 +1,52 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  creationTimestamp: null
+  name: rabbitmq-operator.fling.vsphere.vmware.com
+spec:
+  categories:
+  - Messageing
+  - Streaming
+  displayName: rabbitmq-operator
+  iconSVGBase64: none
+  longDescription: The RabbitMQ Cluster Kubernetes Operator provides a consistent and easy way to deploy RabbitMQ clusters to Kubernetes and run them, including "day two" (continuous) operations. RabbitMQ clusters deployed using the Operator can be used by applications running on Kubernetes or outside of Kubernetes.
+  maintainers:
+  - name: supervisor-services-labs.pdl@broadcom.com
+  providerName: VMware
+  shortDescription: The RabbitMQ Cluster Kubernetes Operator automates provisioning, management, and operations of RabbitMQ clusters running on Kubernetes.
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: rabbitmq-operator.fling.vsphere.vmware.com.2.8.0
+spec:
+  refName: rabbitmq-operator.fling.vsphere.vmware.com
+  releasedAt: "2024-04-10T03:17:23Z"
+  template:
+    spec:
+      deploy:
+      - kapp: {}
+      fetch:
+      - imgpkgBundle:
+          image: projects.registry.vmware.com/vsphere-labs/rabbitmq-operator@sha256:ae74e808e334731baaa07a2cb31a457e176a2361d3751af3acc0f448077b1e93
+      template:
+      - ytt:
+          paths:
+          - ./config
+      - kbld:
+          paths:
+          - '-'
+          - .imgpkg/images.yml
+  valuesSchema:
+    openAPIv3:
+      properties:
+        image:
+          default: rabbitmqoperator/cluster-operator:2.8.0
+          description: Image of RabbitMQ Operator
+          type: string
+        namespace:
+          default: rabbitmq-operator
+          description: The namespace in which to deploy rabbitmq-operator.
+          type: string
+  version: 2.8.0
