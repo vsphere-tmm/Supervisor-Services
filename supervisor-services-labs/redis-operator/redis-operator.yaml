@@ -1,0 +1,45 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  creationTimestamp: null
+  name: redis-operator.fling.vsphere.vmware.com
+spec:
+  categories:
+  - In-Memory Database
+  - Caching
+  displayName: redis-operator
+  iconSVGBase64: none
+  longDescription: A Golang based Redis operator that overseees Redis standalone and cluster mode setup on top of Kubernetes. It can create a Redis cluster setup with best practices on any Cloud. It also provides an in-built monitoring capability using redis-exporter.
+  maintainers:
+  - name: supervisor-services-labs.pdl@broadcom.com
+  providerName: VMware
+  shortDescription: Redis operator that overseees Redis standalone and cluster mode setup on top of Kubernetes
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: redis-operator.fling.vsphere.vmware.com.0.16.0
+spec:
+  refName: redis-operator.fling.vsphere.vmware.com
+  releasedAt: "2024-04-17T18:30:14Z"
+  template:
+    spec:
+      deploy:
+      - kapp: {}
+      fetch:
+      - imgpkgBundle:
+          image: projects.registry.vmware.com/vsphere-labs/redis-operator@sha256:bef1297474d098dc6663b3a5b2ff347e1eb1b6d5aa817149aaec70d2bbfafa7c
+      template:
+      - ytt:
+          paths:
+          - ./config
+      - kbld:
+          paths:
+          - '-'
+          - .imgpkg/images.yml
+  valuesSchema:
+    openAPIv3:
+      default: null
+      nullable: true
+  version: 0.16.0
