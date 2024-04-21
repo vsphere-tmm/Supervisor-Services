@@ -194,7 +194,7 @@ The Argo CD Operator manages the entire lifecycle of Argo CD and its components.
 
 ### ArgoCD Operator Versions
 
-- Download the latest version: [ArgoCD Operator v0.8.0](supervisor-services-labs/argocd-operator/argocd-operator.yaml)
+- Download the latest version: [ArgoCD Operator v0.8.0](supervisor-services-labs/argocd-operator/v0.8.0/argocd-operator.yaml)
 
 ArgoCD Operator Sample `values.yaml` - None
 
@@ -203,7 +203,6 @@ ArgoCD Operator Sample `values.yaml` - None
 #### Usage:
 
 - Check out this example on deploying an ArgoCD instance with the Argo CD Operator [here.](supervisor-services-labs/argocd-operator/usage.md)
-
 - For advanced configurations, check the [detailed reference](https://argocd-operator.readthedocs.io/en/latest/reference/argocd/) and [sample usage](https://argocd-operator.readthedocs.io/en/latest/usage/basics/)
 
 ## External Secrets Operator
@@ -214,7 +213,7 @@ External Secrets Operator is a Kubernetes operator that integrates external secr
 
 ### External Secrets Operator Versions
 
-- Download latest version: [External Secrets Operator v0.9.14](supervisor-services-labs/external-secrets-operator/external-secrets-operator.yaml)
+- Download latest version: [External Secrets Operator v0.9.14](supervisor-services-labs/external-secrets-operator/v0.9.14/external-secrets-operator.yaml)
 
 External Secrets Operator Sample `values.yaml` - None
 
@@ -232,11 +231,11 @@ The RabbitMQ Cluster Kubernetes Operator provides a consistent and easy way to d
 
 ### RabbitMQ Cluster Kubernetes Operator Versions
 
-- Download latest version: [RabbitMQ Cluster Kubernetes Operator v2.8.0](supervisor-services-labs/rabbitmq-operator/rabbitmq-operator.yaml)
+- Download latest version: [RabbitMQ Cluster Kubernetes Operator v2.8.0](supervisor-services-labs/rabbitmq-operator/v2.8.0/rabbitmq-operator.yaml)
 
 RabbitMQ Cluster Kubernetes Operator Sample `values.yaml` - 
 
-- Modify the latest [values.yaml](supervisor-services-labs/rabbitmq-operator/values.yaml) by providing a new location for the RabbitMQ Cluster Kubernetes Operator image. This may be required to overcome DockerHub's rate-limiting issues. The RabbitMQ Cluster Kubernetes Operator pods and related artifacts get deployed in the `svc-rabbitmq-operator-domain-xx` namespace.
+- Modify the latest [values.yaml](supervisor-services-labs/rabbitmq-operator/v2.8.0/values.yaml) by providing a new location for the RabbitMQ Cluster Kubernetes Operator image. This may be required to overcome DockerHub's rate-limiting issues. The RabbitMQ Cluster Kubernetes Operator pods and related artifacts get deployed in the `svc-rabbitmq-operator-domain-xx` namespace.
 
 #### Usage:
 
@@ -251,7 +250,7 @@ A Golang-based Redis operator that oversees Redis standalone/cluster/replication
 
 ### Redis Operator Versions
 
-- Download latest version: [Redis Operator v.16.0](supervisor-services-labs/redis-operator/redis-operator.yaml)
+- Download latest version: [Redis Operator v0.16.0](supervisor-services-labs/redis-operator/v0.16.0/redis-operator.yaml)
 
 Redis Operator Sample `values.yaml` - 
 
@@ -260,5 +259,4 @@ Redis Operator Sample `values.yaml` -
 #### Usage:
 
 - View an example of how to use the Redis Operator to deploy a Redis standalone instance [here](supervisor-services-labs/redis-operator/redis-instance.yaml)
-
 - For advanced configurations, check the [detailed reference](https://ot-redis-operator.netlify.app/docs/getting-started/).
