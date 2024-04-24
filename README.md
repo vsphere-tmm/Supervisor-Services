@@ -19,6 +19,10 @@
     - [ArgoCD Operator Versions](#argocd-operator-versions)
   - [External Secrets Operator](#external-secrets-operator)
     - [External Secrets Operator Versions](#external-secrets-operator-versions)
+  - [RabbitMQ Cluster Kubernetes Operator](#rabbitmq-cluster-kubernetes-operator)
+    - [RabbitMQ Cluster Kubernetes Operator Versions](#rabbitmq-cluster-kubernetes-operator-versions)
+  - [Redis Operator](#redis-operator)
+    - [Redis Operator Versions](#redis-operator-versions)
 
 
 # Supervisor Services Catalog
@@ -190,44 +194,15 @@ The Argo CD Operator manages the entire lifecycle of Argo CD and its components.
 
 ### ArgoCD Operator Versions
 
-- Download the latest version: [ArgoCD Operator v0.8.0](supervisor-services-labs/argocd-operator/argocd-operator.yaml)
+- Download the latest version: [ArgoCD Operator v0.8.0](supervisor-services-labs/argocd-operator/v0.8.0/argocd-operator.yaml)
 
 ArgoCD Operator Sample `values.yaml` - None
 
-- We do not provide any default `values.yaml` for this package. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-argocd-operator-domain-xxx` namespace. 
+- We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the  `svc-argocd-operator-domain-xxx` namespace. 
 
 #### Usage:
-- Once the ArgoCD Operator has been deployed successfully on the Supervisor, deploy an ArgoCD object within your vSphere Namespace. To do so, follow the steps below.
-1. Download the [example](supervisor-services-labs/argocd-operator/argocd-instance.yaml) as a reference for a simple deployment.
-2. Log in to the Supervisor - `10.220.3.18` is the Supervisor IP address in this example - with a user that has owner/edit access to the vSphere Namespace - `user@vsphere.local` in this example. 
-```bash
-$ kubectl vsphere login --server 10.220.3.18 -u user@vsphere.local
-```
-3. To deploy ArgoCD to the vSphere Namespace - `demo1` in this example - set the context appropriately. 
-```bash
-$ kubectl config use-context demo1
-```
-4. Use kubectl to deploy the file -`argocd-instance.yaml` in this example - that was downloaded in Step 1. 
-```bash
-$ kubectl apply -f argocd-instance.yaml
-```
-5. Upon successful deployment, the following should be the status. Use the EXTERNAL-IP address of the argocd-server service to connect to the UI - `10.220.3.20` in this example.  
-```bash
-$ kubectl get pods
-NAME                                        READY   STATUS    RESTARTS   AGE
-demo1-argocd-application-controller-0       1/1     Running   0          5m9s
-demo1-argocd-redis-cd8c958fd-jltgd          1/1     Running   0          5m9s
-demo1-argocd-repo-server-6ccccfc999-rm4ng   1/1     Running   0          5m9s
-demo1-argocd-server-945597778-2qfjk         1/1     Running   0          5m9s
 
-$ kubectl get svc
-NAME                                          TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)                      AGE
-...
-demo1-argocd-server                           LoadBalancer   10.96.0.88    10.220.3.20   80:30803/TCP,443:30679/TCP   6m41s
-...
-```
-6. If you encounter a DockerHub rate-limiting for the Redis image, use a proxy-cache or host the image on another registry. The sample `argocd-instance.yaml` shows how to reference an alternate image location.  
-
+- Check out this example on deploying an ArgoCD instance with the Argo CD Operator [here.](supervisor-services-labs/argocd-operator/usage.md)
 - For advanced configurations, check the [detailed reference](https://argocd-operator.readthedocs.io/en/latest/reference/argocd/) and [sample usage](https://argocd-operator.readthedocs.io/en/latest/usage/basics/)
 
 ## External Secrets Operator
@@ -238,32 +213,50 @@ External Secrets Operator is a Kubernetes operator that integrates external secr
 
 ### External Secrets Operator Versions
 
-- Download latest version: [External Secrets Operator v0.9.14](supervisor-services-labs/external-secrets-operator/external-secrets-operator.yaml)
+- Download latest version: [External Secrets Operator v0.9.14](supervisor-services-labs/external-secrets-operator/v0.9.14/external-secrets-operator.yaml)
 
 External Secrets Operator Sample `values.yaml` - None
 
-- We do not provide any default `values.yaml` for this package. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-external-secrets-operator-domain-xxx` namespace.
+- We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-external-secrets-operator-domain-xxx` namespace.
 
 #### Usage: 
-- Since the External Secrets Operator integrates with multiple providers, usage varies based on the types of secret stores accessed and secrets consumed. Once the External Secrets Operator has been deployed successfully on the Supervisor, basic operations include creating a `SecretStore` object and an `ExternalSecret` object within your vSphere Namespace.
-1. Download the [example](supervisor-services-labs/external-secrets-operator/external-secrets-example.yaml) as a reference for a simple usage. For this example to work, store an SSH private key as a secret called `tkg-ssh-priv-keys` in **GCP Secret Manager**. A service account with the `Secret Manager Secret Accessor` role should be granted access to the secret. The service account's key has to been downloaded and kept in a secure location. (*Note* - Service account keys could pose a security risk if compromised, and this exercise is for demo purposes only) 
-2. Log in to the Supervisor - `10.220.3.18` is the Supervisor IP address in this example - with a user with owner/edit access to the vSphere Namespace - `user@vsphere.local` in this example. 
-```bash
-$ kubectl vsphere login --server 10.220.3.18 -u user@vsphere.local
-```
-3. To create External Secrets objects within the vSphere Namespace - `demo1` in this example - set the context appropriately. 
-```bash
-$ kubectl config use-context demo1
-```
-4. Create a secret to store the GCP service account's key downloaded in step 1 - `key.json` in this example.
-```bash
-$ kubectl create secret generic gcpsm-secret --from-file=secret-access-credentials=key.json -n demo1
-```
-5. Modify Line 14 `projectID: my-gcp-projectid` of the file -`external-secrets-example.yaml` in this example - that was downloaded in Step 1, per your GCP ProjectID and use kubectl to deploy the file. 
-```bash
-$ kubectl apply -f external-secrets-example.yaml
-```
-6. Upon successful deployment, a new secret object `workload-vsphere-tkg2-ssh` should have been created and its data should match the one uploaded in the GCP Secret Manager. 
-```bash
-$ kubectl get secret -n demo1 workload-vsphere-tkg2-ssh -o json |jq -r '.data."ssh-privatekey"'|base64 -d
-``` 
+
+- Check out this example on how to access a secret from **GCP Secret Manager** using External Secrets Operator [here](supervisor-services-labs/external-secrets-operator/usage.md)
+
+## RabbitMQ Cluster Kubernetes Operator
+
+<img src="supervisor-services-labs/rabbitmq-operator/rabbitmq-logo.svg" width="150" title="RabbitMQ Logo" id="rabbitmq">
+
+The RabbitMQ Cluster Kubernetes Operator provides a consistent and easy way to deploy RabbitMQ clusters to Kubernetes and run them, including "day two" (continuous) operations. RabbitMQ clusters deployed using the Operator can be used by applications running on or outside Kubernetes. For a detailed description of how to consume the RabbitMQ Cluster Kubernetes Operator, see the [RabbitMQ Cluster Kubernetes Operator project.](https://www.rabbitmq.com/kubernetes/operator/operator-overview)
+
+### RabbitMQ Cluster Kubernetes Operator Versions
+
+- Download latest version: [RabbitMQ Cluster Kubernetes Operator v2.8.0](supervisor-services-labs/rabbitmq-operator/v2.8.0/rabbitmq-operator.yaml)
+
+RabbitMQ Cluster Kubernetes Operator Sample `values.yaml` - 
+
+- Modify the latest [values.yaml](supervisor-services-labs/rabbitmq-operator/v2.8.0/values.yaml) by providing a new location for the RabbitMQ Cluster Kubernetes Operator image. This may be required to overcome DockerHub's rate-limiting issues. The RabbitMQ Cluster Kubernetes Operator pods and related artifacts get deployed in the `svc-rabbitmq-operator-domain-xx` namespace.
+
+#### Usage:
+
+- Check out this example on how to deploy a RabbitMQ cluster using the RabbitMQ Cluster Kubernetes Operator [here](supervisor-services-labs/rabbitmq-operator/usage.md)
+- For advanced configurations, check the [detailed reference](https://www.rabbitmq.com/kubernetes/operator/operator-overview).
+
+## Redis Operator
+
+<img src="supervisor-services-labs/redis-operator/redis.png" width="200" title="Redis Logo" id="redis">
+
+A Golang-based Redis operator that oversees Redis standalone/cluster/replication/sentinel mode setup on top of Kubernetes. It can create a Redis cluster setup using best practices. It also provides an in-built monitoring capability using Redis-exporter. For a detailed description of how to consume the Redis Operator, see the [Redis Operator project.](https://ot-redis-operator.netlify.app/docs/overview/)
+
+### Redis Operator Versions
+
+- Download latest version: [Redis Operator v0.16.0](supervisor-services-labs/redis-operator/v0.16.0/redis-operator.yaml)
+
+Redis Operator Sample `values.yaml` - 
+
+- We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-redis-operator-domain-xxx` namespace.
+
+#### Usage:
+
+- View an example of how to use the Redis Operator to deploy a Redis standalone instance [here](supervisor-services-labs/redis-operator/redis-instance.yaml)
+- For advanced configurations, check the [detailed reference](https://ot-redis-operator.netlify.app/docs/getting-started/).

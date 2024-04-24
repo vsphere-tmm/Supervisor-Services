@@ -1,0 +1,15 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: demo1-rabbitmq-cluster0
+spec:
+  service:
+    type: LoadBalancer
+  persistence:
+    storageClassName: vc01cl01-t0compute
+    storage: 1G
+  image: rabbitmq:3.13.1-management
+# Currently RabbitMQ images are downloaded from Dockerhub and may be subject to download rate limits. 
+# To overcome this, use a proxy cache or host the image on another registry.
+# In such scenarios, uncomment the next two lines, and update the registry image path accordingly.  
+#  image: my-registry/proxy-cache/library/rabbitmq:3.13.1-management

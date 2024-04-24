@@ -1,0 +1,33 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: redis-secret
+data:
+  password: Vk13YXJlMTIzIQo=
+type: Opaque
+---
+apiVersion: redis.redis.opstreelabs.in/v1beta2
+kind: Redis
+metadata:
+  name: demo1-redis-standalone
+spec:
+  kubernetesConfig:
+    image: quay.io/opstree/redis:v7.2.3
+    imagePullPolicy: IfNotPresent
+    redisSecret:
+      name: redis-secret
+      key: password
+    service:
+      serviceType: LoadBalancer
+  storage:
+    volumeClaimTemplate:
+      spec:
+        storageClassName: vc01cl01-t0compute
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 1Gi
+  podSecurityContext:
+    runAsUser: 1000
+    fsGroup: 1000
