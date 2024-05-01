@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 0 
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+      nodeSelector:
+        kubernetes.io/os: CRX
+# Currently NGINX images are downloaded from Dockerhub and may be subject to download rate limits. 
+# To overcome this, use a proxy cache or host the image on another registry.
+# In such scenarios, modify the value of image: and update the registry image path accordingly.  
+#       image: my-registry/proxy-cache/library/nginx:1.14.2
