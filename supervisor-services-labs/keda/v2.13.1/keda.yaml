@@ -1,0 +1,43 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  name: keda.fling.vsphere.vmware.com
+spec:
+  categories:
+  - Orchestration & Management
+  - Scheduling
+  displayName: keda
+  iconSVGBase64: none
+  longDescription: KEDA is a single-purpose and lightweight component that can be added into any Kubernetes cluster. KEDA works alongside standard Kubernetes components like the Horizontal Pod Autoscaler and can extend functionality without overwriting or duplication. With KEDA you can explicitly map the apps you want to use event-driven scale, with other apps continuing to function. This makes KEDA a flexible and safe option to run alongside any number of any other Kubernetes applications or frameworks.
+  maintainers:
+  - name: supervisor-services-labs.pdl@broadcom.com
+  providerName: VMware
+  shortDescription: KEDA is a Kubernetes-based Event Driven Autoscaler. With KEDA, you can drive the scaling of any container in Kubernetes based on the number of events needing to be processed.
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  name: keda.fling.vsphere.vmware.com.2.13.1
+spec:
+  refName: keda.fling.vsphere.vmware.com
+  releasedAt: "2024-04-23T19:35:52Z"
+  template:
+    spec:
+      deploy:
+      - kapp: {}
+      fetch:
+      - imgpkgBundle:
+          image: projects.registry.vmware.com/vsphere-labs/keda@sha256:933b11ed9f53c0ada5bdd9d2c95175399891004c4021d9b310c14dd22b699d7b
+      template:
+      - ytt:
+          paths:
+          - ./config
+      - kbld:
+          paths:
+          - '-'
+          - .imgpkg/images.yml
+  valuesSchema:
+    openAPIv3:
+      default: null
+      nullable: true
+  version: 2.13.1
