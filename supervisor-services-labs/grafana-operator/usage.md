@@ -1,4 +1,4 @@
-Once the Grafna Operator has been deployed successfully on the Supervisor, deploy an Grafana object within your vSphere Namespace. To do so, follow the steps below.
+Once the Grafana Operator has been successfully deployed on the Supervisor, deploy a Grafana object within your vSphere Namespace. To do so, follow the steps below.
 
 1. Download the [example](supervisor-services-labs/grafana-operator/grafana-instance.yaml) as a reference for a simple deployment.
 2. Log in to the Supervisor - `10.220.3.18` is the Supervisor IP address in this example - with a user that has owner/edit access to the vSphere Namespace - `user@vsphere.local` in this example. 
@@ -32,6 +32,29 @@ NAME                                               DESIRED   CURRENT   READY   A
 replicaset.apps/grafana-deployment-58bcb66668      1         1         1       20h
 ...
 ```
-Use the EXTERNAL-IP address / PORT 3000 of the grafana-service service to connect to the UI - `10.43.16.68:3000` in this example. The credentials to login are in the  `grafana-instance.yaml` file.
+Use the EXTERNAL-IP address / PORT 3000 of the grafana-service service to connect to the UI - `10.43.16.68:3000` in this example. The login credentials are in the  `grafana-instance.yaml` file.
 
-6. If you are deploy the Grafana on an NSX based deployment, some of the additonal custom resources may not deployed due to NSX firewall that prevents communication across vSphere Namespaces. Do bypass this restriction, use the sample K8s NetworkPolicy provided in the [example](supervisor-services-labs/grafana-operator/networkpolicy.yaml).
+6. If you are deploying Grafana on an NSX-based deployment, some of the additional custom resources may not be deployed due to the NSX firewall, which prevents communication across vSphere Namespaces. To bypass this restriction, use the sample K8s NetworkPolicy provided in the [example](supervisor-services-labs/grafana-operator/networkpolicy.yaml).
+
+```bash
+$ cat networkpolicy.yaml
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: grafana-network-policy
+spec:
+  podSelector:
+    matchLabels:
+      app: grafana
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - ipBlock:
+        cidr: "0.0.0.0/0"
+    ports:
+    - port: 3000
+
+$ kubectl apply -f networkpolicy.yaml -n demo1
+```

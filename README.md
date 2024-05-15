@@ -23,8 +23,8 @@
     - [RabbitMQ Cluster Kubernetes Operator Versions](#rabbitmq-cluster-kubernetes-operator-versions)
   - [Redis Operator](#redis-operator)
     - [Redis Operator Versions](#redis-operator-versions)
-  - [Keda](#keda)
-    - [Keda Versions](#keda-versions)
+  - [KEDA](#keda)
+    - [KEDA Versions](#keda-versions)
   - [Grafana Operator](#grafana-operator)
     - [Grafana Operator Versions](#grafana-operator-versions)
 
@@ -265,49 +265,30 @@ Redis Operator Sample `values.yaml` -
 - View an example of how to use the Redis Operator to deploy a Redis standalone instance [here](supervisor-services-labs/redis-operator/redis-instance.yaml)
 - For advanced configurations, check the [detailed reference](https://ot-redis-operator.netlify.app/docs/getting-started/).
 
-## RabbitMQ Cluster Kubernetes Operator
-
-<img src="supervisor-services-labs/rabbitmq-operator/rabbitmq-logo.svg" width="150" title="RabbitMQ Logo" id="rabbitmq">
-
-The RabbitMQ Cluster Kubernetes Operator provides a consistent and easy way to deploy RabbitMQ clusters to Kubernetes and run them, including "day two" (continuous) operations. RabbitMQ clusters deployed using the Operator can be used by applications running on or outside Kubernetes. For a detailed description of how to consume the RabbitMQ Cluster Kubernetes Operator, see the [RabbitMQ Cluster Kubernetes Operator project.](https://www.rabbitmq.com/kubernetes/operator/operator-overview)
-
-### RabbitMQ Cluster Kubernetes Operator Versions
-
-- Download latest version: [RabbitMQ Cluster Kubernetes Operator v2.8.0](supervisor-services-labs/rabbitmq-operator/v2.8.0/rabbitmq-operator.yaml)
-
-RabbitMQ Cluster Kubernetes Operator Sample `values.yaml` - 
-
-- Modify the latest [values.yaml](supervisor-services-labs/rabbitmq-operator/v2.8.0/values.yaml) by providing a new location for the RabbitMQ Cluster Kubernetes Operator image. This may be required to overcome DockerHub's rate-limiting issues. The RabbitMQ Cluster Kubernetes Operator pods and related artifacts get deployed in the `svc-rabbitmq-operator-domain-xx` namespace.
-
-#### Usage:
-
-- Check out this example on how to deploy a RabbitMQ cluster using the RabbitMQ Cluster Kubernetes Operator [here](supervisor-services-labs/rabbitmq-operator/usage.md)
-- For advanced configurations, check the [detailed reference](https://www.rabbitmq.com/kubernetes/operator/operator-overview).
-
-## Keda
+## KEDA
 
 <img src="supervisor-services-labs/keda/keda.svg" width="200" title="Keda Logo" id="keda">
 
-KEDA is a single-purpose and lightweight component that can be added into any Kubernetes cluster. KEDA works alongside standard Kubernetes components like the Horizontal Pod Autoscaler and can extend functionality without overwriting or duplication. With KEDA you can explicitly map the apps you want to use event-driven scale, with other apps continuing to function. This makes KEDA a flexible and safe option to run alongside any number of any other Kubernetes applications or frameworks. For a detailed description of how to use Keda, see the [Keda project.](https://keda.sh/)
+KEDA is a single-purpose and lightweight component that can be added into any Kubernetes cluster. KEDA works alongside standard Kubernetes components like the Horizontal Pod Autoscaler and can extend functionality without overwriting or duplication. With KEDA you can explicitly map the apps you want to use event-driven scale, with other apps continuing to function. This makes KEDA a flexible and safe option to run alongside any number of any other Kubernetes applications or frameworks. For a detailed description of how to use KEDA, see the [Keda project.](https://keda.sh/)
 
-### Keda Versions
+### KEDA Versions
 
-- Download latest version: [Keda v2.13.1](supervisor-services-labs/keda/v2.13.1/keda.yaml) Note: This version supports Kubernetes v1.27 - v1.29.
+- Download latest version: [KEDA v2.13.1](supervisor-services-labs/keda/v2.13.1/keda.yaml) Note: This version supports Kubernetes v1.27 - v1.29.
 
-Keda Sample `values.yaml` - 
+KEDA Sample `values.yaml` - 
 
-- We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-keda-domain-xxx` namespace.
+- We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-kedaxxx` namespace.
 
 #### Usage:
 
-- View an example of how to use Keda ScaledObject to scale an NGINX deployment [here](supervisor-services-labs/keda/usage.md).
+- View an example of how to use KEDA `ScaledObject` to scale an NGINX deployment [here](supervisor-services-labs/keda/usage.md).
 - For additonal examples, check the [detailed reference](https://github.com/kedacore/samples).
 
 ## Grafana Operator
 
 <img src="supervisor-services-labs/grafana-operator/Grafana.png" width="200" title="Grafana Logo" id="grafana">
 
-Grafana Operator is a Kubernetes operator built to help you manage your Grafana instances and its resources from within Kubernetes. The Operator can install and manage local Grafana instances, Dashboards and Datasources through Kubernetes Custom resources. The Grafana Operator Automatically syncs the Kubernetes Custom resources and the actual resources in the Grafana Instance. For a detailed description of how to use Grafana Operator, see the [Grafana Project.](https://grafana.com/docs/grafana-cloud/developer-resources/infrastructure-as-code/grafana-operator/)
+Grafana Operator is a Kubernetes operator built to help you manage your Grafana instances and its resources from within Kubernetes. The operator can install and manage local Grafana instances, Dashboards and Datasources through Kubernetes Custom resources. The Grafana Operator automatically syncs the Kubernetes Custom resources and the actual resources in the Grafana Instance. For a detailed description of how to use Grafana Operator, see the [Grafana Project.](https://grafana.com/docs/grafana-cloud/developer-resources/infrastructure-as-code/grafana-operator/)
 
 ### Grafana Operator Versions
 
@@ -315,7 +296,7 @@ Grafana Operator is a Kubernetes operator built to help you manage your Grafana 
 
 Grafana Operator Sample `values.yaml` - 
 
-- We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-grafana-operator-domain-xxx` namespace.
+- We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-grafana-operatorxxx` namespace.
 
 #### Usage:
 
