@@ -25,6 +25,8 @@
     - [Redis Operator Versions](#redis-operator-versions)
   - [Keda](#keda)
     - [Keda Versions](#keda-versions)
+  - [Grafana Operator](#grafana-operator)
+    - [Grafana Operator Versions](#grafana-operator-versions)
 
 
 # Supervisor Services Catalog
@@ -300,3 +302,22 @@ Keda Sample `values.yaml` -
 
 - View an example of how to use Keda ScaledObject to scale an NGINX deployment [here](supervisor-services-labs/keda/usage.md).
 - For additonal examples, check the [detailed reference](https://github.com/kedacore/samples).
+
+## Grafana Operator
+
+<img src="supervisor-services-labs/grafana-operator/Grafana.png" width="200" title="Grafana Logo" id="grafana">
+
+Grafana Operator is a Kubernetes operator built to help you manage your Grafana instances and its resources from within Kubernetes. The Operator can install and manage local Grafana instances, Dashboards and Datasources through Kubernetes Custom resources. The Grafana Operator Automatically syncs the Kubernetes Custom resources and the actual resources in the Grafana Instance. For a detailed description of how to use Grafana Operator, see the [Grafana Project.](https://grafana.com/docs/grafana-cloud/developer-resources/infrastructure-as-code/grafana-operator/)
+
+### Grafana Operator Versions
+
+- Download latest version: [Grafana Operator v5.9.0](supervisor-services-labs/grafana-operator/v5.9.0/grafana-operator.yaml).
+
+Grafana Operator Sample `values.yaml` - 
+
+- We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-grafana-operator-domain-xxx` namespace.
+
+#### Usage:
+
+- View an example of how to use Grafana Operator to create a Grafana instance [here](supervisor-services-labs/grafana-operator/usage.md).
+- For additonal examples, check the [detailed reference](https://grafana.github.io/grafana-operator/docs/examples/).
