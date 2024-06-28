@@ -72,7 +72,7 @@ Download latest version:
 
 ### OSS information
 
-[LCI OSS](https://github.com/vsphere-tmm/vsphere-with-tanzu-dev-center/tree/main/consumption-interface/ConsumptionInterface_LocalConsumptionInterface_1_0_0.zip)
+[LCI OSS](./consumption-interface/ConsumptionInterface_LocalConsumptionInterface_1_0_0.zip)
 
 [SSO OSS](https://support.broadcom.com/group/ecx/productfiles?displayGroup=VMware%20Aria%20Suite%20-%20Enterprise&release=2019&os=&servicePk=202420&language=EN&groupId=204007) Refer to the Open Source Tab
 
