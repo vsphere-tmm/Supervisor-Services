@@ -53,13 +53,17 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 
 Provides the Local Consumption Interface (LCI) for Namespaces within vSphere Client. This also includes the Single Sign On (SSO) component required by the Cloud Consumption Interface (CCI) in Aria Automation within VMware Cloud Foundation.
 
-The minimum required version for using this interface is 8.0U3.
+The minimum required version for using this interface is vSphere 8 Update 3.
 
 ### Consumption Interface Versions
 
 Installation instructions can be found [here in VMware documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html).
 
-NOTE: There are occasions where the plugin fails to load on the initial attempt. To check whether the plugin was loaded correctly, navigate to the vsphere Menu and click through to Administration -> Client Plugins. If you see a "Plug-in configuration with Reverse Proxy failed." message in the Status column for the "Namespace UI" plugin, you will need to reinstall.
+NOTE: Occasionally, the plug-in might fail to load on the initial
+attempt. To check if the plug-in has loaded correctly, click the **vSphere Client**
+menu icon, then to **Administration** -> **Client** -> **Plug-ins**.
+Check the Status column of the Namespace UI plug-in, and in case you see a "Plug-in
+configuration with Reverse Proxy failed." Message, reinstall the plug-in.
 
 Download latest version:
 - [Consumption Interface v1.0.0](https://vmwaresaas.jfrog.io/artifactory/supervisor-services/cci-supervisor-service/v1.0.0/cci-supervisor-service.yml)
