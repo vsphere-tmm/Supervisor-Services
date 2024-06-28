@@ -40,6 +40,7 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 
 | Supervisor Service | vSphere 7 | vSphere 8 |
 | :--: | :--: | :--: |
+| Consumption Interface | ❌ | ✅ |
 | vSAN Data Persistence Platform Services - MinIO, Cloudian and Dell ObjectScale| ✅ | ✅ |
 | Backup \& Recovery Service - Velero | ✅ | ✅ |
 | Certificate Management Service - cert-manager | ❌ | ✅ |
@@ -52,7 +53,9 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 
 Provides the Local Consumption Interface (LCI) for Namespaces within vSphere Client. This also includes the Single Sign On (SSO) component required by the Cloud Consumption Interface (CCI) in Aria Automation within VMware Cloud Foundation.
 
-### Consumption Interface Installation
+The minimum required version for using this interface is 8.0U3.
+
+### Consumption Interface Versions
 
 Installation instructions can be found [here in VMware documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html).
 
