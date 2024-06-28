@@ -15,8 +15,6 @@
     - [ExternalDNS Versions](#externaldns-versions)
   - [NSX Management Proxy](#nsx-management-proxy)
     - [NSX Management Proxy Versions](#nsx-management-proxy-versions)
-  - [Consumption Interface](#consumption-interface)
-    - [Consumption Interface Versions](#consumption-interface-versions)
 ---
 - [Supervisor Services Labs Catalog](#supervisor-services-labs-catalog)
   - [ArgoCD Operator](#argocd-operator)
