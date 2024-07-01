@@ -1,4 +1,6 @@
 - [Supervisor Services Catalog](#supervisor-services-catalog)
+  - [Consumption Interface](#consumption-interface)
+    - [Consumption Interface Versions](#consumption-interface-versions)
   - [vSAN Data Persistence Platform (vDPP) Services:](#vsan-data-persistence-platform-vdpp-services)
   - [Backup \& Recovery Service](#backup--recovery-service)
     - [Velero vSphere Operator CLI Versions](#velero-vsphere-operator-cli-versions)
@@ -38,6 +40,7 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 
 | Supervisor Service | vSphere 7 | vSphere 8 |
 | :--: | :--: | :--: |
+| Consumption Interface | ❌ | ✅ |
 | vSAN Data Persistence Platform Services - MinIO, Cloudian and Dell ObjectScale| ✅ | ✅ |
 | Backup \& Recovery Service - Velero | ✅ | ✅ |
 | Certificate Management Service - cert-manager | ❌ | ✅ |
@@ -45,6 +48,34 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
 | External DNS Service - ExternalDNS | ❌ | ✅ |
 *\* The embedded Harbor Registry feature is still available and supported on vSphere 7 and onwards.*
+
+## Consumption Interface
+
+Provides the Local Consumption Interface (LCI) for Namespaces within vSphere Client. This also includes the Single Sign On (SSO) component required by the Cloud Consumption Interface (CCI) in Aria Automation within VMware Cloud Foundation.
+
+The minimum required version for using this interface is vSphere 8 Update 3.
+
+### Consumption Interface Versions
+
+Installation instructions can be found [here in VMware documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html).
+
+NOTE: Occasionally, the plug-in might fail to load on the initial
+attempt. To check if the plug-in has loaded correctly, click the **vSphere Client**
+menu icon, then to **Administration** -> **Client** -> **Plug-ins**.
+Check the Status column of the Namespace UI plug-in, and in case you see a "Plug-in
+configuration with Reverse Proxy failed." Message, reinstall the plug-in.
+
+Download latest version:
+- [Consumption Interface v1.0.0](https://vmwaresaas.jfrog.io/artifactory/supervisor-services/cci-supervisor-service/v1.0.0/cci-supervisor-service.yml)
+
+- [Release notes](./consumption-interface/Release_Notes_1_0_0.md)
+
+### OSS information
+
+[LCI OSS](./consumption-interface/ConsumptionInterface_LocalConsumptionInterface_1_0_0.zip)
+
+[SSO OSS](https://support.broadcom.com/group/ecx/productfiles?displayGroup=VMware%20Aria%20Suite%20-%20Enterprise&release=2019&os=&servicePk=202420&language=EN&groupId=204007) Refer to the Open Source Tab
+
 
 ## vSAN Data Persistence Platform (vDPP) Services:
 
@@ -182,7 +213,6 @@ NSX Management Proxy Sample `values.yaml`
 
 - Download latest version: [values for v0.1.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy-data-values.yml). Make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
 
----
 ---
 # Supervisor Services Labs Catalog
 
