@@ -1,4 +1,6 @@
 - [Supervisor Services Catalog](#supervisor-services-catalog)
+  - [TKG Service](#tkg-service)
+    - [TKG Service Versions](#tkg-service-versions)
   - [Consumption Interface](#consumption-interface)
     - [Consumption Interface Versions](#consumption-interface-versions)
   - [vSAN Data Persistence Platform (vDPP) Services:](#vsan-data-persistence-platform-vdpp-services)
@@ -40,6 +42,7 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 
 | Supervisor Service | vSphere 7 | vSphere 8 |
 | :--: | :--: | :--: |
+| TKG Service | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later._|
 | Consumption Interface | ❌ | ✅ |
 | vSAN Data Persistence Platform Services - MinIO, Cloudian and Dell ObjectScale| ✅ | ✅ |
 | Backup \& Recovery Service - Velero | ✅ | ✅ |
@@ -47,7 +50,19 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | Cloud Native Registry Service - Harbor | ❌ * | ✅ |
 | Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
 | External DNS Service - ExternalDNS | ❌ | ✅ |
-*\* The embedded Harbor Registry feature is still available and supported on vSphere 7 and onwards.*
+*\* The embedded Harbor Registry and TKG Service features are still available and supported on vSphere 7 and onwards.*
+
+## TKG Service
+
+VMware Tanzu Kubernetes Grid Service (TKG Service) lets you deploy Kubernetes workload clusters on the vSphere IaaS control plane. Starting with vSphere 8.0 Update 3, Tanzu Kubernetes Grid is installed as a Supervisor Service. This architectural change decouples TKG from vSphere IaaS control plane releases and lets you upgrade the TKG Service independent of vCenter Server and Supervisor.
+
+- Service install [documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-iaas-cp-update/GUID-2005FFCD-07F4-450E-BAE5-445BE9D629AE.html)
+
+### TKG Service Versions
+- [TKG Service v3.1.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.yaml)
+  - [Release Notes](https://docs.vmware.com/en/VMware-vSphere/8/rn/vmware-tanzu-kubernetes-grid-service-release-notes/index.html#TKG%20Service%203.1)
+  - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.open_source_license.txt)
+    
 
 ## Consumption Interface
 
