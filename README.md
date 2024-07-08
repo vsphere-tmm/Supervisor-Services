@@ -50,7 +50,7 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | Cloud Native Registry Service - Harbor | ❌ * | ✅ |
 | Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
 | External DNS Service - ExternalDNS | ❌ | ✅ |
-*\* The embedded Harbor Registry and TKG Services features are still available and supported on vSphere 7 and onwards.*
+*\* The embedded Harbor Registry and TKG Service features are still available and supported on vSphere 7 and onwards.*
 
 ## TKG Service
 
@@ -60,7 +60,7 @@ VMware Tanzu Kubernetes Grid Service (TKG Service) lets you deploy Kubernetes wo
 
 ### TKG Service Versions
 - [TKG Service v3.1.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.yaml)
-  - [Release Notes](https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid-Service/3/rn/vmware-tanzu-kubernetes-grid-service-release-notes/index.html)
+  - [Release Notes](https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid-Service/3/rn/vmware-tanzu-kubernetes-grid-service-release-notes/index.html#TKG%20Service%203.1)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.open_source_license.txt)
     
 
