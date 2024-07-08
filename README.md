@@ -60,7 +60,7 @@ VMware Tanzu Kubernetes Grid Service (TKG Service) lets you deploy Kubernetes wo
 
 ### TKG Service Versions
 - [TKG Service v3.1.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.yaml)
-  - [Release Notes](https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid-Service/3/rn/vmware-tanzu-kubernetes-grid-service-release-notes/index.html#TKG%20Service%203.1)
+  - [Release Notes](https://docs.vmware.com/en/VMware-vSphere/8/rn/vmware-tanzu-kubernetes-grid-service-release-notes/index.html#TKG%20Service%203.1)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.open_source_license.txt)
     
 
