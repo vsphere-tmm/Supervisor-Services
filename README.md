@@ -99,7 +99,7 @@ vSphere with Tanzu offers the vSAN Data Persistence platform. The platform provi
 
 - Using vSAN Data Persistence Platform (vDPP) with vSphere with Tanzu [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F7223607-30A5-4B2D-9B06-A55A65FEAA11.html)
 - Enable Stateful Services in vSphere with Tanzu [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F68B264E-76A3-4A6D-A3B0-17153DDF7A18.html)
-- Avaliable vDPP Services [documentation](https://vmwaresaas.jfrog.io/ui/native/vDPP-Partner-YAML/)
+- Available vDPP Services [download](https://vmwaresaas.jfrog.io/ui/native/vDPP-Partner-YAML/)
 
 Partner Documentation Links:
 
