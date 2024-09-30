@@ -17,6 +17,8 @@
     - [ExternalDNS Versions](#externaldns-versions)
   - [NSX Management Proxy](#nsx-management-proxy)
     - [NSX Management Proxy Versions](#nsx-management-proxy-versions)
+  - [DSM Consumption Operator](#dsm-consumption-operator)
+    - [DSM Consumption Operator Versions](#dsm-consumption-operator-versions)
 ---
 - [Supervisor Services Labs Catalog](#supervisor-services-labs-catalog)
   - [ArgoCD Operator](#argocd-operator)
@@ -50,6 +52,7 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | Cloud Native Registry Service - Harbor | ❌ * | ✅ |
 | Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
 | External DNS Service - ExternalDNS | ❌ | ✅ |
+| DSM Consumption Operator | ❌ | ✅ |
 *\* The embedded Harbor Registry and TKG Service features are still available and supported on vSphere 7 and onwards.*
 
 ## TKG Service
@@ -236,16 +239,38 @@ NSX Management Proxy Sample `values.yaml`
 
 - Download latest version: [values for v0.1.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy-data-values.yml). Make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
 
+## DSM Consumption Operator
+
+The DSM Consumption Operator facilitates native, self-service access to DSM within a Kubernetes environment. It exposes a selection of resources supported by the DSM provider, allowing customers to connect to the DSM provider from Kubernetes. Although the DSM provider does not currently support tenancy natively, the DSM Consumption Operator enables customers to seamlessly integrate their existing tenancy model, effectively introducing tenancy into the DSM provider.
+
+- The DSM provider is a prerequisite for DSM consumption operator, so that must be installed first.
+- Installation instructions can be found [here in VMware documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-A0A5F6D4-87A4-46CA-A50A-33664F43F299.html)
+- Configuration instructions can be found [here in VMware documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html).
+
+### DSM Consumption Operator Versions
+
+- Download latest version: [DSM Consumption Operator v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/package.yaml)
+- Download version: [DSM Consumption Operator v1.1.2](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.2/package.yaml)
+- Download version: [DSM Consumption Operator v1.1.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.1/package.yaml)
+- Download version: [DSM Consumption Operator v1.1.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.0/package.yaml)
+
+DSM Consumption Operator Sample values. yaml
+
+- Download latest version: [values for v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#dsm-consumption-operator-1.2.0-configuration).
+- Download version: [values for v1.1.2](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.2/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#dsm-consumption-operator-1.1.X-configuration).
+- Download version: [values for v1.1.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.1/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#dsm-consumption-operator-1.1.X-configuration).
+- Download version: [values for v1.1.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#dsm-consumption-operator-1.1.X-configuration).
+
 ---
 # Supervisor Services Labs Catalog
 
-## *Experimental* 
+## *Experimental*
 
-The following Supervisor Services Labs catalog is only provided for testing and educational purposes. Please do not use these services in a production environment. These services are intended to demonstrate Supervisor Services' capabilities and usability. VMware will strive to provide regular updates to these services. The Labs services have been tested starting from vSphere 8.0. Over time, depending on usage and customer needs, some of these services may be included in the core product. 
+The following Supervisor Services Labs catalog is only provided for testing and educational purposes. Please do not use these services in a production environment. These services are intended to demonstrate Supervisor Services' capabilities and usability. VMware will strive to provide regular updates to these services. The Labs services have been tested starting from vSphere 8.0. Over time, depending on usage and customer needs, some of these services may be included in the core product.
 
 **WARNING** - By downloading and using these solutions from the Supervisor Services Labs catalog, you explicitly agree to the conditional use **[license agreement](supervisor-services-labs/licence-agreement.md)**.
 
-## ArgoCD Operator 
+## ArgoCD Operator
 
 <img src="supervisor-services-labs/argocd-operator/argocd.png" width="200" title="ArgoCD Logo" id="argocd">
 
@@ -256,10 +281,10 @@ The Argo CD Operator manages the entire lifecycle of Argo CD and its components.
 - Download the latest version: [ArgoCD Operator v0.12.0](supervisor-services-labs/argocd-operator/v0.12.0/argocd-operator.yaml)
 - Download previous v0.8.0:    [ArgoCD Operator v0.8.0](supervisor-services-labs/argocd-operator/v0.8.0/argocd-operator.yaml)
 
-ArgoCD Operator Sample `values.yaml` for v0.12.0 - [values.yaml](supervisor-services-labs/argocd-operator/v0.12.0/values.yaml)  
+ArgoCD Operator Sample `values.yaml` for v0.12.0 - [values.yaml](supervisor-services-labs/argocd-operator/v0.12.0/values.yaml)
 ArgoCD Operator Sample `values.yaml` for v0.8.0  - None
 
-- The sample `values.yaml` for the latest version has been provided above. This operator requires minimal configurations, and the necessary pods get deployed in the  `svc-argocd-operator-domain-xxx` namespace. 
+- The sample `values.yaml` for the latest version has been provided above. This operator requires minimal configurations, and the necessary pods get deployed in the  `svc-argocd-operator-domain-xxx` namespace.
 
 #### Usage:
 
@@ -280,7 +305,7 @@ External Secrets Operator Sample `values.yaml` - None
 
 - We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-external-secrets-operator-domain-xxx` namespace.
 
-#### Usage: 
+#### Usage:
 
 - Check out this example on how to access a secret from **GCP Secret Manager** using External Secrets Operator [here](supervisor-services-labs/external-secrets-operator/usage.md)
 
@@ -294,7 +319,7 @@ The RabbitMQ Cluster Kubernetes Operator provides a consistent and easy way to d
 
 - Download latest version: [RabbitMQ Cluster Kubernetes Operator v2.8.0](supervisor-services-labs/rabbitmq-operator/v2.8.0/rabbitmq-operator.yaml)
 
-RabbitMQ Cluster Kubernetes Operator Sample `values.yaml` - 
+RabbitMQ Cluster Kubernetes Operator Sample `values.yaml` -
 
 - Modify the latest [values.yaml](supervisor-services-labs/rabbitmq-operator/v2.8.0/values.yaml) by providing a new location for the RabbitMQ Cluster Kubernetes Operator image. This may be required to overcome DockerHub's rate-limiting issues. The RabbitMQ Cluster Kubernetes Operator pods and related artifacts get deployed in the `svc-rabbitmq-operator-domain-xx` namespace.
 
@@ -313,7 +338,7 @@ A Golang-based Redis operator that oversees Redis standalone/cluster/replication
 
 - Download latest version: [Redis Operator v0.16.0](supervisor-services-labs/redis-operator/v0.16.0/redis-operator.yaml)
 
-Redis Operator Sample `values.yaml` - 
+Redis Operator Sample `values.yaml` -
 
 - We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-redis-operator-domain-xxx` namespace.
 
@@ -332,7 +357,7 @@ KEDA is a single-purpose and lightweight component that can be added into any Ku
 
 - Download latest version: [KEDA v2.13.1](supervisor-services-labs/keda/v2.13.1/keda.yaml) Note: This version supports Kubernetes v1.27 - v1.29.
 
-KEDA Sample `values.yaml` - 
+KEDA Sample `values.yaml` -
 
 - We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-kedaxxx` namespace.
 
@@ -351,7 +376,7 @@ Grafana Operator is a Kubernetes operator built to help you manage your Grafana 
 
 - Download latest version: [Grafana Operator v5.9.0](supervisor-services-labs/grafana-operator/v5.9.0/grafana-operator.yaml).
 
-Grafana Operator Sample `values.yaml` - 
+Grafana Operator Sample `values.yaml` -
 
 - We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-grafana-operatorxxx` namespace.
 
