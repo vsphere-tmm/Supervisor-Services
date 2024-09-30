@@ -249,15 +249,13 @@ The DSM Consumption Operator facilitates native, self-service access to DSM with
 
 ### DSM Consumption Operator Versions
 
-- Download latest version: [DSM Consumption Operator v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/package.yaml)
-- Download version: [DSM Consumption Operator v1.1.2](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.2/package.yaml)
+- Download latest version: [DSM Consumption Operator v1.1.2](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.2/package.yaml)
 - Download version: [DSM Consumption Operator v1.1.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.1/package.yaml)
 - Download version: [DSM Consumption Operator v1.1.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.0/package.yaml)
 
 DSM Consumption Operator Sample values. yaml
 
-- Download latest version: [values for v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#dsm-consumption-operator-1.2.0-configuration).
-- Download version: [values for v1.1.2](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.2/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#dsm-consumption-operator-1.1.X-configuration).
+- Download latest version: [values for v1.1.2](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.2/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#dsm-consumption-operator-1.1.X-configuration).
 - Download version: [values for v1.1.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.1/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#dsm-consumption-operator-1.1.X-configuration).
 - Download version: [values for v1.1.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#dsm-consumption-operator-1.1.X-configuration).
 
