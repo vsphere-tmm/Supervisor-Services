@@ -34,7 +34,7 @@ spec:
       - kapp: {}
       fetch:
       - imgpkgBundle:
-          image: projects.registry.vmware.com/vsphere-labs/argocd-operator@sha256:850cc1f1253f2f898c61d8305b6004373c2f9422faaf562afb26456b790a3155
+          image: projects.packages.broadcom.com/vsphere-labs/argocd-operator@sha256:850cc1f1253f2f898c61d8305b6004373c2f9422faaf562afb26456b790a3155
       template:
       - ytt:
           paths:
