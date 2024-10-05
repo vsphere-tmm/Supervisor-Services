@@ -1,6 +1,6 @@
 Once the Grafana Operator has been successfully deployed on the Supervisor, deploy a Grafana object within your vSphere Namespace. To do so, follow the steps below.
 
-1. Download the [example](supervisor-services-labs/grafana-operator/grafana-instance.yaml) as a reference for a simple deployment.
+1. Download the [example](grafana-instance.yaml) as a reference for a simple deployment.
 2. Log in to the Supervisor - `10.220.3.18` is the Supervisor IP address in this example - with a user that has owner/edit access to the vSphere Namespace - `user@vsphere.local` in this example. 
 ```bash
 $ kubectl vsphere login --server 10.220.3.18 -u user@vsphere.local

@@ -249,11 +249,13 @@ The Argo CD Operator manages the entire lifecycle of Argo CD and its components.
 
 ### ArgoCD Operator Versions
 
-- Download the latest version: [ArgoCD Operator v0.8.0](supervisor-services-labs/argocd-operator/v0.8.0/argocd-operator.yaml)
+- Download the latest version: [ArgoCD Operator v0.12.0](supervisor-services-labs/argocd-operator/v0.12.0/argocd-operator.yaml)
+- Download previous v0.8.0:    [ArgoCD Operator v0.8.0](supervisor-services-labs/argocd-operator/v0.8.0/argocd-operator.yaml)
 
-ArgoCD Operator Sample `values.yaml` - None
+ArgoCD Operator Sample `values.yaml` for v0.12.0 - [values.yaml](supervisor-services-labs/argocd-operator/v0.12.0/values.yaml)  
+ArgoCD Operator Sample `values.yaml` for v0.8.0  - None
 
-- We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the  `svc-argocd-operator-domain-xxx` namespace. 
+- The sample `values.yaml` for the latest version has been provided above. This operator requires minimal configurations, and the necessary pods get deployed in the  `svc-argocd-operator-domain-xxx` namespace. 
 
 #### Usage:
 

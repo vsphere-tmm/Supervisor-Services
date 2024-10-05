@@ -1,0 +1,2 @@
+# To reference the argocd-operator:tag hosted on an alternate/registry, modify the value of the image field.
+image: quay.io/argoprojlabs/argocd-operator:v0.12.0

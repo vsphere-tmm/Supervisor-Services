@@ -1,6 +1,6 @@
 Once the RabbitMQ Cluster Kubernetes Operator has been deployed successfully on the Supervisor, deploy a RabbitMQ Cluster object within your vSphere Namespace. To do so, follow the steps below.
 
-1. Download the [example](supervisor-services-labs/rabbitmq-operator/rabbitmq-instance.yaml) as a reference for a simple deployment. You will need to modify the value of the `storageClassName` object as per your environment. 
+1. Download the [example](rabbitmq-instance.yaml) as a reference for a simple deployment. You will need to modify the value of the `storageClassName` object as per your environment. 
 2. Log in to the Supervisor - `10.220.3.18` is the Supervisor IP address in this example - with a user that has owner/edit access to the vSphere Namespace - `user@vsphere.local` in this example. 
 ```bash
 $ kubectl vsphere login --server 10.220.3.18 -u user@vsphere.local

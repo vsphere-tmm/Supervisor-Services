@@ -1,0 +1,50 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  name: argocd-operator.fling.vsphere.vmware.com
+spec:
+  categories:
+  - CI/CD
+  - GitOps
+  displayName: argocd-operator
+  iconSVGBase64: none
+  longDescription: The Argo CD Operator manages the full lifecycle for Argo CD and
+    its components. The operator's goal is to automate the tasks required when operating
+    an Argo CD cluster. Beyond installation, the operator helps to automate the process
+    of upgrading, backing up and restoring as needed and remove the human as much
+    as possible. In addition, the operator aims to provide deep insights into the
+    Argo CD environment by configuring Prometheus and Grafana to aggregate, visualize
+    and expose the metrics already exported by Argo CD.
+  maintainers:
+  - name: supervisor-services-labs.pdl@broadcom.com
+  providerName: VMware
+  shortDescription: The Argo CD Operator manages the full lifecycle for Argo CD and
+    its components.
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  name: argocd-operator.fling.vsphere.vmware.com.0.12.0
+spec:
+  refName: argocd-operator.fling.vsphere.vmware.com
+  releasedAt: "2024-10-01T01:51:26Z"
+  template:
+    spec:
+      deploy:
+      - kapp: {}
+      fetch:
+      - imgpkgBundle:
+          image: projects.packages.broadcom.com/vsphere-labs/argocd-operator@sha256:850cc1f1253f2f898c61d8305b6004373c2f9422faaf562afb26456b790a3155
+      template:
+      - ytt:
+          paths:
+          - ./config
+      - kbld:
+          paths:
+          - '-'
+          - .imgpkg/images.yml
+  valuesSchema:
+    openAPIv3:
+      default: null
+      nullable: true
+  version: 0.12.0

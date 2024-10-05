@@ -1,6 +1,6 @@
 Once Keda has been deployed successfully on the Supervisor, deploy NGINX within your vSphere Namespace. To do so, follow the steps below.
 
-1. Download the [NGINX example](supervisor-services-labs/keda/nginx-deployment.yaml) as a reference for a simple deployment.
+1. Download the [NGINX example](nginx-deployment.yaml) as a reference for a simple deployment.
 
 2. Log in to the Supervisor - `10.220.3.18` is the Supervisor IP address in this example - with a user with owner/edit access to the vSphere Namespace - `user@vsphere.local` in this example. 
 ```bash
@@ -25,7 +25,7 @@ NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 nginx-deployment    0/0    0            0           43m
 ```
 
-6. Download the [scaledobject example](supervisor-services-labs/keda/scaledobject-instance.yaml) as a reference yaml for scaling the NGINX deployment based on a trigger type `cron`. The example will scale the `nginx-deployment` to 10 replicas from **6AM to 8PM EST**. Modify the values in the YAML accordingly.  
+6. Download the [scaledobject example](scaledobject-instance.yaml) as a reference yaml for scaling the NGINX deployment based on a trigger type `cron`. The example will scale the `nginx-deployment` to 10 replicas from **6AM to 8PM EST**. Modify the values in the YAML accordingly.  
 
 7. Use kubectl to deploy the file -`scaledobject-instance.yaml` in this example - downloaded in Step 6. 
 ```bash
