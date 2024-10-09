@@ -52,7 +52,7 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | Cloud Native Registry Service - Harbor | ❌ * | ✅ |
 | Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
 | External DNS Service - ExternalDNS | ❌ | ✅ |
-| Data Services Manager Consumption Operator | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later with additional configuration. Please contact Global Support Services (GSS) for the additional configuration |
+| Data Services Manager Consumption Operator | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later with additional configuration.<br> Please contact Global Support Services (GSS) for the additional configuration_ |
 *\* The embedded Harbor Registry and TKG Service features are still available and supported on vSphere 7 and onwards.*
 
 ## TKG Service
