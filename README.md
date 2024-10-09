@@ -255,6 +255,14 @@ DSM Consumption Operator Sample values. yaml
 
 - Download latest version: [values for v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#dsm-consumption-operator-1.2.0-configuration).
 
+**Installation Note:** DSM Consumption Operator v1.2.0
+When installing DSM Consumption Operator v1.2.0 as a Supervisor Service, if you encounter any issues related to the Service-id, please contact Global Support Services (GSS) for immediate assistance.
+
+**Upgrade Note:** DSM Consumption Operator v1.2.0
+Earlier versions of the DSM Consumption Operator, including v1.1.0, v1.1.1, and v1.1.2, are deprecated and should not be used for new Supervisor Service installation.
+If you are upgrading from these older versions to v1.2.0, do not uninstall the existing version. Instead, we highly recommend contacting GSS for guidance and support. This will ensure a smooth upgrade process and prevent potential disruptions.
+For additional help, please refer to the support documentation or reach out to our technical support team.
+
 ---
 # Supervisor Services Labs Catalog
 
