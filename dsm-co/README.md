@@ -1,6 +1,6 @@
-# DSM Consumption Operator 1.2.0 Configuration
+# Data Services Manager Consumption Operator 1.2.0 Configuration
 
-Below is table that highlights the required fields for the DSM Consumption Operator data values file.
+Below is table that highlights the required fields for the Data Services Manager(DSM) Consumption Operator data values file.
 
 | Property                                     | Value                                                                                                                      | Description                                                                                                                                                                                                                                                 |
 | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

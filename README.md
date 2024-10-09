@@ -17,8 +17,8 @@
     - [ExternalDNS Versions](#externaldns-versions)
   - [NSX Management Proxy](#nsx-management-proxy)
     - [NSX Management Proxy Versions](#nsx-management-proxy-versions)
-  - [DSM Consumption Operator](#dsm-consumption-operator)
-    - [DSM Consumption Operator Versions](#dsm-consumption-operator-versions)
+  - [Data Services Manager Consumption Operator](#data-services-manager-consumption-operator)
+    - [Data Services Manager Consumption Operator Versions](#data-services-manager-consumption-operator-versions)
 ---
 - [Supervisor Services Labs Catalog](#supervisor-services-labs-catalog)
   - [ArgoCD Operator](#argocd-operator)
@@ -52,7 +52,7 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | Cloud Native Registry Service - Harbor | ❌ * | ✅ |
 | Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
 | External DNS Service - ExternalDNS | ❌ | ✅ |
-| DSM Consumption Operator | ❌ | ✅ |
+| Data Services Manager Consumption Operator | ❌ | ✅ |
 *\* The embedded Harbor Registry and TKG Service features are still available and supported on vSphere 7 and onwards.*
 
 ## TKG Service
@@ -239,21 +239,21 @@ NSX Management Proxy Sample `values.yaml`
 
 - Download latest version: [values for v0.1.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy-data-values.yml). Make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
 
-## DSM Consumption Operator
+## Data Services Manager Consumption Operator
 
-The DSM Consumption Operator facilitates native, self-service access to DSM within a Kubernetes environment. It exposes a selection of resources supported by the DSM provider, allowing customers to connect to the DSM provider from Kubernetes. Although the DSM provider does not currently support tenancy natively, the DSM Consumption Operator enables customers to seamlessly integrate their existing tenancy model, effectively introducing tenancy into the DSM provider.
+The Data Services Manager(DSM) Consumption Operator facilitates native, self-service access to DSM within a Kubernetes environment. It exposes a selection of resources supported by the DSM provider, allowing customers to connect to the DSM provider from Kubernetes. Although the DSM provider does not currently support tenancy natively, the DSM Consumption Operator enables customers to seamlessly integrate their existing tenancy model, effectively introducing tenancy into the DSM provider.
 
 - The DSM provider is a prerequisite for DSM consumption operator, so that must be installed first.
 - Installation instructions can be found [here in VMware documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-A0A5F6D4-87A4-46CA-A50A-33664F43F299.html)
 - Configuration instructions can be found [here in VMware documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html).
 
-### DSM Consumption Operator Versions
+### Data Services Manager Consumption Operator Versions
 
 - Download latest version: [DSM Consumption Operator v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/package.yaml)
 
 DSM Consumption Operator Sample values. yaml
 
-- Download latest version: [values for v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#dsm-consumption-operator-1.2.0-configuration).
+- Download latest version: [values for v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README.md#data-services-manager-consumption-operator-1.2.0-configuration).
 
 **Installation Note:** DSM Consumption Operator v1.2.0<br>
 When installing DSM Consumption Operator v1.2.0 as a Supervisor Service, if you encounter any issues related to the Service-id, please contact Global Support Services (GSS) for immediate assistance.
