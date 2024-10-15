@@ -106,18 +106,19 @@ vSphere with Tanzu offers the vSAN Data Persistence platform. The platform provi
 
 - Using vSAN Data Persistence Platform (vDPP) with vSphere with Tanzu [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F7223607-30A5-4B2D-9B06-A55A65FEAA11.html)
 - Enable Stateful Services in vSphere with Tanzu [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F68B264E-76A3-4A6D-A3B0-17153DDF7A18.html)
-- Available vDPP Services 
-  - Couldian [1.2.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/1.2.0/hyperstore-supervisorservice-1.2.0.yaml)
-  - Couldian [1.2.1](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/1.2.1/hyperstore-supervisorservice-1.2.1.yaml)
-  - Couldian [1.3.1](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/Cloudian/Hyperstore/SupervisorService/1.3.1/hyperstore-supervisorservice-1.3.1.yaml)
-  - Minio [2.0.0](https://vmwaresaas.jfrog.io/artifactory/vDPP-Partner-YAML/MinIO/MinIO/SupervisorService/2.0.0/minio-supervisorservice-2.0.0.yaml)
-  - Minio [2.0.10](https://projects.packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/minio/minio-service-definition-v2.0.10-3.yaml)
 
-Partner Documentation Links:
+
+Available vDPP Services 
 
 - MinIO partner [documentation](https://docs.min.io/minio/vsphere/core-concepts/core-concepts.html)
+  - Download version: [Minio 2.0.10](https://projects.packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/minio/minio-service-definition-v2.0.10-3.yaml)
+  - Download version: [Minio 2.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=MinIO%252FMinIO%252FSupervisorService%252F2.0.0%252Fminio-supervisorservice-2.0.0.yaml)
 - Cloudian partner [documentation](https://cloudian.com/vmware/)
+  - Download version: [Cloudian 1.3.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.3.1%252Fhyperstore-supervisorservice-1.3.1.yaml)
+  - Download version: [Cloudian 1.2.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.2.1%252Fhyperstore-supervisorservice-1.2.1.yaml)
+  - Download version: [Cloudian 1.2.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.2.0%252Fhyperstore-supervisorservice-1.2.0.yaml)
 - Dell ObjectScale partner [documentation](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/docs/vmware-dell-objectscale.pdf)
+
 
 ## Backup & Recovery Service
 
