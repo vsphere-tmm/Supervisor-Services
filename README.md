@@ -117,7 +117,6 @@ Available vDPP Services
   - Download version: [Cloudian 1.3.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.3.1%252Fhyperstore-supervisorservice-1.3.1.yaml)
   - Download version: [Cloudian 1.2.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.2.1%252Fhyperstore-supervisorservice-1.2.1.yaml)
   - Download version: [Cloudian 1.2.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.2.0%252Fhyperstore-supervisorservice-1.2.0.yaml)
-- Dell ObjectScale partner [documentation](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/docs/vmware-dell-objectscale.pdf)
 
 
 ## Backup & Recovery Service
