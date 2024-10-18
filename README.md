@@ -44,8 +44,8 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 
 | Supervisor Service | vSphere 7 | vSphere 8 |
 | :--: | :--: | :--: |
-| TKG Service | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later._|
-| Consumption Interface | ❌ | ✅ |
+| TKG Service | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
+| Consumption Interface | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
 | vSAN Data Persistence Platform Services - MinIO, Cloudian and Dell ObjectScale| ✅ | ✅ |
 | Backup \& Recovery Service - Velero | ✅ | ✅ |
 | Certificate Management Service - cert-manager | ❌ | ✅ |
@@ -82,16 +82,16 @@ The minimum required version for using this interface is vSphere 8 Update 3.
 
 Installation instructions can be found [here in VMware documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html).
 
-NOTE: Occasionally, the plug-in might fail to load on the initial
+**IMPORTANT NOTICE**: Occasionally, the plug-in may fail to load on the initial
 attempt. To check if the plug-in has loaded correctly, click the **vSphere Client**
 menu icon, then to **Administration** -> **Client** -> **Plug-ins**.
 Check the Status column of the Namespace UI plug-in, and in case you see a "Plug-in
 configuration with Reverse Proxy failed." Message, reinstall the plug-in.
 
 Download latest version:
-- [Consumption Interface v1.0.0](https://vmwaresaas.jfrog.io/artifactory/supervisor-services/cci-supervisor-service/v1.0.0/cci-supervisor-service.yml)
+- [Consumption Interface v1.0.1](https://vmwaresaas.jfrog.io/artifactory/supervisor-services/cci-supervisor-service/v1.0.1/cci-supervisor-service.yml)
 
-- [Release notes](./consumption-interface/Release_Notes_1_0_0.md)
+- [Release notes](./consumption-interface/Release_Notes_1_0_1.md)
 
 ### OSS information
 
