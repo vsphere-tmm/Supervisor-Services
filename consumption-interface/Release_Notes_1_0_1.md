@@ -4,8 +4,7 @@ LCI : Local Consumption Interface
 
 What's New
 
-- Minimal support for Kubernetes Service 3.2 is included. This version of the Consumption Interface is compatible with Kubernetes Service 3.2 but does not yet support all operations or features included with Kubernetes Service 3.2. In particular, there is no support for windows or the Cluster Class 3.2 version of the API. Clusters created using the Cluster Class 3.1 version of the API will be successful but day 2 operations need to be handled through the use of kubectl.
-Also - because we have auto-rebase to higher version, certain variables which were supported in Cluster Class 3.1 will not be visible in the Cluster Class 3.2
+- Minimal support for Kubernetes Service 3.2 is included. This version of the Consumption Interface is compatible with Kubernetes Service 3.2 but does not yet support all operations or features included with Kubernetes Service 3.2. In particular, there is no support for windows and lifecycle management of clusters using ClusterClass `builtin-generic-v3.2.0`. Day2 operations for Clusters using the `builtin-generic-v3.1.0` ClusterClass will not be possible and would need to be handled through the use of kubectl. 
 
 Known Issues
 
