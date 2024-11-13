@@ -1,6 +1,7 @@
 apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: PackageMetadata
 metadata:
+  creationTimestamp: null
   name: grafana-operator.fling.vsphere.vmware.com
 spec:
   categories:
@@ -8,7 +9,7 @@ spec:
   - Observability
   displayName: grafana-operator
   iconSVGBase64: none
-  longDescription: The Grafana Operator is a Kubernetes operator built to help you manage your Grafana instances and its resources in and outside of Kubernetes. Whether you’re running one Grafana instance or many, the Grafana Operator simplifies the processes of installing, configuring, and maintaining Grafana and its resources. Additionally, it's perfect for those who prefer to manage resources using infrastructure as code or using GitOps workflows through tools like ArgoCD and Flux CD.
+  longDescription: The Grafana Operator is a Kubernetes operator built to help you manage your Grafana instances and its resources in and outside of Kubernetes. Whether you’re running one Grafana instance or many, the Grafana Operator simplifies the processes of installing, configuring, and maintaining Grafana and its resources. Additionally, it's perfect for those who prefer to manage resources using infrastructure as code or using GitOps workflows through tools like ArgoCD and Flux CD. 
   maintainers:
   - name: supervisor-services-labs.pdl@broadcom.com
   providerName: VMware
@@ -17,17 +18,18 @@ spec:
 apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: Package
 metadata:
-  name: grafana-operator.fling.vsphere.vmware.com.5.9.0
+  creationTimestamp: null
+  name: grafana-operator.fling.vsphere.vmware.com.5.15.0
 spec:
   refName: grafana-operator.fling.vsphere.vmware.com
-  releasedAt: "2024-05-13T23:41:36Z"
+  releasedAt: "2024-11-06T21:00:17Z"
   template:
     spec:
       deploy:
       - kapp: {}
       fetch:
       - imgpkgBundle:
-          image: projects.registry.vmware.com/vsphere-labs/grafana-operator@sha256:a74b04131c238e08ad4330bc04ac6d82ac00b38f90da48119fc2d95b5458f413
+          image: projects.packages.broadcom.com/vsphere-labs/grafana-operator@sha256:b3d21e4adf129add6d20d72f7ba51a3e0fc1b69feb6c3fc30a18f314811a01e8
       template:
       - ytt:
           paths:
@@ -40,4 +42,4 @@ spec:
     openAPIv3:
       default: null
       nullable: true
-  version: 5.9.0
+  version: 5.15.0

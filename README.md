@@ -382,11 +382,11 @@ Grafana Operator is a Kubernetes operator built to help you manage your Grafana 
 
 ### Grafana Operator Versions
 
-- Download latest version: [Grafana Operator v5.9.0](supervisor-services-labs/grafana-operator/v5.9.0/grafana-operator.yaml).
+- Download latest version: [Grafana Operator v5.15.0](supervisor-services-labs/grafana-operator/v5.15.0/grafana-operator.yaml).
 
-Grafana Operator Sample `values.yaml` -
+Grafana Operator Sample `values.yaml` for v5.15.0 - [values.yaml](supervisor-services-labs/grafana-operator/v5.15.0/values.yaml)
 
-- We do not provide this package's default `values.yaml`. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-grafana-operatorxxx` namespace.
+- The sample `values.yaml` for the latest version has been provided above. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-grafana-operator-xxx` namespace.
 
 #### Usage:
 
