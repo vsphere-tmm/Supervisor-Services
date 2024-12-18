@@ -89,9 +89,9 @@ Check the Status column of the Namespace UI plug-in, and in case you see a "Plug
 configuration with Reverse Proxy failed." Message, reinstall the plug-in.
 
 Download latest version:
-- [Consumption Interface v1.0.1](https://vmwaresaas.jfrog.io/artifactory/supervisor-services/cci-supervisor-service/v1.0.1/cci-supervisor-service.yml)
+- [Consumption Interface v1.0.2](https://vmwaresaas.jfrog.io/artifactory/supervisor-services/cci-supervisor-service/v1.0.2/cci-supervisor-service.yml)
 
-- [Release notes](./consumption-interface/Release_Notes_1_0_1.md)
+- [Release notes](./consumption-interface/Release_Notes_1_0_2.md)
 
 ### OSS information
 
