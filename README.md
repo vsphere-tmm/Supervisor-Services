@@ -46,7 +46,7 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | :--: | :--: | :--: |
 | TKG Service | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
 | Consumption Interface | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
-| vSAN Data Persistence Platform Services - MinIO, Cloudian and Dell ObjectScale| ✅ | ✅ |
+| vSAN Data Persistence Platform Services - MinIO | ✅ | ✅ |
 | Backup \& Recovery Service - Velero | ✅ | ✅ |
 | Certificate Management Service - cert-manager | ❌ | ✅ |
 | Cloud Native Registry Service - Harbor | ❌ * | ✅ |
@@ -112,11 +112,6 @@ Available vDPP Services
 
 - MinIO partner [documentation](https://docs.min.io/minio/vsphere/core-concepts/core-concepts.html)
   - Download version: [Minio 2.0.10](https://projects.packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/minio/minio-service-definition-v2.0.10-3.yaml)
-  - Download version: [Minio 2.0.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=MinIO%252FMinIO%252FSupervisorService%252F2.0.0%252Fminio-supervisorservice-2.0.0.yaml)
-- Cloudian partner [documentation](https://cloudian.com/vmware/)
-  - Download version: [Cloudian 1.3.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.3.1%252Fhyperstore-supervisorservice-1.3.1.yaml)
-  - Download version: [Cloudian 1.2.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.2.1%252Fhyperstore-supervisorservice-1.2.1.yaml)
-  - Download version: [Cloudian 1.2.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=vDPP-Partner-YAML&path=Cloudian%252FHyperstore%252FSupervisorService%252F1.2.0%252Fhyperstore-supervisorservice-1.2.0.yaml)
 
 
 ## Backup & Recovery Service
