@@ -168,21 +168,20 @@ CA Cluster Issuer Sample `values.yaml`
 
 Harbor is an open source trusted cloud native registry project that stores, signs, and scans content. Harbor extends the open source Docker Distribution by adding the functionalities usually required by users such as security, identity and management. Having a registry closer to the build and run environment can improve the image transfer efficiency. Harbor supports replication of images between registries, and also offers advanced security features such as user management, access control and activity auditing.
 
-- The [contour package](#contour) is a prerequisite for Harbor, so that must be installed
-  first.
+- The [contour package](#contour) is a prerequisite for Harbor v2.9.x, so that must be installed
+  first if you are using v2.9.x.
+- Harbor v2.11.2 supports exposing the registry using loadbalancer, and contour is not required.
 - Follow the instructions under [Installing and Configuring Harbor on a Supervisor](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-8C645717-C473-4E67-8DEE-049B71447B86.html).
 
 ### Harbor Versions
 
-- Download latest version: [Harbor v2.9.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.9.1/harbor.yml)
-- Download version: [Harbor v2.8.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.8.2/harbor.yml)
-- Download version: [Harbor v2.5.3](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.5.3/harbor.yml)
+- Download latest versoin: [Harbor v2.11.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/harbor/harbor-service-v2.11.2.yml)
+- Download version: [Harbor v2.9.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.9.1/harbor.yml)
 
 Harbor Sample `values.yaml`
 
-- Download latest version: [values for v2.9.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.9.1/harbor-data-values.yml). For details about each of the required properties, [see the configuration details page](harbor/README.md).
-- Download version: [values for v2.8.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.8.2/harbor-data-values.yml). For details about each of the required properties, [see the configuration details page](https://github.com/vsphere-tmm/Supervisor-Services/blob/0418bdfa19f7de6404f81d13b724e7e841abff53/harbor/README.md).
-- Download version: [values for v2.5.3](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.5.3/harbor-data-values.yml). For details about each of the required properties, [see the configuration details page](https://github.com/vsphere-tmm/Supervisor-Services/blob/33a424992a03eff5c13fea45807f2b578e3b65d4/harbor/README.md).
+- Download version: [values for v2.11.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/harbor/harbor-data-values-v2.11.2.yml) For details about each of the required properties, [see the configuration details page](harbor/README-v2.11.2.md).
+- Download version: [values for v2.9.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.9.1/harbor-data-values.yml). For details about each of the required properties, [see the configuration details page](harbor/README.md).
 
 ## Kubernetes Ingress Controller Service
 
