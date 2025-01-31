@@ -52,6 +52,7 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | Cloud Native Registry Service - Harbor | ❌ * | ✅ |
 | Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
 | External DNS Service - ExternalDNS | ❌ | ✅ |
+| NSX Management Proxy | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with Supervisor Clusters enabled using VMware NSX-T_  |
 | Data Services Manager Consumption Operator | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with additional configuration.<br> Please contact Global Support Services (GSS) for the additional configuration_ |
 *\* The embedded Harbor Registry and TKG Service features are still available and supported on vSphere 7 and onwards.*
 
@@ -232,14 +233,18 @@ deployment:
 NSX Management Proxy is for Antrea-NSX adapter in TKG workload cluster to reach NSX manager. We recommend to use NSX Management Proxy when there is isolation between management network and workload network and the workloads running in TKG workload clusters cannot reach NSX manager.
 
 ### NSX Management Proxy Versions
-
-- Download latest version: [nsx-management-proxy v0.2.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.2.1/nsx-management-proxy.yml)
-- Download version: [nsx-management-proxy v0.2.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.2.0/nsx-management-proxy.yml)
-- Download version: [nsx-management-proxy v0.1.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy.yml)
+- For vSphere 8.0 Update 3
+  - Download latest version: [nsx-management-proxy v0.2.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.2.1/nsx-management-proxy.yml)
+  - Download version: [nsx-management-proxy v0.2.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.2.0/nsx-management-proxy.yml)
+  - Download version: [nsx-management-proxy v0.1.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy.yml)
 
 NSX Management Proxy Sample `values.yaml`
 
 - Download [values for all versions](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy-data-values.yml). Make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
+
+**Note:** NSX Management Proxy is supported in vSphere 8.0 Update 3 when Supervisor Clusters are enabled using VMware NSX-T networking stack under following configurations:
+- NSX Load Balancer is configured as load balancing solution.
+- NSX Gateway Firewall is enabled.
 
 ## Data Services Manager Consumption Operator
 
