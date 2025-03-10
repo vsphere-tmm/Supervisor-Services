@@ -72,7 +72,7 @@ VMware Tanzu Kubernetes Grid Service (TKG Service) lets you deploy Kubernetes wo
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.2.0-package.open_source_license.txt)
   - [Interoperability Matrix](https://interopmatrix.vmware.com/Interoperability?col=820,17000,18237,17284,18034,18430,18431,18448&row=2,%261794,&isHidePatch=false&isHideLegacyReleases=false) showing compatible Kubernetes releases
 - Download [TKG Service v3.1.1](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.1-package.yaml)
-  - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-7580485a-27a3-4b85-99b8-412c2d61d6fe)
+  - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-79e16754-ab76-47cf-a500-9b9ddea90907)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.1-package.open_source_license.txt)
   - [Interoperability Matrix](https://interopmatrix.vmware.com/Interoperability?col=820,17000,18237,17284,18034,18430,18431&row=2,%261794,&isHidePatch=false&isHideLegacyReleases=false) showing compatible Kubernetes releases
 - Download [TKG Service v3.1.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.yaml)
