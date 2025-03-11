@@ -70,11 +70,15 @@ VMware Tanzu Kubernetes Grid Service (TKG Service) lets you deploy Kubernetes wo
 - Download [TKG Service v3.2.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.2.0-package.yaml)
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-dc37abc7-0aa5-4d4c-8118-1a041f1afe65)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.2.0-package.open_source_license.txt)
-  - [Interoperability Matrix](https://interopmatrix.vmware.com/Interoperability?col=820,17000,18237,17284,18034,18430,18431,18448&row=2,%261794,&isHidePatch=false&isHideLegacyReleases=false) showing compatible Kubernetes releases
+  - [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,17000,18237,17284,18034,18430,18431,18448,18562&row=2,%261794,&isHidePatch=true&isHideLegacyReleases=false) showing compatible Kubernetes releases
+- Download [TKG Service v3.1.1](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.1-package.yaml)
+  - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-79e16754-ab76-47cf-a500-9b9ddea90907)
+  - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.1-package.open_source_license.txt)
+  - [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,17000,18237,17284,18034,18430,18431,18562&row=2,%261794,&isHidePatch=true&isHideLegacyReleases=false) showing compatible Kubernetes releases
 - Download [TKG Service v3.1.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.yaml)
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-7580485a-27a3-4b85-99b8-412c2d61d6fe)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.open_source_license.txt)
-  - [Interoperability Matrix](https://interopmatrix.vmware.com/Interoperability?col=820,17000,18237,17284,18034,18430,18431&row=2,%261794,&isHidePatch=false&isHideLegacyReleases=false) showing compatible Kubernetes releases
+  - [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,17000,18237,17284,18034,18430,18431,18562&row=2,%261794,&isHidePatch=true&isHideLegacyReleases=false) showing compatible Kubernetes releases
 
 
 ## Consumption Interface
