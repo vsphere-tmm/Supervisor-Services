@@ -221,8 +221,9 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 
 ### ExternalDNS Versions
 
-- Download latest version: [ExternalDNS v0.13.4](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=external-dns/v0.13.4/external-dns.yml)
-- Download version: [ExternalDNS v0.11.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=external-dns/v0.11.0/external-dns.yml)
+- Download latest version: [ExternalDNS v0.14.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/external-dns/external-dns-service-0.14.2.yml)
+- Download v0.13.4 version: [ExternalDNS v0.13.4](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=external-dns/v0.13.4/external-dns.yml)
+- Download v0.11.0 version: [ExternalDNS v0.11.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=external-dns/v0.11.0/external-dns.yml)
 
 ExternalDNS data `values.yaml`
 
@@ -235,6 +236,9 @@ deployment:
   - --source=service
   - --log-level=debug
 ```
+
+Validated Supported DNS Server Example:
+- RFC2136 BIND DNS Server: [values.yaml](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/external-dns/external-dns-data-values_0.14.2.yaml). Replace the values indicated by the comments with your own DNS server details.
 
 ## NSX Management Proxy
 
