@@ -203,13 +203,15 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 ### Contour Versions
 
-- Download latest version: [Contour v1.28.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.28.2/contour.yml)
+- Download latest version: [Contour v1.29.3](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/contour/v1.29.3/contour-service-v1.29.3.yml)
+- Download version: [Contour v1.28.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.28.2/contour.yml)
 - Download version: [Contour v1.24.4](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.24.4/contour.yml)
 - Download version: [Contour v1.18.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.18.2/contour.yml)
 
 Contour Sample `values.yaml`
 
-- Download [values for all versions](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.24.4/contour-data-values.yml). These values can be used _as-is_ and require no configuration changes.
+- Download latest [values for v1.29.3](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/contour/v1.29.3/contour-data-values.yml). These values can be used _as-is_ and require no configuration changes.
+- Download [values for versions before v1.29.3](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.24.4/contour-data-values.yml). These values can be used _as-is_ and require no configuration changes.
 
 ## External DNS Service
 
