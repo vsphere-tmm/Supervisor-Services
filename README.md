@@ -210,7 +210,7 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 Contour Sample `values.yaml`
 
-- Download latest [values for v1.29.3](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/contour/v1.29.3/contour-data-values.yml). These values can be used _as-is_ and require no configuration changes.
+- Download latest [values for v1.29.3](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/contour/v1.29.3/contour-data-values.yml). These values can be used _as-is_, but ensure that there are at least two hosts in the Management Zone when configuring envoy replica count of 2.
 - Download [values for versions before v1.29.3](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.24.4/contour-data-values.yml). These values can be used _as-is_ and require no configuration changes.
 
 ## External DNS Service
