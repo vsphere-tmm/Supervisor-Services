@@ -246,8 +246,10 @@ Validated Supported DNS Server Example:
 NSX Management Proxy is for Antrea-NSX adapter in TKG workload cluster to reach NSX manager. We recommend to use NSX Management Proxy when there is isolation between management network and workload network and the workloads running in TKG workload clusters cannot reach NSX manager.
 
 ### NSX Management Proxy Versions
+- For vSphere 8.0 Update 3 or later
+  - Download latest version: [nsx-management-proxy v0.2.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/nsx-management-proxy/v0.2.2/nsx-management-proxy.yml)
 - For vSphere 8.0 Update 3
-  - Download latest version: [nsx-management-proxy v0.2.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.2.1/nsx-management-proxy.yml)
+  - Download version: [nsx-management-proxy v0.2.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.2.1/nsx-management-proxy.yml)
   - Download version: [nsx-management-proxy v0.2.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.2.0/nsx-management-proxy.yml)
   - Download version: [nsx-management-proxy v0.1.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy.yml)
 
