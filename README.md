@@ -1,6 +1,6 @@
 - [Supervisor Services Catalog](#supervisor-services-catalog)
-  - [TKG Service](#tkg-service)
-    - [TKG Service Versions](#tkg-service-versions)
+  - [vSphere Kubernetes Service (VKS)](#vsphere-kubernetes-service)
+    - [vSphere Kubernetes Service (VKS) Versions](#vsphere-kubernetes-service-versions)
   - [Consumption Interface](#consumption-interface)
     - [Consumption Interface Versions](#consumption-interface-versions)
   - [vSAN Data Persistence Platform (vDPP) Services:](#vsan-data-persistence-platform-vdpp-services)
@@ -44,7 +44,7 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 
 | Supervisor Service | vSphere 7 | vSphere 8 |
 | :--: | :--: | :--: |
-| TKG Service | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
+| vSphere Kubernetes Service | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
 | Consumption Interface | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
 | vSAN Data Persistence Platform Services - MinIO | ✅ | ✅ |
 | Backup \& Recovery Service - Velero | ✅ | ✅ |
@@ -54,36 +54,36 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | External DNS Service - ExternalDNS | ❌ | ✅ |
 | NSX Management Proxy | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with Supervisor Clusters enabled using VMware NSX-T_  |
 | Data Services Manager Consumption Operator | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with additional configuration.<br> Please contact Global Support Services (GSS) for the additional configuration_ |
-*\* The embedded Harbor Registry and TKG Service features are still available and supported on vSphere 7 and onwards.*
+*\* The embedded Harbor Registry and vSphere Kubernetes Service features are still available and supported on vSphere 7 and onwards.*
 
-## TKG Service
+## <a name="tkg-service"></a>vSphere Kubernetes Service
 
-VMware Tanzu Kubernetes Grid Service (TKG Service) lets you deploy Kubernetes workload clusters on the vSphere IaaS control plane. Starting with vSphere 8.0 Update 3, Tanzu Kubernetes Grid is installed as a Supervisor Service. This architectural change decouples TKG from vSphere IaaS control plane releases and lets you upgrade the TKG Service independent of vCenter Server and Supervisor.
+VMware vSphere Kubernetes Service (VKS, formerly known as the VMware Tanzu Kubernetes Grid Service or TKG Service) lets you deploy Kubernetes workload clusters on the vSphere Supervisor (formerly known as the vSphere IaaS control plane). Starting with vSphere 8.0 Update 3, VKS is installed as a Supervisor Service. This architectural change decouples VKS from Supervisor releases and lets you upgrade VKS independently of vCenter Server and Supervisor.
 
 - Service install [documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-iaas-cp-update/GUID-2005FFCD-07F4-450E-BAE5-445BE9D629AE.html)
 
-### TKG Service Versions
-The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,17000,18237,17284,18034,18430,18431,18448,18667,18589,18562&row=2,%261794,&isHidePatch=true&isHideLegacyReleases=false) shows each TKG Service version below, including compatible Kubernetes releases and the vCenter Server versions containing compatible Supervisor versions. Note that some compatible Kubernetes releases may have reached End of Service; refer to the [Product Lifecycle](https://support.broadcom.com/group/ecx/productlifecycle) tool (Division: "VMware Cloud Foundation", Product Name: "Tanzu Kubernetes releases") to view End of Service dates for Kubernetes releases.
+### <a name="tkg-service-versions"></a>vSphere Kubernetes Service Versions
+The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,17000,18237,17284,18034,18430,18431,18448,18667,18589,18562&row=2,%261794,&isHidePatch=true&isHideLegacyReleases=false) shows each VKS version below, including compatible Kubernetes releases and the vCenter Server versions containing compatible Supervisor versions. Note that some compatible Kubernetes releases may have reached End of Service; refer to the [Product Lifecycle](https://support.broadcom.com/group/ecx/productlifecycle) tool (Division: "VMware Cloud Foundation", Product Name: "vSphere Kubernetes releases") to view End of Service dates for Kubernetes releases.
 
-- Download latest version [TKG Service v3.3.3](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.3-package.yaml)
+- Download latest version [VKS v3.3.3](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.3-package.yaml)
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-516ce6e6-fcaf-4af7-b455-9779386e5f50)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.3-package.open_source_license.txt)
-- Download [TKG Service v3.3.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.2-package.yaml)
+- Download [VKS v3.3.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.2-package.yaml)
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-72280637-4785-49e0-8728-860db0f1c284)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.2-package.open_source_license.txt)
-- Download [TKG Service v3.3.1](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.1-package.yaml)
+- Download [VKS v3.3.1](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.1-package.yaml)
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-d980858e-865c-4182-bc2d-6270521e9a19)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.1-package.open_source_license.txt)
-- Download [TKG Service v3.3.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.0-package.yaml)
+- Download [VKS v3.3.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.0-package.yaml)
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-9a8726db-dc10-44f5-8a7c-a030c6366c94)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.0-package.open_source_license.txt)
-- Download [TKG Service v3.2.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.2.0-package.yaml)
+- Download [VKS v3.2.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.2.0-package.yaml)
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-dc37abc7-0aa5-4d4c-8118-1a041f1afe65)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.2.0-package.open_source_license.txt)
-- Download [TKG Service v3.1.1](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.1-package.yaml)
+- Download [VKS v3.1.1](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.1-package.yaml)
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-79e16754-ab76-47cf-a500-9b9ddea90907)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.1-package.open_source_license.txt)
-- Download [TKG Service v3.1.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.yaml)
+- Download [VKS v3.1.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.yaml)
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-7580485a-27a3-4b85-99b8-412c2d61d6fe)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.open_source_license.txt)
 
@@ -250,7 +250,7 @@ Validated Supported DNS Server Example:
 
 ## NSX Management Proxy
 
-NSX Management Proxy is for Antrea-NSX adapter in TKG workload cluster to reach NSX manager. We recommend to use NSX Management Proxy when there is isolation between management network and workload network and the workloads running in TKG workload clusters cannot reach NSX manager.
+NSX Management Proxy is for Antrea-NSX adapter in Kubernetes clusters deployed by VKS to reach NSX manager. We recommend to use NSX Management Proxy when there is isolation between management network and workload network and the Kubernetes clusters cannot reach NSX manager.
 
 ### NSX Management Proxy Versions
 - For vSphere 8.0 Update 3 or later
