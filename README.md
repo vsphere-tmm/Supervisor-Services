@@ -19,6 +19,8 @@
     - [NSX Management Proxy Versions](#nsx-management-proxy-versions)
   - [Data Services Manager Consumption Operator](#data-services-manager-consumption-operator)
     - [Data Services Manager Consumption Operator Versions](#data-services-manager-consumption-operator-versions)
+  - [Secret Store Service](#secret-store-service)
+    - [Secret Store Service versions](#secret-store-service-versions)
 ---
 - [Supervisor Services Labs Catalog](#supervisor-services-labs-catalog)
   - [ArgoCD Operator](#argocd-operator)
@@ -288,6 +290,20 @@ When installing DSM Consumption Operator v2.2.0 as a Supervisor Service, if you 
 Earlier versions of the DSM Consumption Operator, including v1.1.0, v1.1.1, v1.1.2 and v1.2.0 are deprecated and should not be used for new Supervisor Service installation.
 If you are upgrading from these older versions to v2.2.0, do not uninstall the existing version. Instead, we highly recommend contacting GSS for guidance and support. This will ensure a smooth upgrade process and prevent potential disruptions.
 For additional help, please refer to the support documentation or reach out to our technical support team.
+
+## Secret Store Service
+
+<img src="secret-service-logo.svg" width="250" title="Secret Store Service" id="secret-store-service">
+
+Secret Store Service is a comprehensive solution for managing secrets in vSphere, ensuring the security and integrity of the environment and providing a robust and scalable solution for securely injecting secrets into workloads.
+
+### Secret Store Service Versions 
+
+Download latest version: [Secret Store Service v9.0.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/secret-store/9.0.0/secret-store-service-definition.yml)
+
+Secret Store Service sample `values.yaml`
+
+- Download [values for all versions](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/secret-store/9.0.0/secret-store-data-values.yml). Make sure to fill the property `storageClassName` with storage policy name. 
 
 ---
 # Supervisor Services Labs Catalog
