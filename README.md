@@ -275,11 +275,21 @@ The Data Services Manager(DSM) Consumption Operator facilitates native, self-ser
 
 ### Data Services Manager Consumption Operator Versions
 
-- Download latest version: [DSM Consumption Operator v2.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/2.2.0/package.yaml)
+- Download latest version: [DSM Consumption Operator v2.2.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/2.2.1/package.yaml)
+- Download version: [DSM Consumption Operator v2.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/2.2.0/package.yaml)
+- Download version: [DSM Consumption Operator v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/package.yaml)
+- Download version: [DSM Consumption Operator v1.1.2](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.2/package.yaml)
+- Download version: [DSM Consumption Operator v1.1.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.1/package.yaml)
+- Download version: [DSM Consumption Operator v1.1.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.0/package.yaml)
 
 Data Services Manager Consumption Operator Sample values. yaml
 
-- Download latest version: [values for v2.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/2.2.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README_2_2_0.md#data-services-manager-consumption-operator-2.2.0-configuration).
+- Download latest version: [values for v2.2.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/2.2.1/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README_2_2_1.md#data-services-manager-consumption-operator-2.2.1-configuration).
+- Download version: [values for v2.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/2.2.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README_2_2_0.md#data-services-manager-consumption-operator-2.2.0-configuration).
+- Download version: [values for v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README_1_2_0.md#data-services-manager-consumption-operator-1.2.0-configuration).
+- Download version: [values for v1.1.2](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.2/values.yaml).
+- Download version: [values for v1.1.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.1/values.yaml).
+- Download version: [values for v1.1.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.0/values.yaml).
 
 **Installation Note:** DSM Consumption Operator v2.2.0<br>
 When installing DSM Consumption Operator v2.2.0 as a Supervisor Service, if you encounter any issues related to the Service-id, please contact Global Support Services (GSS) for immediate assistance.
