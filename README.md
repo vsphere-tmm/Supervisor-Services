@@ -188,11 +188,13 @@ Harbor is an open source trusted cloud native registry project that stores, sign
 
 ### Harbor Versions
 
-- Download latest version: [Harbor v2.11.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/harbor/harbor-service-v2.11.2-respin.yml)
+- Download latest version: [Harbor v2.12.4](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/harbor/harbor-service-2.12.4.yml)
+- Download version: [Harbor v2.11.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/harbor/harbor-service-v2.11.2-respin.yml)
 - Download version: [Harbor v2.9.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.9.1/harbor.yml)
 
 Harbor Sample `values.yaml`
 
+- Download version: [values for v2.12.4](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/harbor/harbor-data-values-v2.12.4.yml) For details about each of the required properties, [see the configuration details page](harbor/README-v2.12.4.md).
 - Download version: [values for v2.11.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/harbor/harbor-data-values-v2.11.2-respin.yml) For details about each of the required properties, [see the configuration details page](harbor/README-v2.11.2.md).
 - Download version: [values for v2.9.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.9.1/harbor-data-values.yml). For details about each of the required properties, [see the configuration details page](harbor/README.md).
 
