@@ -37,10 +37,9 @@
 
 # Supervisor Services Catalog
 
-Discover current Supervisor Services offered to support modern applications through vSphere Services.
-New service will be added overtime with the goal to continue to empower your DevOps communities.
+Discover current Supervisor Services offered to support modern applications through vSphere Services. New services will be added over time with the goal to continue to empower your DevOps communities.
 
-Prior vSphere 8 Update 1, the Supervisor Services are only available with Supervisor Clusters enabled using VMware NSX-T. With vSphere 8 U1, Supervisor Services are also supported when using the vSphere Distributed Switch networking stack.
+Prior to vSphere 8 Update 1, the Supervisor Services are only available with Supervisor Clusters enabled using VMware NSX-T. With vSphere 8 U1, Supervisor Services are also supported when using the vSphere Distributed Switch (VDS) networking stack.
 
 | Supervisor Service | vSphere 7 | vSphere 8 |
 | :--: | :--: | :--: |
@@ -56,13 +55,13 @@ Prior vSphere 8 Update 1, the Supervisor Services are only available with Superv
 | Data Services Manager Consumption Operator | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with additional configuration.<br> Please contact Global Support Services (GSS) for the additional configuration_ |
 *\* The embedded Harbor Registry and vSphere Kubernetes Service features are still available and supported on vSphere 7 and onwards.*
 
-## <a name="tkg-service"></a>vSphere Kubernetes Service
+## vSphere Kubernetes Service
 
 VMware vSphere Kubernetes Service (VKS, formerly known as the VMware Tanzu Kubernetes Grid Service or TKG Service) lets you deploy Kubernetes workload clusters on the vSphere Supervisor (formerly known as the vSphere IaaS control plane). Starting with vSphere 8.0 Update 3, VKS is installed as a Supervisor Service. This architectural change decouples VKS from Supervisor releases and lets you upgrade VKS independently of vCenter Server and Supervisor.
 
 - Service install [documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-iaas-cp-update/GUID-2005FFCD-07F4-450E-BAE5-445BE9D629AE.html)
 
-### <a name="tkg-service-versions"></a>vSphere Kubernetes Service Versions
+### vSphere Kubernetes Service Versions
 The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,17000,18237,17284,18034,18430,18431,18448,18667,18589,18562&row=2,%261794,&isHidePatch=true&isHideLegacyReleases=false) shows each VKS version below, including compatible Kubernetes releases and the vCenter Server versions containing compatible Supervisor versions. Note that some compatible Kubernetes releases may have reached End of Service; refer to the [Product Lifecycle](https://support.broadcom.com/group/ecx/productlifecycle) tool (Division: "VMware Cloud Foundation", Product Name: "vSphere Kubernetes releases") to view End of Service dates for Kubernetes releases.
 
 - Download latest version [VKS v3.3.3](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.3-package.yaml)
