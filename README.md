@@ -19,6 +19,8 @@
     - [NSX Management Proxy Versions](#nsx-management-proxy-versions)
   - [Data Services Manager Consumption Operator](#data-services-manager-consumption-operator)
     - [Data Services Manager Consumption Operator Versions](#data-services-manager-consumption-operator-versions)
+  - [Secret Store Service](#secret-store-service)
+    - [Secret Store Service versions](#secret-store-service-versions)
 ---
 - [Supervisor Services Labs Catalog](#supervisor-services-labs-catalog)
   - [ArgoCD Operator](#argocd-operator)
@@ -31,8 +33,6 @@
     - [Redis Operator Versions](#redis-operator-versions)
   - [KEDA](#keda)
     - [KEDA Versions](#keda-versions)
-  - [Grafana Operator](#grafana-operator)
-    - [Grafana Operator Versions](#grafana-operator-versions)
 
 
 # Supervisor Services Catalog
@@ -55,6 +55,24 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 | Data Services Manager Consumption Operator | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with additional configuration.<br> Please contact Global Support Services (GSS) for the additional configuration_ |
 *\* The embedded Harbor Registry and vSphere Kubernetes Service features are still available and supported on vSphere 7 and onwards.*
 
+## How to find the Supervisor Services
+
+###  Download a service definition from support.broadcom.com. To find a service definition:
+
+1. Log in to support.broadcom.com, Go to Enterprice Sofware.
+
+2. Select My Downloads on the left hand side navigation.
+
+3. If you are looking to download VMware Private AI Services search that term, alternatively search for vSphere Supervisor Services.
+
+4. Next navigate to the service of choice and version you are looking to install.
+
+5. Click on the download icon on the service definition as well as any additional files (such as values.yaml files, etc.)
+
+6. You can now proceed to install your service.
+
+Please check [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) to find out which version is compatible with which Supervisor version. 
+
 ## vSphere Kubernetes Service
 
 VMware vSphere Kubernetes Service (VKS, formerly known as the VMware Tanzu Kubernetes Grid Service or TKG Service) lets you deploy Kubernetes workload clusters on the vSphere Supervisor (formerly known as the vSphere IaaS control plane). Starting with vSphere 8.0 Update 3, VKS is installed as a Supervisor Service. This architectural change decouples VKS from Supervisor releases and lets you upgrade VKS independently of vCenter Server and Supervisor.
@@ -65,27 +83,27 @@ VMware vSphere Kubernetes Service (VKS, formerly known as the VMware Tanzu Kuber
 
 The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,18034,18430,18431,18448,18667,18589,18562,19031,19029,19027,19025&row=2,%261794,&isHidePatch=false&isHideLegacyReleases=false) shows each VKS version below, including compatible Kubernetes releases and the vCenter Server versions containing compatible Supervisor versions. Note that some compatible Kubernetes releases may have reached End of Service; refer to the [Product Lifecycle](https://support.broadcom.com/group/ecx/productlifecycle) tool (Division: "VMware Cloud Foundation", Product Name: "vSphere Kubernetes releases") to view End of Service dates for Kubernetes releases.
 
-- Download latest version [VKS v3.4.0](https://support.broadcom.com/group/ecx/productfiles?subFamily=vSphere%20Supervisor%20Services&displayGroup=vSphere%20Kubernetes%20Service&release=3.4%2Bv1.33&os=&servicePk=&language=EN) from the [vSphere Supervisor Services section of the Broadcom Support Portal](https://support.broadcom.com/group/ecx/productdownloads?subfamily=vSphere%20Supervisor%20Services)
+- Latest version VKS v3.4.0
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-166807c0-799a-4122-a5de-59c5d158b3e3-en_id-e41377ae-b95a-4df2-8e72-f2424c8af0c3)
-- Download [VKS v3.3.3](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.3-package.yaml)
+- VKS v3.3.3
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-516ce6e6-fcaf-4af7-b455-9779386e5f50)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.3-package.open_source_license.txt)
-- Download [VKS v3.3.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.2-package.yaml)
+- VKS v3.3.2
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-72280637-4785-49e0-8728-860db0f1c284)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.2-package.open_source_license.txt)
-- Download [VKS v3.3.1](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.1-package.yaml)
+- VKS v3.3.1
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-d980858e-865c-4182-bc2d-6270521e9a19)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.1-package.open_source_license.txt)
-- Download [VKS v3.3.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.0-package.yaml)
+- VKS v3.3.0
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-9a8726db-dc10-44f5-8a7c-a030c6366c94)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.3.0-package.open_source_license.txt)
-- Download [VKS v3.2.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.2.0-package.yaml)
+- VKS v3.2.0
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-dc37abc7-0aa5-4d4c-8118-1a041f1afe65)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.2.0-package.open_source_license.txt)
-- Download [VKS v3.1.1](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.1-package.yaml)
+- VKS v3.1.1
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-79e16754-ab76-47cf-a500-9b9ddea90907)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.1-package.open_source_license.txt)
-- Download [VKS v3.1.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.yaml)
+- VKS v3.1.0
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-7580485a-27a3-4b85-99b8-412c2d61d6fe)
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.open_source_license.txt)
 
@@ -106,10 +124,8 @@ menu icon, then to **Administration** -> **Client** -> **Plug-ins**.
 Check the Status column of the Namespace UI plug-in, and in case you see a "Plug-in
 configuration with Reverse Proxy failed." Message, reinstall the plug-in.
 
-Download latest version:
-- [Consumption Interface v1.0.2](https://vmwaresaas.jfrog.io/artifactory/supervisor-services/cci-supervisor-service/v1.0.2/cci-supervisor-service.yml)
-
-- [Release notes](./consumption-interface/Release_Notes_1_0_2.md)
+- Latest version: 9.0.0
+- Version: v1.0.2 [Release notes](./consumption-interface/Release_Notes_1_0_2.md)
 
 ### OSS information
 
@@ -129,7 +145,7 @@ vSphere with Tanzu offers the vSAN Data Persistence platform. The platform provi
 Available vDPP Services
 
 - MinIO partner [documentation](https://docs.min.io/minio/vsphere/core-concepts/core-concepts.html)
-  - Download version: [Minio 2.0.10](https://projects.packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/minio/minio-service-definition-v2.0.10-3.yaml)
+  - Latest version: Minio 2.0.10
 
 
 ## Backup & Recovery Service
@@ -144,25 +160,25 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
 
 *This is a prerequisite for a cluster admin install.*
 
-- Download latest version: [Velero vSphere Operator CLI - v1.8.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/velero-vsphere/v1.8.0/velero-vsphere-1.8.0-linux-amd64.tar.gz)
-- Download: [Velero vSphere Operator CLI - v1.6.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.6.1%252Fvelero-vsphere-1.6.1-linux-amd64.tar.gz)
-- Download: [Velero vSphere Operator CLI - v1.6.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.5.3/velero-vsphere-1.6.0-linux-amd64.tar.gz)
-- Download: [Velero vSphere Operator CLI - v1.5.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.5.1/velero-vsphere-1.5.0-linux-amd64.tar.gz)
-- Download: [Velero vSphere Operator CLI - v1.4.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.5.1/velero-vsphere-1.4.0-linux-amd64.tar.gz)
-- Download: [Velero vSphere Operator CLI - v1.3.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.4.2/velero-vsphere-1.3.0-linux-amd64.tar.gz)
-- Download: [Velero vSphere Operator CLI - v1.2.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.4.0/velero-vsphere-1.2.0-linux-amd64.tar.gz)
-- Download: [Velero vSphere Operator CLI - v1.1.0](https://github.com/vmware-tanzu/velero-plugin-for-vsphere/releases/download/v1.1.0/velero-vsphere-1.1.0-linux-amd64.tar.gz)
+- Latest version: Velero vSphere Operator CLI - v1.8.0
+- Velero vSphere Operator CLI - v1.6.1
+- Velero vSphere Operator CLI - v1.6.0
+- Velero vSphere Operator CLI - v1.5.0
+- Velero vSphere Operator CLI - v1.4.0
+- Velero vSphere Operator CLI - v1.3.0
+- Velero vSphere Operator CLI - v1.2.0
+- Velero vSphere Operator CLI - v1.1.0
 
 ### Velero Versions
 
-- Download latest version: [Velero vSphere Operator v1.8.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/velero-vsphere/v1.8.0/velero-vsphere-1.8.0-def.yaml)
-- Download: [Velero vSphere Operator v1.6.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.6.1%252Fvelero-vsphere-1.6.1-def.yaml)
-- Download: [Velero vSphere Operator v1.6.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.6.0%252Fvelero-vsphere-1.6.0-def.yaml)
-- Download: [Velero vSphere Operator v1.5.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.5.0%252Fvelero-vsphere-1.5.0-def.yaml)
-- Download: [Velero vSphere Operator v1.4.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.4.0%252Fvelero-vsphere-1.4.0-def.yaml)
-- Download: [Velero vSphere Operator v1.3.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.3.0%252Fvelero-supervisorservice-1.3.0.yaml)
-- Download: [Velero vSphere Operator v1.2.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.2.0%252Fvelero-supervisorservic-1.2.0.yaml)
-- Download: [Velero vSphere Operator v1.1.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=Velero-YAML&path=Velero%252FSupervisorService%252F1.0.0%252Fvelero-supervisorservice-1.0.0.yaml)
+- Latest version: Velero vSphere Operator v1.8.0
+- Velero vSphere Operator v1.6.1
+- Velero vSphere Operator v1.6.0
+- Velero vSphere Operator v1.5.0
+- Velero vSphere Operator v1.4.0
+- Velero vSphere Operator v1.3.0
+- Velero vSphere Operator v1.2.0
+- Velero vSphere Operator v1.1.0
 
 ## Certificate Management Service
 
@@ -175,8 +191,8 @@ ClusterIssuers are Kubernetes resources that represent certificate authorities (
 
 ### CA Cluster Issuer Versions
 
-- Download latest version: [ca-clusterissuer v0.0.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=ca-clusterissuer/v0.0.2/ca-clusterissuer.yml)
-- Download version: [ca-clusterissuer v0.0.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=ca-clusterissuer/v0.0.1/ca-clusterissuer.yml)
+- Latest version: ca-clusterissuer v0.0.2
+- Version: ca-clusterissuer v0.0.1
 
 CA Cluster Issuer Sample `values.yaml`
 
@@ -195,15 +211,17 @@ Harbor is an open source trusted cloud native registry project that stores, sign
 
 ### Harbor Versions
 
-- Download latest version: [Harbor v2.12.4](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/harbor/harbor-service-2.12.4.yml)
-- Download version: [Harbor v2.11.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/harbor/harbor-service-v2.11.2-respin.yml)
-- Download version: [Harbor v2.9.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.9.1/harbor.yml)
+- Latest version: v2.13.1
+- Version: Harbor v2.12.4
+- Version: Harbor v2.11.2
+- Version: Harbor v2.9.1
 
 Harbor Sample `values.yaml`
+  Sample values can be downloaded from the same location as Service yamls.
 
-- Download version: [values for v2.12.4](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/harbor/harbor-data-values-v2.12.4.yml) For details about each of the required properties, [see the configuration details page](harbor/README-v2.12.4.md).
-- Download version: [values for v2.11.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/harbor/harbor-data-values-v2.11.2-respin.yml) For details about each of the required properties, [see the configuration details page](harbor/README-v2.11.2.md).
-- Download version: [values for v2.9.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=harbor/v2.9.1/harbor-data-values.yml). For details about each of the required properties, [see the configuration details page](harbor/README.md).
+- Version: values for v2.12.4 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.12.4.md).
+- Version: values for v2.11.2 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.11.2.md).
+- Version: values for v2.9.1 - For details about each of the required properties, [see the configuration details page](harbor/README.md).
 
 ## Kubernetes Ingress Controller Service
 
@@ -215,15 +233,13 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 ### Contour Versions
 
-- Download latest version: [Contour v1.29.3](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/contour/v1.29.3/contour-service-v1.29.3.yml)
-- Download version: [Contour v1.28.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.28.2/contour.yml)
-- Download version: [Contour v1.24.4](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.24.4/contour.yml)
-- Download version: [Contour v1.18.2](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.18.2/contour.yml)
+- Latest version: Contour v1.29.3
+- Version: Contour v1.28.2
+- Version: Contour v1.24.4
+- Version: Contour v1.18.2
 
 Contour Sample `values.yaml`
-
-- Download latest [values for v1.29.3](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/contour/v1.29.3/contour-data-values.yml). These values can be used _as-is_ and require no configuration changes.
-- Download [values for versions before v1.29.3](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=contour/v1.24.4/contour-data-values.yml). These values can be used _as-is_ and require no configuration changes.
+- Sample values can be downloaded from the same location as service yaml. These values can be used _as-is_ and require no configuration changes.
 
 ## External DNS Service
 
@@ -235,9 +251,9 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 
 ### ExternalDNS Versions
 
-- Download latest version: [ExternalDNS v0.14.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/external-dns/external-dns-service-0.14.2.yml)
-- Download v0.13.4 version: [ExternalDNS v0.13.4](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=external-dns/v0.13.4/external-dns.yml)
-- Download v0.11.0 version: [ExternalDNS v0.11.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=external-dns/v0.11.0/external-dns.yml)
+- Latest version: ExternalDNS v0.14.2
+- Version v0.13.4: ExternalDNS v0.13.4
+- Version  v0.11.0: ExternalDNS v0.11.0
 
 ExternalDNS data `values.yaml`
 
@@ -252,7 +268,7 @@ deployment:
 ```
 
 Validated Supported DNS Server Example:
-- RFC2136 BIND DNS Server: [values.yaml](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/external-dns/external-dns-data-values_0.14.2.yaml). Replace the values indicated by the comments with your own DNS server details.
+- RFC2136 BIND DNS Server: Sample values can be downloaded from the same location as service.yaml. Replace the values indicated by the comments with your own DNS server details.
 
 ## NSX Management Proxy
 
@@ -260,15 +276,14 @@ NSX Management Proxy is for Antrea-NSX adapter in Kubernetes clusters deployed b
 
 ### NSX Management Proxy Versions
 - For vSphere 8.0 Update 3 or later
-  - Download latest version: [nsx-management-proxy v0.2.2](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/nsx-management-proxy/v0.2.2/nsx-management-proxy.yml)
+  - Latest version: nsx-management-proxy v0.2.2
 - For vSphere 8.0 Update 3
-  - Download version: [nsx-management-proxy v0.2.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.2.1/nsx-management-proxy.yml)
-  - Download version: [nsx-management-proxy v0.2.0](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.2.0/nsx-management-proxy.yml)
-  - Download version: [nsx-management-proxy v0.1.1](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy.yml)
+  - Version: nsx-management-proxy v0.2.1
+  - Version: nsx-management-proxy v0.2.0
+  - Version: nsx-management-proxy v0.1.1
 
 NSX Management Proxy Sample `values.yaml`
-
-- Download [values for all versions](https://vmwaresaas.jfrog.io/ui/api/v1/download?repoKey=supervisor-services&path=nsx-management-proxy/v0.1.1/nsx-management-proxy-data-values.yml). Make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
+- Download sample values.yaml from the same location as Service yaml. Make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
 
 **Note:** NSX Management Proxy is supported in vSphere 8.0 Update 3 when Supervisor Clusters are enabled using VMware NSX-T networking stack under following configurations:
 - NSX Load Balancer is configured as load balancing solution.
@@ -284,23 +299,21 @@ The Data Services Manager(DSM) Consumption Operator facilitates native, self-ser
 
 ### Data Services Manager Consumption Operator Versions
 
-- Download latest version: [DSM Consumption Operator v9.0.0.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/9.0.0.0/package.yaml)
-- Download version: [DSM Consumption Operator v2.2.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/2.2.1/package.yaml)
-- Download version: [DSM Consumption Operator v2.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/2.2.0/package.yaml)
-- Download version: [DSM Consumption Operator v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/package.yaml)
-- Download version: [DSM Consumption Operator v1.1.2](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.2/package.yaml)
-- Download version: [DSM Consumption Operator v1.1.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.1/package.yaml)
-- Download version: [DSM Consumption Operator v1.1.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.0/package.yaml)
+- Latest version: DSM Consumption Operator v9.0.0.0
+- Version: DSM Consumption Operator v2.2.1
+- Version: DSM Consumption Operator v2.2.0
+- Version: DSM Consumption Operator v1.2.0
+- Version: DSM Consumption Operator v1.1.2
+- Version: DSM Consumption Operator v1.1.1
+- Version: DSM Consumption Operator v1.1.0
 
 Data Services Manager Consumption Operator Sample values. yaml
+- Sample values can be found at the same location as service yaml
 
-- Download latest version: [values for v9.0.0.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/9.0.0.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README_9_0_0_0.md#data-services-manager-consumption-operator-9.0.0.0-configuration).
-- Download version: [values for v2.2.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/2.2.1/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README_2_2_1.md#data-services-manager-consumption-operator-2.2.1-configuration).
-- Download version: [values for v2.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/2.2.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README_2_2_0.md#data-services-manager-consumption-operator-2.2.0-configuration).
-- Download version: [values for v1.2.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.2.0/values.yaml). For details about each of the required properties, [see the configuration details page](dsm-co/README_1_2_0.md#data-services-manager-consumption-operator-1.2.0-configuration).
-- Download version: [values for v1.1.2](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.2/values.yaml).
-- Download version: [values for v1.1.1](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.1/values.yaml).
-- Download version: [values for v1.1.0](https://packages.broadcom.com/artifactory/dsm-distro/dsm-consumption-operator/supervisor-service/1.1.0/values.yaml).
+- Latest version: v9.0.0.0: For details about each of the required properties, [see the configuration details page](dsm-co/README_9_0_0_0.md#data-services-manager-consumption-operator-9.0.0.0-configuration).
+- Version: v2.2.1 For details about each of the required properties, [see the configuration details page](dsm-co/README_2_2_1.md#data-services-manager-consumption-operator-2.2.1-configuration).
+- Version: v2.2.0 For details about each of the required properties, [see the configuration details page](dsm-co/README_2_2_0.md#data-services-manager-consumption-operator-2.2.0-configuration).
+- Version: v1.2.0 For details about each of the required properties, [see the configuration details page](dsm-co/README_1_2_0.md#data-services-manager-consumption-operator-1.2.0-configuration).
 
 **Installation Note:**
 
@@ -319,7 +332,21 @@ Data Services Manager Consumption Operator Sample values. yaml
   If you are upgrading from these older versions to v2.2.X, do not uninstall the existing version. Instead, we highly recommend contacting GSS for guidance and support. This will ensure a smooth upgrade process and prevent potential disruptions.
   For additional help, please refer to the support documentation or reach out to our technical support team.
 
+## Secret Store Service
+
+<img src="secret-service-logo.svg" width="250" title="Secret Store Service" id="secret-store-service">
+
+Secret Store Service is a comprehensive solution for managing secrets in vSphere, ensuring the security and integrity of the environment and providing a robust and scalable solution for securely injecting secrets into workloads.
+
+### Secret Store Service Versions 
+
+Latest version: Secret Store Service v9.0.0
+
+Secret Store Service sample `values.yaml`
+- Sample values can be downloaded from the same location as service yaml. Make sure to fill the property `storageClassName` with storage policy name.
+
 ---
+
 # Supervisor Services Labs Catalog
 
 ## *Experimental*
@@ -424,21 +451,3 @@ KEDA Sample `values.yaml` -
 - View an example of how to use KEDA `ScaledObject` to scale an NGINX deployment [here](supervisor-services-labs/keda/usage.md).
 - For additonal examples, check the [detailed reference](https://github.com/kedacore/samples).
 
-## Grafana Operator
-
-<img src="supervisor-services-labs/grafana-operator/Grafana.png" width="200" title="Grafana Logo" id="grafana">
-
-Grafana Operator is a Kubernetes operator built to help you manage your Grafana instances and its resources from within Kubernetes. The operator can install and manage local Grafana instances, Dashboards and Datasources through Kubernetes Custom resources. The Grafana Operator automatically syncs the Kubernetes Custom resources and the actual resources in the Grafana Instance. For a detailed description of how to use Grafana Operator, see the [Grafana Project.](https://grafana.com/docs/grafana-cloud/developer-resources/infrastructure-as-code/grafana-operator/)
-
-### Grafana Operator Versions
-
-- Download latest version: [Grafana Operator v5.15.0](supervisor-services-labs/grafana-operator/v5.15.0/grafana-operator.yaml).
-
-Grafana Operator Sample `values.yaml` for v5.15.0 - [values.yaml](supervisor-services-labs/grafana-operator/v5.15.0/values.yaml)
-
-- The sample `values.yaml` for the latest version has been provided above. This operator requires minimal configurations, and the necessary pods get deployed in the `svc-grafana-operator-xxx` namespace.
-
-#### Usage:
-
-- View an example of how to use Grafana Operator to create a Grafana instance [here](supervisor-services-labs/grafana-operator/usage.md).
-- For additonal examples, check the [detailed reference](https://grafana.github.io/grafana-operator/docs/examples/).
