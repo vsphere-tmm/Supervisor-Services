@@ -63,7 +63,7 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 
 2. Select My Downloads on the left hand side navigation.
 
-3. If you are looking to download VMware Private AI Services search that term, alternatively search for vSphere Supervisor Services.
+3. If you are looking to download [VMware Private AI Services](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Private%20AI%20Services) search that term, alternatively search for [vSphere Supervisor Services](https://support.broadcom.com/group/ecx/productdownloads?subfamily=vSphere%20Supervisor%20Services).
 
 4. Next navigate to the service of choice and version you are looking to install.
 
@@ -83,7 +83,7 @@ VMware vSphere Kubernetes Service (VKS, formerly known as the VMware Tanzu Kuber
 
 The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,18034,18430,18431,18448,18667,18589,18562,19031,19029,19027,19025&row=2,%261794,&isHidePatch=false&isHideLegacyReleases=false) shows each VKS version below, including compatible Kubernetes releases and the vCenter Server versions containing compatible Supervisor versions. Note that some compatible Kubernetes releases may have reached End of Service; refer to the [Product Lifecycle](https://support.broadcom.com/group/ecx/productlifecycle) tool (Division: "VMware Cloud Foundation", Product Name: "vSphere Kubernetes releases") to view End of Service dates for Kubernetes releases.
 
-- Latest version VKS v3.4.0
+- VKS v3.4.0
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-166807c0-799a-4122-a5de-59c5d158b3e3-en_id-e41377ae-b95a-4df2-8e72-f2424c8af0c3)
 - VKS v3.3.3
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-4e548863-c753-46af-b78a-c308d560981d-en_id-516ce6e6-fcaf-4af7-b455-9779386e5f50)
@@ -124,8 +124,9 @@ menu icon, then to **Administration** -> **Client** -> **Plug-ins**.
 Check the Status column of the Namespace UI plug-in, and in case you see a "Plug-in
 configuration with Reverse Proxy failed." Message, reinstall the plug-in.
 
-- Latest version: 9.0.0
-- Version: v1.0.2 [Release notes](./consumption-interface/Release_Notes_1_0_2.md)
+- Version:
+    - 9.0.0
+    - v1.0.2 [Release notes](./consumption-interface/Release_Notes_1_0_2.md)
 
 ### OSS information
 
@@ -145,7 +146,8 @@ vSphere with Tanzu offers the vSAN Data Persistence platform. The platform provi
 Available vDPP Services
 
 - MinIO partner [documentation](https://docs.min.io/minio/vsphere/core-concepts/core-concepts.html)
-  - Latest version: Minio 2.0.10
+  - Version: 
+    - 2.0.10
 
 
 ## Backup & Recovery Service
@@ -160,25 +162,27 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
 
 *This is a prerequisite for a cluster admin install.*
 
-- Latest version: Velero vSphere Operator CLI - v1.8.0
-- Velero vSphere Operator CLI - v1.6.1
-- Velero vSphere Operator CLI - v1.6.0
-- Velero vSphere Operator CLI - v1.5.0
-- Velero vSphere Operator CLI - v1.4.0
-- Velero vSphere Operator CLI - v1.3.0
-- Velero vSphere Operator CLI - v1.2.0
-- Velero vSphere Operator CLI - v1.1.0
+- Velero vSphere Operator CLI versions:
+    - v1.8.0
+    - v1.6.1
+    - v1.6.0
+    - v1.5.0
+    - v1.4.0
+    - v1.3.0
+    - v1.2.0
+    - v1.1.0
 
 ### Velero Versions
 
-- Latest version: Velero vSphere Operator v1.8.0
-- Velero vSphere Operator v1.6.1
-- Velero vSphere Operator v1.6.0
-- Velero vSphere Operator v1.5.0
-- Velero vSphere Operator v1.4.0
-- Velero vSphere Operator v1.3.0
-- Velero vSphere Operator v1.2.0
-- Velero vSphere Operator v1.1.0
+- Velero vSphere Operator versions: 
+    - v1.8.0
+    - v1.6.1
+    - v1.6.0
+    - v1.5.0
+    - v1.4.0
+    - v1.3.0
+    - v1.2.0
+    - v1.1.0
 
 ## Certificate Management Service
 
@@ -191,8 +195,8 @@ ClusterIssuers are Kubernetes resources that represent certificate authorities (
 
 ### CA Cluster Issuer Versions
 
-- Latest version: ca-clusterissuer v0.0.2
-- Version: ca-clusterissuer v0.0.1
+- v0.0.2
+- v0.0.1
 
 CA Cluster Issuer Sample `values.yaml`
 
@@ -211,10 +215,10 @@ Harbor is an open source trusted cloud native registry project that stores, sign
 
 ### Harbor Versions
 
-- Latest version: v2.13.1
-- Version: Harbor v2.12.4
-- Version: Harbor v2.11.2
-- Version: Harbor v2.9.1
+- v2.13.1
+- v2.12.4
+- v2.11.2
+- v2.9.1
 
 Harbor Sample `values.yaml`
   Sample values can be downloaded from the same location as Service yamls.
@@ -233,10 +237,10 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 ### Contour Versions
 
-- Latest version: Contour v1.29.3
-- Version: Contour v1.28.2
-- Version: Contour v1.24.4
-- Version: Contour v1.18.2
+- v1.29.3
+- v1.28.2
+- v1.24.4
+- v1.18.2
 
 Contour Sample `values.yaml`
 - Sample values can be downloaded from the same location as service yaml. These values can be used _as-is_ and require no configuration changes.
@@ -251,9 +255,9 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 
 ### ExternalDNS Versions
 
-- Latest version: ExternalDNS v0.14.2
-- Version v0.13.4: ExternalDNS v0.13.4
-- Version  v0.11.0: ExternalDNS v0.11.0
+- v0.14.2
+- v0.13.4
+- v0.11.0
 
 ExternalDNS data `values.yaml`
 
@@ -276,11 +280,11 @@ NSX Management Proxy is for Antrea-NSX adapter in Kubernetes clusters deployed b
 
 ### NSX Management Proxy Versions
 - For vSphere 8.0 Update 3 or later
-  - Latest version: nsx-management-proxy v0.2.2
+  - v0.2.2
 - For vSphere 8.0 Update 3
-  - Version: nsx-management-proxy v0.2.1
-  - Version: nsx-management-proxy v0.2.0
-  - Version: nsx-management-proxy v0.1.1
+  - v0.2.1
+  - v0.2.0
+  - v0.1.1
 
 NSX Management Proxy Sample `values.yaml`
 - Download sample values.yaml from the same location as Service yaml. Make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
@@ -299,21 +303,21 @@ The Data Services Manager(DSM) Consumption Operator facilitates native, self-ser
 
 ### Data Services Manager Consumption Operator Versions
 
-- Latest version: DSM Consumption Operator v9.0.0.0
-- Version: DSM Consumption Operator v2.2.1
-- Version: DSM Consumption Operator v2.2.0
-- Version: DSM Consumption Operator v1.2.0
-- Version: DSM Consumption Operator v1.1.2
-- Version: DSM Consumption Operator v1.1.1
-- Version: DSM Consumption Operator v1.1.0
+- v9.0.0.0
+- v2.2.1
+- v2.2.0
+- v1.2.0
+- v1.1.2
+- v1.1.1
+- v1.1.0
 
 Data Services Manager Consumption Operator Sample values. yaml
 - Sample values can be found at the same location as service yaml
 
-- Latest version: v9.0.0.0: For details about each of the required properties, [see the configuration details page](dsm-co/README_9_0_0_0.md#data-services-manager-consumption-operator-9.0.0.0-configuration).
-- Version: v2.2.1 For details about each of the required properties, [see the configuration details page](dsm-co/README_2_2_1.md#data-services-manager-consumption-operator-2.2.1-configuration).
-- Version: v2.2.0 For details about each of the required properties, [see the configuration details page](dsm-co/README_2_2_0.md#data-services-manager-consumption-operator-2.2.0-configuration).
-- Version: v1.2.0 For details about each of the required properties, [see the configuration details page](dsm-co/README_1_2_0.md#data-services-manager-consumption-operator-1.2.0-configuration).
+- v9.0.0.0: For details about each of the required properties, [see the configuration details page](dsm-co/README_9_0_0_0.md#data-services-manager-consumption-operator-9.0.0.0-configuration).
+- v2.2.1 For details about each of the required properties, [see the configuration details page](dsm-co/README_2_2_1.md#data-services-manager-consumption-operator-2.2.1-configuration).
+- v2.2.0 For details about each of the required properties, [see the configuration details page](dsm-co/README_2_2_0.md#data-services-manager-consumption-operator-2.2.0-configuration).
+- v1.2.0 For details about each of the required properties, [see the configuration details page](dsm-co/README_1_2_0.md#data-services-manager-consumption-operator-1.2.0-configuration).
 
 **Installation Note:**
 
@@ -340,7 +344,7 @@ Secret Store Service is a comprehensive solution for managing secrets in vSphere
 
 ### Secret Store Service Versions 
 
-Latest version: Secret Store Service v9.0.0
+- v9.0.0
 
 Secret Store Service sample `values.yaml`
 - Sample values can be downloaded from the same location as service yaml. Make sure to fill the property `storageClassName` with storage policy name.
