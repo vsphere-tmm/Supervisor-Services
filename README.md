@@ -59,7 +59,7 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 
 ###  Download a service definition from support.broadcom.com. To find a service definition:
 
-1. Log in to support.broadcom.com, Go to Enterprice Sofware.
+1. Log in to support.broadcom.com, Go to Enterprice Software.
 
 2. Select My Downloads on the left hand side navigation.
 
@@ -71,7 +71,7 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 
 6. You can now proceed to install your service.
 
-Please check [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) to find out which version is compatible with which Supervisor version. 
+Please check [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) to find out which service version is compatible with which Supervisor version. 
 
 ## vSphere Kubernetes Service
 
@@ -215,7 +215,6 @@ Harbor is an open source trusted cloud native registry project that stores, sign
 
 ### Harbor Versions
 
-- v2.13.1
 - v2.12.4
 - v2.11.2
 - v2.9.1
