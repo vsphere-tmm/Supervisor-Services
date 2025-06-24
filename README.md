@@ -1,4 +1,52 @@
-- [Supervisor Services Catalog](#supervisor-services-catalog)
+# Supervisor Services
+
+ Supervisor Services offered to support modern applications through vSphere Services. New services will be added over time with the goal to continue to empower your DevOps communities.
+
+## Install Supervisor Services
+
+> 📢 Services are moved to support.broadcom.com
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
+
+Prior to vSphere 8 Update 1, the Supervisor Services are only available with Supervisor Clusters enabled using VMware NSX-T. With vSphere 8 U1, Supervisor Services are also supported when using the vSphere Distributed Switch (VDS) networking stack.
+
+| Supervisor Service | vSphere 7 | vSphere 8 |
+| :--: | :--: | :--: |
+| vSphere Kubernetes Service | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
+| Consumption Interface | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
+| vSAN Data Persistence Platform Services - MinIO | ✅ | ✅ |
+| Backup \& Recovery Service - Velero | ✅ | ✅ |
+| Certificate Management Service - cert-manager | ❌ | ✅ |
+| Cloud Native Registry Service - Harbor | ❌ * | ✅ |
+| Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
+| External DNS Service - ExternalDNS | ❌ | ✅ |
+| NSX Management Proxy | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with Supervisor Clusters enabled using VMware NSX-T_  |
+| Data Services Manager Consumption Operator | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with additional configuration.<br> Please contact Global Support Services (GSS) for the additional configuration_ |
+*\* The embedded Harbor Registry and vSphere Kubernetes Service features are still available and supported on vSphere 7 and onwards.*
+
+
+## How to find and install Supervisor Services
+
+1. Log in to support.broadcom.com.
+
+2. Select My Downloads on the left hand side navigation.
+
+3. Select Free Software Downloads available HERE if you are looking for free services. Search vSphere Supervisor Services.
+
+4. Services that need entitlements can be downlaoded directly from My Downloads. Search for vSphere Supervisor Services.
+
+5. If you are looking to download VMware Private AI Services, goto My Downloads and then search the term VMware Private AI Services.
+
+6. Next navigate to the service of choice and version you are looking to install.
+
+7. Click on the download icon on the service definition as well as any additional files (such as values.yaml files, etc.)
+
+8. You can now proceed to install your service.
+
+#### Please check [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) to find out which service version is compatible with which Supervisor version.
+
+## Supervisor Services Catalog
+
   - [vSphere Kubernetes Service (VKS)](#vsphere-kubernetes-service)
     - [vSphere Kubernetes Service (VKS) Versions](#vsphere-kubernetes-service-versions)
   - [Consumption Interface](#consumption-interface)
@@ -35,45 +83,10 @@
     - [KEDA Versions](#keda-versions)
 
 
-# Supervisor Services Catalog
 
-Discover current Supervisor Services offered to support modern applications through vSphere Services. New services will be added over time with the goal to continue to empower your DevOps communities.
+## [vSphere Kubernetes Service](https://support.broadcom.com)
 
-Prior to vSphere 8 Update 1, the Supervisor Services are only available with Supervisor Clusters enabled using VMware NSX-T. With vSphere 8 U1, Supervisor Services are also supported when using the vSphere Distributed Switch (VDS) networking stack.
-
-| Supervisor Service | vSphere 7 | vSphere 8 |
-| :--: | :--: | :--: |
-| vSphere Kubernetes Service | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
-| Consumption Interface | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
-| vSAN Data Persistence Platform Services - MinIO | ✅ | ✅ |
-| Backup \& Recovery Service - Velero | ✅ | ✅ |
-| Certificate Management Service - cert-manager | ❌ | ✅ |
-| Cloud Native Registry Service - Harbor | ❌ * | ✅ |
-| Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
-| External DNS Service - ExternalDNS | ❌ | ✅ |
-| NSX Management Proxy | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with Supervisor Clusters enabled using VMware NSX-T_  |
-| Data Services Manager Consumption Operator | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with additional configuration.<br> Please contact Global Support Services (GSS) for the additional configuration_ |
-*\* The embedded Harbor Registry and vSphere Kubernetes Service features are still available and supported on vSphere 7 and onwards.*
-
-## How to find the Supervisor Services
-
-###  Download a service definition from support.broadcom.com. To find a service definition:
-
-1. Log in to support.broadcom.com, Go to Enterprice Software.
-
-2. Select My Downloads on the left hand side navigation.
-
-3. If you are looking to download [VMware Private AI Services](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Private%20AI%20Services) search that term, alternatively search for [vSphere Supervisor Services](https://support.broadcom.com/group/ecx/productdownloads?subfamily=vSphere%20Supervisor%20Services).
-
-4. Next navigate to the service of choice and version you are looking to install.
-
-5. Click on the download icon on the service definition as well as any additional files (such as values.yaml files, etc.)
-
-6. You can now proceed to install your service.
-
-Please check [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) to find out which service version is compatible with which Supervisor version. 
-
-## vSphere Kubernetes Service
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 VMware vSphere Kubernetes Service (VKS, formerly known as the VMware Tanzu Kubernetes Grid Service or TKG Service) lets you deploy Kubernetes workload clusters on the vSphere Supervisor (formerly known as the vSphere IaaS control plane). Starting with vSphere 8.0 Update 3, VKS is installed as a Supervisor Service. This architectural change decouples VKS from Supervisor releases and lets you upgrade VKS independently of vCenter Server and Supervisor.
 
@@ -108,7 +121,9 @@ The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperabilit
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.open_source_license.txt)
 
 
-## Consumption Interface
+## [Consumption Interface](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 Provides the Local Consumption Interface (LCI) for Namespaces within vSphere Client.
 
@@ -133,7 +148,9 @@ Installation instructions for installing the supervisor service can be found in 
 
 OSS information is available on the Broadcom Customer Portal.
 
-## vSAN Data Persistence Platform (vDPP) Services:
+## [vSAN Data Persistence Platform (vDPP) Services](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 vSphere with Tanzu offers the vSAN Data Persistence platform. The platform provides a framework that enables third parties to integrate their cloud native service applications with underlying vSphere infrastructure, so that third-party software can run on vSphere with Tanzu optimally.
 
@@ -148,7 +165,9 @@ Available vDPP Services
     - 2.0.10
 
 
-## Backup & Recovery Service
+## [Backup & Recovery Service](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 <img src="Velero.svg" width="250" title="Velero Logo">
 
@@ -182,7 +201,9 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
     - v1.2.0
     - v1.1.0
 
-## Certificate Management Service
+## [Certificate Management Service](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 <img src="cert-manager-logo.PNG" width="250" title="cert-manager Logo">
 
@@ -199,8 +220,10 @@ ClusterIssuers are Kubernetes resources that represent certificate authorities (
 CA Cluster Issuer Sample `values.yaml`
 
 - We do not provide any default values for this package. Instead, we encourage that you generate certificates. Please read [How-To Deploy a self-signed CA Issuer and Request a Certificate](https://github.com/vsphere-tmm/vsphere-with-tanzu-dev-center/tree/main/cert-manager#how-to-deploy-a-self-signed-ca-issuer-and-request-a-certificate) for information on how to create a self-signed certificate.
+)
+## [Cloud Native Registry Service](https://support.broadcom.com)
 
-## Cloud Native Registry Service
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 <img src="harbor-logo.png" width="250" title="Harbor Logo">
 
@@ -224,7 +247,9 @@ Harbor Sample `values.yaml`
 - Version: values for v2.11.2 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.11.2.md).
 - Version: values for v2.9.1 - For details about each of the required properties, [see the configuration details page](harbor/README.md).
 
-## Kubernetes Ingress Controller Service
+## [Kubernetes Ingress Controller Service](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 <img src="contour-logo.png" width="250" title="Contour Logo" id="contour">
 
@@ -242,7 +267,9 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 Contour Sample `values.yaml`
 - Sample values can be downloaded from the same location as service yaml. These values can be used _as-is_ and require no configuration changes.
 
-## External DNS Service
+## [External DNS Service](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 <img src="external-dns-logo.png" width="250" title="External DNS Logo" id="external-dns">
 
@@ -271,7 +298,9 @@ deployment:
 Validated Supported DNS Server Example:
 - RFC2136 BIND DNS Server: Sample values can be downloaded from the same location as service.yaml. Replace the values indicated by the comments with your own DNS server details.
 
-## NSX Management Proxy
+## [NSX Management Proxy](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 NSX Management Proxy is for Antrea-NSX adapter in Kubernetes clusters deployed by VKS to reach NSX manager. We recommend to use NSX Management Proxy when there is isolation between management network and workload network and the Kubernetes clusters cannot reach NSX manager.
 
@@ -290,7 +319,9 @@ NSX Management Proxy Sample `values.yaml`
 - NSX Load Balancer is configured as load balancing solution.
 - NSX Gateway Firewall is enabled.
 
-## Data Services Manager Consumption Operator
+## [Data Services Manager Consumption Operator](https://support.broadcom.com))
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 The Data Services Manager(DSM) Consumption Operator facilitates native, self-service access to DSM within a Kubernetes environment. It exposes a selection of resources supported by the DSM provider, allowing customers to connect to the DSM provider from Kubernetes. Although the DSM provider does not currently support tenancy natively, the DSM Consumption Operator enables customers to seamlessly integrate their existing tenancy model, effectively introducing tenancy into the DSM provider.
 
@@ -333,7 +364,9 @@ Data Services Manager Consumption Operator Sample values. yaml
   If you are upgrading from these older versions to v2.2.X, do not uninstall the existing version. Instead, we highly recommend contacting GSS for guidance and support. This will ensure a smooth upgrade process and prevent potential disruptions.
   For additional help, please refer to the support documentation or reach out to our technical support team.
 
-## Secret Store Service
+## [Secret Store Service](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 <img src="secret-service-logo.svg" width="250" title="Secret Store Service" id="secret-store-service">
 
@@ -356,7 +389,9 @@ The following Supervisor Services Labs catalog is only provided for testing and 
 
 **WARNING** - By downloading and using these solutions from the Supervisor Services Labs catalog, you explicitly agree to the conditional use **[license agreement](supervisor-services-labs/licence-agreement.md)**.
 
-## ArgoCD Operator
+## [ArgoCD Operator](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 <img src="supervisor-services-labs/argocd-operator/argocd.png" width="200" title="ArgoCD Logo" id="argocd">
 
