@@ -13,7 +13,7 @@ Known issues and limitations of the Consumption Interface Supervisor Service
 
 ## VKS
 - Supports VKS up until 3.2.
-- VKS 3.3/3.4 are not supported with LCI 9.0.0. Support will come with an upcoming release of LCI 9.0.1.
+- The new features for VKS 3.3/3.4 are not supported with LCI 9.0.0. Support for the new features will be available with an upcoming release of LCI 9.0.1. You can still use VKS for managing the lifecycle of the cluster for VKS 3.3/3.4.
 - New features
     - Multiple CL on Supervisor for both TKC and CAPI Cluster
     - vSphere Zones for both TKC and CAPI Cluster
@@ -25,21 +25,9 @@ Known issues and limitations of the Consumption Interface Supervisor Service
         - Add/Update/Delete Volumes
 - VKS 3.2 variables
 
-A cluster can be created with the following cluster variables.
-UI supports all versions of ClusterClass variables and will update the yaml based on the version selected. Variables supported for ClusterClass 3.2 and higher are listed below
+VKS v3.2.0 introduced the concept of versioned ClusterClass objects. It shipped with ClusterClass builtin-generic-v3.2.0 which introduces a new variable schema. LCI 9.0.0 adds supports for this.
 
-| Variable Name | Property |
-| ----------- | ----------- |
-| vmClass| vmClass|
-| storageClass | storageclass |
-| volumes | volumes|
-| node | Labels Taints |
-| kubernetes | certificateRotation - ‘enabled’ and set to 90 days by default |
-| kubernetes | endpointFQDNs |
-| vsphereOptions | persistentVolumes (availableStorageClasses, defaultStorageClass) |
-| osConfiguration | ntp |
-| osConfiguration | systemProxy (Http, https, noProxy)
-| osConfiguration | trust additionalTrustedCAs |
+Please see the documentation for these variables here: [ClusterClass Variables for Customizing a Cluster](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/using-tkg-service-with-vsphere-supervisor/provisioning-tkg-service-clusters/using-the-builtin-generic-v3-2-0-clusterclass/clusterclass-variables-for-customizing-a-cluster.html)
 
 --- 
 
@@ -47,6 +35,8 @@ UI supports all versions of ClusterClass variables and will update the yaml base
 Admins can provide a link to launch LCI independent of granting access to the vSphere client
 
 ## Known Issues
+
+- You must uninstall version 1.0.x before using the 9.0.0 version of LCI. Failure to do so will result in the interface not starting correctly when looking at the Resources tab for a namespace.
 
 - The UI allows users to publish TKG cluster VMs that are currently deployed. The published image will not be usable and users should not leverage this feature for such VMs.
 

@@ -110,7 +110,7 @@ The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperabilit
 
 ## Consumption Interface
 
-Provides the Local Consumption Interface (LCI) for Namespaces within vSphere Client. For the 8.0U3 release, this also includes the Single Sign On (SSO) component required by the Cloud Consumption Interface (CCI) in Aria Automation within VMware Cloud Foundation. As of VCF 9.0, you do not need the Consumption Interface plugin version 1.0.2 for SSO support.
+Provides the Local Consumption Interface (LCI) for Namespaces within vSphere Client.
 
 The minimum required version for using this interface is vSphere 8 Update 3.
 ```
