@@ -1,10 +1,10 @@
 # Supervisor Services
 
- Supervisor Services offered to support modern applications through vSphere Services. New services will be added over time with the goal to continue to empower your DevOps communities.
+Discover VCF services offered to support modern applications through vSphere Services. New services will be added over time with the goal to continue to empower your DevOps communities.
 
 ## Install Supervisor Services
 
-> 📢 Services are moved to support.broadcom.com
+> 📢 Download links for Service artifacts have moved to [support.broadcom.com](https://support.broadcom.com)
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -27,17 +27,25 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 
 ## How to find and install Supervisor Services
 
-1. Log in to support.broadcom.com.
+1. Log in to [support.broadcom.com](https://support.broadcom.com)
 
-2. Select My Downloads on the left hand side navigation.
+2. Select `My Downloads` on the left hand side navigation.
 
-3. Select Free Software Downloads available HERE if you are looking for free services. Search vSphere Supervisor Services.
+3. Select `Free Software Downloads available HERE`, if you are looking for free services. Search `vSphere Supervisor Services`.
 
-4. Services that need entitlements can be downlaoded directly from My Downloads. Search for vSphere Supervisor Services.
+4. Services that need entitlements can be downloaded directly from `My Downloads`. Search for `vSphere Supervisor Services`.
 
-5. If you are looking to download VMware Private AI Services, goto My Downloads and then search the term VMware Private AI Services.
+5. If you are looking to download VMware Private AI Services, go to `My Downloads` and then search the term `VMware Private AI Services`.
 
 6. Next navigate to the service of choice and version you are looking to install.
+
+7. To download files, first you need to click `Terms and Conditions` to activate the checkbox.
+
+<img src="terms-and-conditions.png" width="750" height="300"  title="Select Terms and Condtions" id="terms-and-conditions">
+
+8. Go through the terms and conditions, once you agree select the checkbox, which will activate download icon. 
+
+<img src="download.png" width="750" height="300" title="How to Download" id="download">
 
 7. Click on the download icon on the service definition as well as any additional files (such as values.yaml files, etc.)
 
@@ -152,10 +160,10 @@ OSS information is available on the Broadcom Customer Portal.
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
-vSphere with Tanzu offers the vSAN Data Persistence platform. The platform provides a framework that enables third parties to integrate their cloud native service applications with underlying vSphere infrastructure, so that third-party software can run on vSphere with Tanzu optimally.
+vSphere Supervisor offers the vSAN Data Persistence platform. The platform provides a framework that enables third parties to integrate their cloud native service applications with underlying vSphere infrastructure, so that third-party software can run on vSphere Supervisor optimally.
 
-- Using vSAN Data Persistence Platform (vDPP) with vSphere with Tanzu [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F7223607-30A5-4B2D-9B06-A55A65FEAA11.html)
-- Enable Stateful Services in vSphere with Tanzu [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F68B264E-76A3-4A6D-A3B0-17153DDF7A18.html)
+- Using vSAN Data Persistence Platform (vDPP) with vSphere Supervisor [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F7223607-30A5-4B2D-9B06-A55A65FEAA11.html)
+- Enable Stateful Services in vSphere Supervisor [documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-F68B264E-76A3-4A6D-A3B0-17153DDF7A18.html)
 
 
 Available vDPP Services
@@ -319,7 +327,7 @@ NSX Management Proxy Sample `values.yaml`
 - NSX Load Balancer is configured as load balancing solution.
 - NSX Gateway Firewall is enabled.
 
-## [Data Services Manager Consumption Operator](https://support.broadcom.com))
+## [Data Services Manager Consumption Operator](https://support.broadcom.com)
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
