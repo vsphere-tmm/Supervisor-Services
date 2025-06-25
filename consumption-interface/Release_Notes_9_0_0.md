@@ -12,8 +12,8 @@ Known issues and limitations of the Consumption Interface Supervisor Service
 
 
 ## VKS
-- Supports VKS up until 3.2.
-- The new features for VKS 3.3/3.4 are not supported with LCI 9.0.0. Support for the new features will be available with an upcoming release of LCI 9.0.1. You can still use VKS for managing the lifecycle of the cluster for VKS 3.3/3.4.
+- LCI 9.0.0 is compatible with VKS 3.0 through 3.4, and can be used for managing the lifecycle of clusters with any of these versions.
+- However, LCI 9.0.0 does not expose functionality added in the VKS 3.3 or 3.4 ClusterClass versions, and does not display the 3.4 ClusterClass. This will be addressed in a future LCI patch.
 - New features
     - Multiple CL on Supervisor for both TKC and CAPI Cluster
     - vSphere Zones for both TKC and CAPI Cluster
