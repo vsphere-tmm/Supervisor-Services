@@ -13,19 +13,18 @@ Known issues and limitations of the Consumption Interface Supervisor Service
 
 ## VKS
 - LCI 9.0.0 is compatible with VKS 3.0 through 3.4, and can be used for managing the lifecycle of clusters with any of these versions.
-- However, LCI 9.0.0 does not expose functionality added in the VKS 3.3 or 3.4 ClusterClass versions, and does not display the 3.4 ClusterClass. This will be addressed in a future LCI patch.
+- However, LCI 9.0.0 does not support functionality introduced in the VKS 3.3 and VKS 3.4. This will be addressed in a future LCI patch.
 - New features
-    - Multiple CL on Supervisor for both TKC and CAPI Cluster
-    - vSphere Zones for both TKC and CAPI Cluster
-    - Windows OS worker nodes
-    - Windows AD
-    - Day 2 actions
+    - Add support for consuming multiple Content Library configured for Kubernetes Service on Supervisor for both TanzuKubernetesCluster and Cluster API
+    - Add support for vSphere Zones for both TanzuKubernetesCluster and Cluster API
+    - Ability to configure a Windows node pool to use Group Managed Service Accounts
+    - Introduced following Cluster Day 2 actions
         - Increase Replicas
-        - Update VM CLass
+        - Update VM Class
         - Add/Update/Delete Volumes
-- VKS 3.2 variables
+    - Support for variables introduced in builtin-generic-v3.2.0 cluster class
 
-VKS v3.2.0 introduced the concept of versioned ClusterClass objects. It shipped with ClusterClass builtin-generic-v3.2.0 which introduces a new variable schema. LCI 9.0.0 adds supports for this.
+VKS v3.2.0 introduced the concept of versioned cluster class objects. It shipped with cluster class builtin-generic-v3.2.0 which introduces a new variable schema. LCI 9.0.0 adds supports for this.
 
 Please see the documentation for these variables here: [ClusterClass Variables for Customizing a Cluster](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/using-tkg-service-with-vsphere-supervisor/provisioning-tkg-service-clusters/using-the-builtin-generic-v3-2-0-clusterclass/clusterclass-variables-for-customizing-a-cluster.html)
 
