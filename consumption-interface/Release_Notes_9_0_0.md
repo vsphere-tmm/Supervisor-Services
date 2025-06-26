@@ -36,7 +36,7 @@ Admins can provide a link to launch LCI independent of granting access to the vS
 
 ## Known Issues
 
-- You must uninstall version 1.0.x before using the 9.0.0 version of LCI. Failure to do so will result in the interface not starting correctly when looking at the Resources tab for a namespace.
+- You must uninstall version 1.0.x before using the 9.0.0 version of LCI. Failure to do so will result in the interface not starting correctly when looking at the `Resources` tab for a namespace.
 
 - The UI allows users to publish TKG cluster VMs that are currently deployed. The published image will not be usable and users should not leverage this feature for such VMs.
 
