@@ -110,30 +110,28 @@ The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperabilit
 
 ## Consumption Interface
 
-Provides the Local Consumption Interface (LCI) for Namespaces within vSphere Client. This also includes the Single Sign On (SSO) component required by the Cloud Consumption Interface (CCI) in Aria Automation within VMware Cloud Foundation.
+Provides the Local Consumption Interface (LCI) for Namespaces within vSphere Client.
 
 The minimum required version for using this interface is vSphere 8 Update 3.
+```
+** IMPORTANT NOTICE **: You must uninstall version 1.0.x before using the 9.0.0 version of LCI. Failure to do so will result in the interface not starting correctly when looking at the Resources tab for a namespace.
+```
 
 ### Consumption Interface Versions
 
-Installation instructions can be found [here in VMware documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html).
+Installation instructions for installing the supervisor service can be found in the VCF documentation sites.
 
-**IMPORTANT NOTICE**: Occasionally, the plug-in may fail to load on the initial
-attempt. To check if the plug-in has loaded correctly, click the **vSphere Client**
-menu icon, then to **Administration** -> **Client** -> **Plug-ins**.
-Check the Status column of the Namespace UI plug-in, and in case you see a "Plug-in
-configuration with Reverse Proxy failed." Message, reinstall the plug-in.
+[Release 9.0](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/managing-supervisor-services-with-vsphere-iaas-control-plane/supervisor-service-life-cycle-management-and-consumption/install-a-supervisor-service-on-supervisors.html)
+
+[Release 8.0U3](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html)
 
 - Version:
-    - 9.0.0
+    - 9.0.0 [Release notes](./consumption-interface/Release_Notes_9_0_0.md)
     - v1.0.2 [Release notes](./consumption-interface/Release_Notes_1_0_2.md)
 
 ### OSS information
 
-[LCI OSS](./consumption-interface/ConsumptionInterface_LocalConsumptionInterface_1_0_0.zip)
-
-[SSO OSS](https://support.broadcom.com/group/ecx/productfiles?displayGroup=VMware%20Aria%20Suite%20-%20Enterprise&release=2019&os=&servicePk=202420&language=EN&groupId=204007) Refer to the Open Source Tab
-
+OSS information is available on the Broadcom Customer Portal.
 
 ## vSAN Data Persistence Platform (vDPP) Services:
 

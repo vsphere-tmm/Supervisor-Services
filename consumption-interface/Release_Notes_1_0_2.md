@@ -1,4 +1,10 @@
-Known issues and limitations of the Consumption Interface Supervisor Service
+Known issues and limitations of the Consumption Interface Supervisor Service for version 1.0.2
+
+**IMPORTANT NOTICE**: Occasionally, the plug-in may fail to load on the initial
+attempt. To check if the plug-in has loaded correctly, click the **vSphere Client**
+menu icon, then to **Administration** -> **Client** -> **Plug-ins**.
+Check the Status column of the Namespace UI plug-in, and in case you see a "Plug-in
+configuration with Reverse Proxy failed." Message, reinstall the plug-in.
 
 LCI : Local Consumption Interface
 
