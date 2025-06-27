@@ -267,6 +267,7 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 ### Contour Versions
 
+- v1.30.3
 - v1.29.3
 - v1.28.2
 - v1.24.4
