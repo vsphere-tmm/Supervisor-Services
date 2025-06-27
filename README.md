@@ -83,10 +83,10 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
     - [Data Services Manager Consumption Operator Versions](#data-services-manager-consumption-operator-versions)
   - [Secret Store Service](#secret-store-service)
     - [Secret Store Service versions](#secret-store-service-versions)
+  - [ArgoCD Service](#argocd-service)
+    - [ArgoCD Service versions](#argocd-service-versions)
 ---
 - [Supervisor Services Labs Catalog](#supervisor-services-labs-catalog)
-  - [ArgoCD Operator](#argocd-operator)
-    - [ArgoCD Operator Versions](#argocd-operator-versions)
   - [External Secrets Operator](#external-secrets-operator)
     - [External Secrets Operator Versions](#external-secrets-operator-versions)
   - [RabbitMQ Cluster Kubernetes Operator](#rabbitmq-cluster-kubernetes-operator)
@@ -429,6 +429,20 @@ Secret Store Service is a comprehensive solution for managing secrets in vSphere
 Secret Store Service sample `values.yaml`
 - Sample values can be downloaded from the same location as service yaml. Make sure to fill the property `storageClassName` with storage policy name.
 
+## [ArgoCD Service](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
+
+<img src="argocd.png" width="200" title="ArgoCD Logo" id="argocd">
+
+Argo CD empowers teams to deliver applications with speed and precision by continuously synchronizing Git-defined desired state with live environments.Argo CD, a leading declarative GitOps continuous delivery tool, revolutionizes how teams deploy and manage applications. It champions a paradigm where the desired state of applications and infrastructure is explicitly defined in Git repositories. This "Git-defined desired state" serves as the single source of truth, offering unparalleled transparency, version control, and auditability for deployments.
+ArgoCD Service provides the entire lifecycle of Argo CD instance, including create, delete, upgrade ArgoCD and update its configurations. It gives both platform teams and developers access to automated, version-controlled delivery pipelines—whether they’re managing vSphere Kubernetes Service (VKS) clusters, VMs, vSphere Pods on supervisor cluster or workloads on VKS clusters.
+- Service installation and Configuration [documentation](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/using-supervisor-services/using-argo-cd-service.html)
+
+### ArgoCD Service Versions
+- v1.0.0
+  - [Release Notes](argocd-service/release-notes-v1.0.0.md) 
+
 ---
 
 # Supervisor Services Labs Catalog
@@ -438,29 +452,6 @@ Secret Store Service sample `values.yaml`
 The following Supervisor Services Labs catalog is only provided for testing and educational purposes. Please do not use these services in a production environment. These services are intended to demonstrate Supervisor Services' capabilities and usability. VMware will strive to provide regular updates to these services. The Labs services have been tested starting from vSphere 8.0. Over time, depending on usage and customer needs, some of these services may be included in the core product.
 
 **WARNING** - By downloading and using these solutions from the Supervisor Services Labs catalog, you explicitly agree to the conditional use **[license agreement](supervisor-services-labs/licence-agreement.md)**.
-
-## [ArgoCD Operator](https://support.broadcom.com)
-
-#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
-
-<img src="supervisor-services-labs/argocd-operator/argocd.png" width="200" title="ArgoCD Logo" id="argocd">
-
-The Argo CD Operator manages the entire lifecycle of Argo CD and its components. The operator aims to automate the tasks required to operate an Argo CD deployment. Beyond installation, the operator helps automate the process of upgrading, backing up, and restoring as needed and removes the human toil as much as possible. For a detailed description of how to consume the ArgoCD Operator, see the [ArgoCD Operator project.](https://argocd-operator.readthedocs.io/en/latest/)
-
-### ArgoCD Operator Versions
-
-- Download the latest version: [ArgoCD Operator v0.12.0](supervisor-services-labs/argocd-operator/v0.12.0/argocd-operator.yaml)
-- Download previous v0.8.0:    [ArgoCD Operator v0.8.0](supervisor-services-labs/argocd-operator/v0.8.0/argocd-operator.yaml)
-
-ArgoCD Operator Sample `values.yaml` for v0.12.0 - [values.yaml](supervisor-services-labs/argocd-operator/v0.12.0/values.yaml)
-ArgoCD Operator Sample `values.yaml` for v0.8.0  - None
-
-- The sample `values.yaml` for the latest version has been provided above. This operator requires minimal configurations, and the necessary pods get deployed in the  `svc-argocd-operator-domain-xxx` namespace.
-
-#### Usage:
-
-- Check out this example on deploying an ArgoCD instance with the Argo CD Operator [here.](supervisor-services-labs/argocd-operator/usage.md)
-- For advanced configurations, check the [detailed reference](https://argocd-operator.readthedocs.io/en/latest/reference/argocd/) and [sample usage](https://argocd-operator.readthedocs.io/en/latest/usage/basics/)
 
 ## External Secrets Operator
 
