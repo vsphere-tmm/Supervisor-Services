@@ -292,6 +292,7 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 
 ### ExternalDNS Versions
 
+- v0.16.1
 - v0.14.2
 - v0.13.4
 - v0.11.0
@@ -299,8 +300,19 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 ExternalDNS data `values.yaml`
 
 - Because of the large list of supported DNS providers, we do not supply complete sample configuration values here. If you're deploying ExternalDNS with Harbor and Contour, make sure to include `source=contour-httpproxy` in the configuration values. An *incomplete* example of the service configuration is included below. Make sure to setup API access to your DNS server and include authentication details with the service configuration.
+- Enabled RFC2136 TLS Connection Configuration from release 0.16.1. Detailed parameters refer to external-dns/README-0.16.1.md.
 
 ```yaml
+---
+#! use tlsConfig to enable TLS connection with BIND server
+#! and require BIND server enables TLS meanwhile
+#! if want to keep using nonTLS connection, comment or remove the tlsConfig part
+tlsConfig:
+  tls_enable: true
+  #! User requires to provide base64 encryption format of root ca.crt value 
+  #! which uses to validate tls connection with DNS server once tls_enable=true
+  ca_crt: "LS0tLS1CRUdJT"
+  
 deployment:
   args:
   - --source=contour-httpproxy
