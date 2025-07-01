@@ -392,6 +392,20 @@ Secret Store Service is a comprehensive solution for managing secrets in vSphere
 Secret Store Service sample `values.yaml`
 - Sample values can be downloaded from the same location as service yaml. Make sure to fill the property `storageClassName` with storage policy name.
 
+## Secret Store Service
+
+<img src="secret-service-logo.svg" width="250" title="Secret Store Service" id="secret-store-service">
+
+Secret Store Service is a comprehensive solution for managing secrets in vSphere, ensuring the security and integrity of the environment and providing a robust and scalable solution for securely injecting secrets into workloads.
+
+### Secret Store Service Versions 
+
+Download latest version: [Secret Store Service v9.0.0](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/secret-store/9.0.0/secret-store-service-definition.yml)
+
+Secret Store Service sample `values.yaml`
+
+- Download [values for all versions](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/secret-store/9.0.0/secret-store-data-values.yml). Make sure to fill the property `storageClassName` with storage policy name. 
+
 ---
 
 # Supervisor Services Labs Catalog
