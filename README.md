@@ -75,6 +75,8 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
     - [Contour Versions](#contour-versions)
   - [External DNS Service](#external-dns-service)
     - [ExternalDNS Versions](#externaldns-versions)
+  - [Supervisor Management Proxy](#supervisor-management-proxy)
+    - [Supervisor Management Proxy Versions](#supervisor-management-proxy-versions)
   - [NSX Management Proxy](#nsx-management-proxy)
     - [NSX Management Proxy Versions](#nsx-management-proxy-versions)
   - [Data Services Manager Consumption Operator](#data-services-manager-consumption-operator)
@@ -310,11 +312,34 @@ deployment:
 Validated Supported DNS Server Example:
 - RFC2136 BIND DNS Server: Sample values can be downloaded from the same location as service.yaml. Replace the values indicated by the comments with your own DNS server details.
 
+## [Supervisor Management Proxy](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
+
+Supervisor Management Proxy is required when there is isolation between management network and workload network and the VKS clusters in workload network cannot reach components running in management network.
+
+Supervisor Management Proxy supports following usecases:
+- Antrea-NSX adapter in VKS cluster to reach NSX manager. (Same as NSX Management Proxy)
+- Send metrics from VKS Clusters to VCF Ops when monitoring VKS Clusters in VCF Ops.
+
+### Supervisor Management Proxy Versions
+  
+- v0.3.0 (requires vSphere 9.0 or later)
+
+Supervisor Management Proxy Sample `values.yaml`
+- Download sample values.yaml from the same location as Service yaml.
+- For Antrea-NSX usecase, make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
+- For VKS monitoring usecase, no need to fill any property in data values to configure the Supervisor Management Proxy.
+
 ## [NSX Management Proxy](https://support.broadcom.com)
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
-NSX Management Proxy is for Antrea-NSX adapter in Kubernetes clusters deployed by VKS to reach NSX manager. We recommend to use NSX Management Proxy when there is isolation between management network and workload network and the Kubernetes clusters cannot reach NSX manager.
+NSX Management Proxy is for Antrea-NSX adapter in Kubernetes clusters deployed by VKS to reach NSX manager. NSX Management Proxy is used when there is isolation between management network and workload network and the VKS clusters cannot reach NSX manager.
+
+We recommend to use Supervisor Management Proxy over NSX Management Proxy. The two proxies cannot be used together. If you are already using NSX Management Proxy, consider migrating to Supervisor Management Proxy for additional usecases. Contact Broadcom support for migration steps.
+
+NSX Management Proxy is deprecated since vSphere 9.0. We still maintain it for vSphere 8.0.* - 9.0.*, but will not maintain it for future vSphere releases.
 
 ### NSX Management Proxy Versions
 - For vSphere 8.0 Update 3 or later
