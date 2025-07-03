@@ -194,6 +194,7 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
 *This is a prerequisite for a cluster admin install.*
 
 - Velero vSphere Operator CLI versions:
+    - v1.8.1
     - v1.8.0
     - v1.6.1
     - v1.6.0
@@ -206,6 +207,7 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
 ### Velero Versions
 
 - Velero vSphere Operator versions: 
+    - v1.8.1
     - v1.8.0
     - v1.6.1
     - v1.6.0
