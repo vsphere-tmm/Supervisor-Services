@@ -245,23 +245,21 @@ CA Cluster Issuer Sample `values.yaml`
 
 Harbor is an open source trusted cloud native registry project that stores, signs, and scans content. Harbor extends the open source Docker Distribution by adding the functionalities usually required by users such as security, identity and management. Having a registry closer to the build and run environment can improve the image transfer efficiency. Harbor supports replication of images between registries, and also offers advanced security features such as user management, access control and activity auditing.
 
-- The [contour package](#contour) is a prerequisite for Harbor v2.9.x, so that must be installed
-  first if you are using v2.9.x.
-- Harbor v2.11.2 supports exposing the registry using loadbalancer, and contour is not required.
+- Since v2.11.2, Harbor supervisor service supports exposing the registry using a load balancer.  Contour is optional, depending on the "enableNginxLoadBalancer" and "enableContourHttpProxy" settings.
 - Follow the instructions under [Installing and Configuring Harbor on a Supervisor](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-8C645717-C473-4E67-8DEE-049B71447B86.html).
 
 ### Harbor Versions
 
+- v2.13.1
 - v2.12.4
 - v2.11.2
-- v2.9.1
 
 Harbor Sample `values.yaml`
   Sample values can be downloaded from the same location as Service yamls.
 
+- Version: values for v2.13.1 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.13.1.md).
 - Version: values for v2.12.4 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.12.4.md).
 - Version: values for v2.11.2 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.11.2.md).
-- Version: values for v2.9.1 - For details about each of the required properties, [see the configuration details page](harbor/README.md).
 
 ## [Kubernetes Ingress Controller Service](https://support.broadcom.com)
 

@@ -1,4 +1,4 @@
-# Harbor v2.12.4 Configuration
+# Harbor v2.13.1 Configuration
 
 The table below highlights the required fields for the Harbor data values file. 
 
