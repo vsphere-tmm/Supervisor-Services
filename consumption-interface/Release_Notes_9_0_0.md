@@ -12,8 +12,8 @@ Known issues and limitations of the Consumption Interface Supervisor Service
 
 
 ## VKS
-- LCI 9.0.0 is compatible with VKS 3.0 through 3.4, and can be used for managing the lifecycle of clusters with any of these versions.
-- However, LCI 9.0.0 does not support functionality introduced in VKS 3.3 and VKS 3.4. This will be addressed in a future LCI patch.
+- LCI 9.0.0 is compatible with VKS v3.0 through v3.4, and can be used for managing the lifecycle of clusters with any of these versions.
+- However, LCI 9.0.0 does not support functionality introduced in VKS 3.3 and VKS 3.4. This will be addressed in a future LCI release.
 - New features
     - Add support for consuming multiple Content Libraries configured for Kubernetes Service on Supervisor for both Cluster and TanzuKubernetesCluster API
     - Add support for vSphere Zones for both Cluster and TanzuKubernetesCluster API
@@ -24,7 +24,7 @@ Known issues and limitations of the Consumption Interface Supervisor Service
         - Add/Update/Delete Volumes
     - Support for variables introduced in builtin-generic-v3.2.0 cluster class
 
-VKS v3.2.0 introduced the concept of versioned cluster class objects. It shipped with cluster class builtin-generic-v3.2.0 which introduces a new variable schema. LCI 9.0.0 adds supports for this.
+VKS v3.2.0 introduced the concept of versioned cluster class objects. It shipped with cluster class builtin-generic-v3.2.0 which introduces a new variable schema. LCI 9.0.0 adds supports for this schema.
 
 Please see the documentation for these variables here: [ClusterClass Variables for Customizing a Cluster](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-supervisor/8-0/using-tkg-service-with-vsphere-supervisor/provisioning-tkg-service-clusters/using-the-builtin-generic-v3-2-0-clusterclass/clusterclass-variables-for-customizing-a-cluster.html)
 
@@ -39,7 +39,7 @@ Admins can provide a link to launch LCI independent of granting access to the vS
 attempt. To check if the plug-in has loaded correctly, click the **vSphere Client**
 menu icon, then to **Administration** -> **Client** -> **Plug-ins**.
 Check the Status column of the VMware Local Consumption Interface plug-in, and in case you see a *Plug-in
-configuration with Reverse Proxy failed.* message, reinstall the plug-in.
+Configuration with Reverse Proxy failed.* message, reinstall the plug-in.
 
 - You must uninstall version 1.0.x before using the 9.0.0 version of LCI. Failure to do so will result in the interface not starting correctly when looking at the `Resources` tab for a namespace.
 
