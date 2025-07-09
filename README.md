@@ -1,6 +1,6 @@
 # Supervisor Services
 
-Discover VCF services offered to support modern applications through vSphere Services. New services will be added over time with the goal to continue to empower your DevOps communities.
+Explore VCF services purpose-built to accelerate modern application delivery and elevate private cloud consumption, with new capabilities continuously added to expand your service portfolio.
 
 ## Install Supervisor Services
 
@@ -29,27 +29,31 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 
 1. Log in to [support.broadcom.com](https://support.broadcom.com)
 
-2. Select `My Downloads` on the left hand side navigation.
+2. Select `Enterprise Software` on the left hand side navigation.
 
-3. Select `Free Software Downloads available HERE`, if you are looking for free services. Search `vSphere Supervisor Services`.
+<img src="main.png" width="750" height="300"  title="Home" id="home">
 
-4. Services that need entitlements can be downloaded directly from `My Downloads`. Search for `vSphere Supervisor Services`.
+3. Select `My Downloads` on the left hand side navigation.
 
-5. If you are looking to download VMware Private AI Services, go to `My Downloads` and then search the term `VMware Private AI Services`.
+4. Select `Free Software Downloads available HERE`, if you are looking for free services. Search for `vSphere Supervisor Services`.
 
-6. Next navigate to the service of choice and version you are looking to install.
+5. Services that need entitlements can be downloaded directly from `My Downloads`. Search for `vSphere Supervisor Services`.
 
-7. To download files, first you need to click `Terms and Conditions` to activate the checkbox.
+6. If you are looking to download VMware Private AI Services, go to `My Downloads` and then search for `VMware Private AI Services`.
+
+7. Next navigate to the service of choice and version you are looking to install.
+
+8. To download files, first you need to click `Terms and Conditions` to activate the checkbox.
 
 <img src="terms-and-conditions.png" width="750" height="300"  title="Select Terms and Condtions" id="terms-and-conditions">
 
-8. Go through the terms and conditions, once you agree select the checkbox, which will activate download icon. 
+9. Go through the `Terms and Conditions`. Once you agree, select the checkbox to activate the download icon. 
 
 <img src="download.png" width="750" height="300" title="How to Download" id="download">
 
-7. Click on the download icon on the service definition as well as any additional files (such as values.yaml files, etc.)
+10. Click on the download icon on the service definition as well as any additional files (such as values.yaml files, etc.)
 
-8. You can now proceed to install your service.
+11. You can now proceed to install your service.
 
 #### Please check [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) to find out which service version is compatible with which Supervisor version.
 
@@ -71,6 +75,8 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
     - [Contour Versions](#contour-versions)
   - [External DNS Service](#external-dns-service)
     - [ExternalDNS Versions](#externaldns-versions)
+  - [Supervisor Management Proxy](#supervisor-management-proxy)
+    - [Supervisor Management Proxy Versions](#supervisor-management-proxy-versions)
   - [NSX Management Proxy](#nsx-management-proxy)
     - [NSX Management Proxy Versions](#nsx-management-proxy-versions)
   - [Data Services Manager Consumption Operator](#data-services-manager-consumption-operator)
@@ -188,6 +194,7 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
 *This is a prerequisite for a cluster admin install.*
 
 - Velero vSphere Operator CLI versions:
+    - v1.8.1
     - v1.8.0
     - v1.6.1
     - v1.6.0
@@ -200,6 +207,7 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
 ### Velero Versions
 
 - Velero vSphere Operator versions: 
+    - v1.8.1
     - v1.8.0
     - v1.6.1
     - v1.6.0
@@ -267,6 +275,7 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 ### Contour Versions
 
+- v1.30.3
 - v1.29.3
 - v1.28.2
 - v1.24.4
@@ -306,11 +315,34 @@ deployment:
 Validated Supported DNS Server Example:
 - RFC2136 BIND DNS Server: Sample values can be downloaded from the same location as service.yaml. Replace the values indicated by the comments with your own DNS server details.
 
+## [Supervisor Management Proxy](https://support.broadcom.com)
+
+#### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
+
+Supervisor Management Proxy is required when there is isolation between management network and workload network and the VKS clusters in workload network cannot reach components running in management network.
+
+Supervisor Management Proxy supports following usecases:
+- Antrea-NSX adapter in VKS cluster to reach NSX manager. (Same as NSX Management Proxy)
+- Send metrics from VKS Clusters to VCF Ops when monitoring VKS Clusters in VCF Ops.
+
+### Supervisor Management Proxy Versions
+  
+- v0.3.0 (requires vSphere 9.0 or later)
+
+Supervisor Management Proxy Sample `values.yaml`
+- Download sample values.yaml from the same location as Service yaml.
+- For Antrea-NSX usecase, make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
+- For VKS monitoring usecase, no need to fill any property in data values to configure the Supervisor Management Proxy.
+
 ## [NSX Management Proxy](https://support.broadcom.com)
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
-NSX Management Proxy is for Antrea-NSX adapter in Kubernetes clusters deployed by VKS to reach NSX manager. We recommend to use NSX Management Proxy when there is isolation between management network and workload network and the Kubernetes clusters cannot reach NSX manager.
+NSX Management Proxy is for Antrea-NSX adapter in Kubernetes clusters deployed by VKS to reach NSX manager. NSX Management Proxy is used when there is isolation between management network and workload network and the VKS clusters cannot reach NSX manager.
+
+We recommend to use Supervisor Management Proxy over NSX Management Proxy. The two proxies cannot be used together. If you are already using NSX Management Proxy, consider migrating to Supervisor Management Proxy for additional usecases. Contact Broadcom support for migration steps.
+
+NSX Management Proxy is deprecated since vSphere 9.0. We still maintain it for vSphere 8.0.* - 9.0.*, but will not maintain it for future vSphere releases.
 
 ### NSX Management Proxy Versions
 - For vSphere 8.0 Update 3 or later
