@@ -39,8 +39,8 @@ Admins can provide a link to launch LCI independent of granting access to the vS
 - For 8.0U3 installations: Occasionally, the plug-in may fail to load on the initial
 attempt. To check if the plug-in has loaded correctly, click the **vSphere Client**
 menu icon, then to **Administration** -> **Client** -> **Plug-ins**.
-Check the Status column of the Namespace UI plug-in, and in case you see a "Plug-in
-configuration with Reverse Proxy failed." Message, reinstall the plug-in
+Check the Status column of the Namespace UI plug-in, and in case you see a *Plug-in
+configuration with Reverse Proxy failed.* message, reinstall the plug-in
 
 - You must uninstall version 1.0.x before using the 9.0.0 version of LCI. Failure to do so will result in the interface not starting correctly when looking at the `Resources` tab for a namespace.
 
