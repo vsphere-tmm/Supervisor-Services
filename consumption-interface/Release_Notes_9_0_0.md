@@ -43,6 +43,8 @@ Configuration with Reverse Proxy failed.* message, reinstall the plug-in.
 
 - You must uninstall version 1.0.x before using the 9.0.0 version of LCI. Failure to do so will result in the interface not starting correctly when looking at the `Resources` tab for a namespace.
 
+- There may be issues recognizing storage classes in non stretch supervisor environments. When this happens, you will see that storage class information is not available. Install LCI 9.0.1 when it becomes available to address this issue.
+
 - The UI allows users to publish TKG cluster VMs that are currently deployed. The published image will not be usable and users should not leverage this feature for such VMs.
 
 - Resource updates will not automatically refresh in the UI. Users need to use the reload button to refresh the views on the resources.
