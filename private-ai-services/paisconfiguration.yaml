@@ -1,0 +1,57 @@
+# Example PAISConfiguration
+#
+# Please review and edit where needed
+# Several dependencies, like ConfigMaps and Secrets, must be created too.
+---
+apiVersion: pais.vmware.com/v1alpha1
+kind: PAISConfiguration
+metadata:
+  name: default
+  namespace: my-namespace-on-supervisor
+spec:
+  worker:
+    storageClassName: my-preferred-storage-class
+  clientTls:
+    # These are optional
+    # Each should be a ConfigMap with a single "ca.crt" field
+    caBundleRefs:
+    - name: ca-trust-bundle-for-my-dsm
+    - name: ca-trust-bundle-for-my-harbor
+    - name: ca-trust-bundle-for-my-data-sources
+    # etc...
+  database:
+    host: my-postgres-with-pgvector-database-host-name
+    username: my-postgres-username
+    dbname: my-postgres-logical-db-name
+    # This is a required reference to a Kubernetes Secret
+    passwordRef:
+      name: postgres-credentials
+      fieldPath: password
+  auth:
+    oidc:
+      issuerUrl: https://my-oidc.example.com/issuer-pkce/
+      scope:
+      - openid
+      - groups
+      # Some IdPs require this in order to support refresh-tokens
+      # but others don't.  Consult your IdP documentation.
+      # - offline_access
+
+      clientId: my-client-id-for-pais
+      extraAudiences: []
+      authorizedGroups: []
+  ingress:
+    serviceType: LoadBalancer
+  vksControlPlane:
+    virtualMachineClassName: my-vm-class-choice-eg-best-effort-large
+    storageClassName: my-preferred-storage-class
+  nvidiaConfig:
+    licenseConfigRef:
+      # name of a configmap with a gridd.conf and client_configuration_token.tok fields
+      name: my-nvidia-licensing-configmap
+    imagePullSecretRef:
+      # name of an image pull secret
+      name: my-ngc-pull-secret
+    gpuOperatorOverridesRef:
+      # optional ref to a ConfigMap containing a values.yaml
+      name: my-gpu-operator-chart-values
