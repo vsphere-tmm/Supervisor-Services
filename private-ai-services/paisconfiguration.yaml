@@ -2,6 +2,12 @@
 #
 # Please review and edit where needed
 # Several dependencies, like ConfigMaps and Secrets, must be created too.
+# All such dependencies must be in the same namespace as this PAISConfiguration.
+#
+# For detailed documentation of this API, use kubectl explain, e.g.
+#   kubectl explain paisconfiguration.spec
+# or
+#   kubectl explain paisconfiguration.spec.database
 ---
 apiVersion: pais.vmware.com/v1alpha1
 kind: PAISConfiguration
@@ -13,9 +19,10 @@ spec:
     storageClassName: my-preferred-storage-class
   clientTls:
     # These are optional
-    # Each should be a ConfigMap with a single "ca.crt" field
+    # Each should be a ConfigMap in this namespace with a single "ca.crt" field
+    # containing one or more PEM-encoded certificates.
     caBundleRefs:
-    - name: ca-trust-bundle-for-my-dsm
+    - name: ca-trust-bundle-for-my-my-postgres-pgvector-db
     - name: ca-trust-bundle-for-my-harbor
     - name: ca-trust-bundle-for-my-data-sources
     # etc...
@@ -23,7 +30,7 @@ spec:
     host: my-postgres-with-pgvector-database-host-name
     username: my-postgres-username
     dbname: my-postgres-logical-db-name
-    # This is a required reference to a Kubernetes Secret
+    # This is a required reference to a Kubernetes Secret in this namespace
     passwordRef:
       name: postgres-credentials
       fieldPath: password
