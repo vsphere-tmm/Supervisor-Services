@@ -4,7 +4,7 @@ Known issues and limitations of the Local Consumption Interface Supervisor Servi
 
 # What's New in 9.0.1
 ## vSphere Kubernetes Service (VKS)
-- LCI 9.0.1 supports features introduced in VKS 3.3 and VKS 3.4
+- LCI 9.0.1 supports features introduced in VKS 3.4 and VKS 3.4
 - VKS 3.4 features
     - Ability to define custom labels and annotations for StorageClass instances that are synced from the Supervisor to the VKS cluster.
     - Efficient ClusterClass consumption across namespaces by referencing the ClusterClass from _vmware-system-vks-public_ namespace.
