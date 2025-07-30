@@ -1,25 +1,22 @@
 
 # LCI : Local Consumption Interface 9.0.1
-Known issues and limitations of the Consumption Interface Supervisor Service
+Known issues and limitations of the Local Consumption Interface Supervisor Service
 
 # What's New in 9.0.1
-## VKS
-- LCI 9.0.1 supports features introduced in VKS 3.3 and VKS 3.4.
-- New features
-    - Feature compatiblity with VKS 3.3
-        This release introduces support for following features made available in VKS 3.3
-        - Ability to configure Operating System FIPS and SSHD on the vSphere Kubernetes Service cluster nodes during the creation of the VKS cluster.
-        - Ability to set the Ubuntu Pro Configuration to configure Ubuntu Pro subscription when using a Ubuntu based VKS cluster.
-        - Provides a means to retire a TKC and continue managing existing VKS clusters using the cluster-api’s Cluster API.
-        - Adds support for VKr version 1.32
-    - Feature compatiblity with VKS 3.4
-        This release introduces support for following features made available in VKS 3.4
-        - Ability to define custom labels and annotations for StorageClass instances that are synced from the Supervisor to the VKS cluster.
-        - Efficient ClusterClass consumption across namespaces by referencing the ClusterClass from _vmware-system-vks-public_ namespace.
-        - Prevents the use of the deprecated TKC API to create Kubernetes 1.33 cluster, or upgrade an existing TKC cluster to Kubernetes release 1.33
-        - Include both 'os-name' and 'os-version' annotations to the cluster configuration to enable Ubuntu Pro and FIPS during an Ubuntu based VKS cluster creation.
-        - Adds support for VKr version 1.33
-    - Allows the user to Upgrade an existing cluster by updating its VKr version.
+## vSphere Kubernetes Service (VKS)
+- LCI 9.0.1 supports features introduced in VKS 3.3 and VKS 3.4
+- VKS 3.4 features
+    - Ability to define custom labels and annotations for StorageClass instances that are synced from the Supervisor to the VKS cluster.
+    - Efficient ClusterClass consumption across namespaces by referencing the ClusterClass from _vmware-system-vks-public_ namespace.
+    - Prevents the use of the deprecated TKC API to create Kubernetes 1.33 cluster, or upgrade an existing TKC cluster to Kubernetes release 1.33
+    - Include both 'os-name' and 'os-version' annotations to the cluster configuration to enable Ubuntu Pro and FIPS during an Ubuntu based VKS cluster creation.
+    - Adds support for VKr version 1.33
+- VKS 3.3 features
+    - Ability to configure Operating System FIPS and SSHD on the vSphere Kubernetes Service cluster nodes during the creation of the VKS cluster.
+    - Ability to set the Ubuntu Pro Configuration to configure Ubuntu Pro subscription when using a Ubuntu based VKS cluster.
+    - Provides a means to retire a TKC and continue managing existing VKS clusters using the cluster-api’s Cluster API.
+    - Adds support for VKr version 1.32
+- Allows the user to Upgrade an existing cluster by updating its VKr version.
 --- 
 
 # Known Issues
