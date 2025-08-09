@@ -442,6 +442,8 @@ ArgoCD Service provides the entire lifecycle of Argo CD instance, including crea
 ### ArgoCD Service Versions
 - v1.0.0
   - [Release Notes](argocd-service/release-notes-v1.0.0.md) 
+- v1.0.1
+  - [Release Notes](argocd-service/release-notes-v1.0.1.md) 
 
 ---
 
