@@ -53,6 +53,8 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 
 10. Click on the download icon on the service definition as well as any additional files (such as values.yaml files, etc.)
 
+> ⚠️ Service configuration value fields may change for each version. If a `values.yaml` manifest is available under the selected service version, consider downloading it, editing it if needed, and providing it when installing or upgrading to that service version.
+
 11. You can now proceed to install your service.
 
 #### Please check [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) to find out which service version is compatible with which Supervisor version.
