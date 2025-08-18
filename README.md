@@ -13,7 +13,7 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 | Supervisor Service | vSphere 7 | vSphere 8 |
 | :--: | :--: | :--: |
 | vSphere Kubernetes Service | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
-| Consumption Interface | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
+| Local Consumption Interface | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
 | vSAN Data Persistence Platform Services - MinIO | ✅ | ✅ |
 | Backup \& Recovery Service - Velero | ✅ | ✅ |
 | Certificate Management Service - cert-manager | ❌ | ✅ |
@@ -61,8 +61,8 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 
   - [vSphere Kubernetes Service (VKS)](#vsphere-kubernetes-service)
     - [vSphere Kubernetes Service (VKS) Versions](#vsphere-kubernetes-service-versions)
-  - [Consumption Interface](#consumption-interface)
-    - [Consumption Interface Versions](#consumption-interface-versions)
+  - [Local Consumption Interface](#consumption-interface)
+    - [Local Consumption Interface Versions](#consumption-interface-versions)
   - [vSAN Data Persistence Platform (vDPP) Services:](#vsan-data-persistence-platform-vdpp-services)
   - [Backup \& Recovery Service](#backup--recovery-service)
     - [Velero vSphere Operator CLI Versions](#velero-vsphere-operator-cli-versions)
@@ -135,7 +135,7 @@ The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperabilit
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.open_source_license.txt)
 
 
-## [Consumption Interface](https://support.broadcom.com)
+## [Local Consumption Interface](https://support.broadcom.com)
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -146,7 +146,7 @@ The minimum required version for using this interface is vSphere 8 Update 3.
 ** IMPORTANT NOTICE **: You must uninstall version 1.0.x before using the 9.0.0 version of LCI. Failure to do so will result in the interface not starting correctly when looking at the Resources tab for a namespace.
 ```
 
-### Consumption Interface Versions
+### Local Consumption Interface Versions
 
 Installation instructions for installing the supervisor service can be found in the VCF documentation sites.
 
@@ -155,8 +155,9 @@ Installation instructions for installing the supervisor service can be found in 
 [Release 8.0U3](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html)
 
 - Version:
+    - 9.0.1 [Release notes](./consumption-interface/Release_Notes_9_0_1.md)
     - 9.0.0 [Release notes](./consumption-interface/Release_Notes_9_0_0.md)
-    - v1.0.2 [Release notes](./consumption-interface/Release_Notes_1_0_2.md)
+    - 1.0.2 [Release notes](./consumption-interface/Release_Notes_1_0_2.md)
 
 ### OSS information
 
