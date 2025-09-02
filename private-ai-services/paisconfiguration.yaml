@@ -1,6 +1,7 @@
 # Example PAISConfiguration
 #
-# Please review and edit where needed
+# Please review and edit where needed.
+#
 # Several dependencies, like ConfigMaps and Secrets, must be created too.
 # All such dependencies must be in the same namespace as this PAISConfiguration.
 #
@@ -52,13 +53,22 @@ spec:
   vksControlPlane:
     virtualMachineClassName: my-vm-class-choice-eg-best-effort-large
     storageClassName: my-preferred-storage-class
+
+  # This is an optional configuration block that will cause PAIS to install
+  # the NVIDIA GPU Operator to enable GPU-accelerated model inferencing.
+  # The licenseConfigRef and imagePullSecretRef correspond to the
+  # licensing-config and ngc-secret resources that are documented
+  # here: https://docs.nvidia.com/ai-enterprise/deployment/vmware/latest/tanzu.html#deploy-nvidia-gpu-operator
   nvidiaConfig:
     licenseConfigRef:
-      # name of a configmap with a gridd.conf and client_configuration_token.tok fields
+      # Name of a configmap with a gridd.conf and client_configuration_token.tok fields
       name: my-nvidia-licensing-configmap
     imagePullSecretRef:
-      # name of an image pull secret
+      # Name of an image pull secret used for pulling the vGPU Driver Image and
+      # other components of the GPU Operator.
       name: my-ngc-pull-secret
     gpuOperatorOverridesRef:
-      # optional ref to a ConfigMap containing a values.yaml
+      # Optional ref to a ConfigMap containing a values.yaml
+      # Use this to customize the gpu-operator Helm chart
+      # see: https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/getting-started.html#common-chart-customization-options
       name: my-gpu-operator-chart-values
