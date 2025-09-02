@@ -14,21 +14,19 @@ PAIS 2.0 is operated via two new Custom Resource Definitions (CRDs) into your Su
 - `PAISConfiguration` is a singleton per-namespace, where you specify a database, certificates, authentication, and other configuration for a PAIS "instance" within that namespace, including a PAIS API server and web UI.
 - `ModelEndpoint`s configure inference servers for a given AI model, using VMs within your namespace, with routing via the namespace-level PAIS API server.
 
-After you've installed the PAIS Supervisor Service, you can use [`kubectl explain`][kubectl-explain] to see the full documentation for each of these resources.  For example
+After you've installed the PAIS Supervisor Service, you can use [`kubectl explain`][kubectl-explain] to see the full documentation for each of these resources.  For example:
 ```
-kubectl explain paisconfiguration.spec.auth.oidc
+kubectl explain paisconfiguration.spec
 ```
 or
 ```
-kubectl explain modelendpoint.spec
+kubectl explain modelendpoint.spec.engine
 ```
-
-will provide detailed API docs.
 
 
 ## Example resources
 
-Here we're publishing some example YAML files to help you get started with Private AI Services on VCF 9.
+Here we're publishing example YAML files to help you get started with Private AI Services on VCF 9.
 
 You must first [install the Private AI Services (PAIS) Supervisor Service][pdf-docs].
 
