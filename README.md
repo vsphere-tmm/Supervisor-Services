@@ -296,10 +296,8 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 
 ### ExternalDNS Versions
 
-- v0.16.1
+- v0.16.1+vmware.2
 - v0.14.2
-- v0.13.4
-- v0.11.0
 
 ExternalDNS data `values.yaml`
 
