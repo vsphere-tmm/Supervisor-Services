@@ -280,8 +280,6 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 - v1.30.3
 - v1.29.3
 - v1.28.2
-- v1.24.4
-- v1.18.2
 
 Contour Sample `values.yaml`
 - Sample values can be downloaded from the same location as service yaml. These values can be used _as-is_ and require no configuration changes.
