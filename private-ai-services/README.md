@@ -33,7 +33,7 @@ You must first [install the Private AI Services (PAIS) Supervisor Service][pdf-d
 Then you can customize and apply:
 
 - [An example `PAISConfiguration`](paisconfiguration.yaml) to configure Private AI Services within the tenant namespace
-- (coming soon) Example `ModelEndpoint` resources for running language models in a tenant namespace
+- [Example `ModelEndpoint` resources](modelendpoints.yaml) for running language models in a tenant namespace
 
 [pdf-docs]: https://techdocs.broadcom.com/content/dam/broadcom/techdocs/us/en/pdf/vmware/private-ai/private-ai-nvidia/vmware-private-ai-foundation-with-nvidia-9-0.pdf
 [blog-post]: https://blogs.vmware.com/cloud-foundation/2025/06/19/private-ai-services-new-in-vmware-private-ai-foundation-with-nvidia-in-vcf-9-0/

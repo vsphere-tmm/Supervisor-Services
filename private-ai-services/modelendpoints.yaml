@@ -1,0 +1,36 @@
+# Example ModelEndpoints
+#
+# Please review and edit where needed, e.g. any values starting with "my-"
+#
+# For detailed documentation of this API, use kubectl explain, e.g.
+#   kubectl explain modelendpoint.spec
+---
+apiVersion: pais.vmware.com/v1alpha1
+kind: ModelEndpoint
+metadata:
+  name: bge-small-en-v1.5-infinity
+spec:
+  model:
+    ociRef: my-oci-registry.example.com/models/baai/bge-small-en:v1.5
+  engine: Infinity
+  type: Embeddings
+  routingName: BAAI/bge-small-en-v1.5
+  virtualMachineClassName: my-vm-class-choice-eg-best-effort-medium
+  storageClassName: my-preferred-storage-class
+
+---
+apiVersion: pais.vmware.com/v1alpha1
+kind: ModelEndpoint
+metadata:
+  name: mistral-7b-instruct-v0.2-vllm
+spec:
+  model:
+    ociRef: my-oci-registry.example.com/more-models/mistralai/mistral-7b-instruct-v0.2@sha256:75eeddac5df9b8d8884c9ae32c5bda4e90d4d1c337829c654b97dad8d6eb72b2
+    pullSecrets:
+    # Optional, image pull secret if this OCI registry requires authentication
+    - name: my-oci-registry-pull-secret
+  engine: vLLM
+  type: Completions
+  routingName: mistralai/mistral-7b-instruct-v0.2
+  virtualMachineClassName: my-vm-class-choice-eg-gpu-large
+  storageClassName: my-preferred-storage-class
