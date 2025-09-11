@@ -35,11 +35,11 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 
 3. Select `My Downloads` on the left hand side navigation.
 
-4. Select `Free Software Downloads available HERE`, if you are looking for free services. **Use this option when you have a VVF or legacy entitlements**. Search for `vSphere Supervisor Services`
+4. Select `Free Software Downloads available HERE`, if you are looking for free services or have a VVF or legacy entitlements. Search for `vSphere Supervisor Services`
 
 <img src="free.png" width="750" height="300"  title="Home" id="home">
 
-5. Services that are **avaiable with VCF entitlements** can be downloaded directly from `My Downloads`. Search for `vSphere Supervisor Services`.
+5. Services that are **available with VCF entitlements** can be downloaded directly from `My Downloads`. Search for `vSphere Supervisor Services`.
 
 <img src="vcf-entitlement.png" width="750" height="300"  title="Home" id="home">
 
