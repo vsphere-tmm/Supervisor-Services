@@ -13,11 +13,10 @@ Known issues and limitations of the Consumption Interface Supervisor Service
 
 ## VKS
 - LCI 9.0.0 is compatible with VKS v3.0 through v3.4, and can be used for managing the lifecycle of clusters with any of these versions.
-- However, LCI 9.0.0 does not support functionality introduced in VKS 3.3 and VKS 3.4. This will be addressed in a future LCI release.
+- However, LCI 9.0.0 does not support the features introduced in VKS 3.3 and VKS 3.4. These features will be supported in a future LCI release.
 - New features
     - Add support for consuming multiple Content Libraries configured for Kubernetes Service on Supervisor for both Cluster and TanzuKubernetesCluster API
     - Add support for vSphere Zones for both Cluster and TanzuKubernetesCluster API
-    - Ability to configure a Windows node pool to use Group Managed Service Accounts
     - Introduced following Cluster Day 2 actions
         - Increase Replicas
         - Update VM Class
