@@ -23,16 +23,19 @@
 - For 8.0U3 installations: 
     - Occasionally, the plug-in may fail to load on the initial attempt. To check if the plug-in has loaded correctly, click the **vSphere Client** menu icon, then to **Administration** -> **Client** -> **Plug-ins**. Check the Status column of the VMware Local Consumption Interface plug-in, and in case you see a *Plug-in Configuration with Reverse Proxy failed.* message, reinstall the plug-in.
     - VKS will not support following features:
-        - Ability to retire a TKC is not supported and hence the upgrade from VKr 1.32.x --> 1.33.x for a TKC will fail.
+        - Ability to retire a TKC and upgrade a TKC from VKr 1.32.x --> 1.33.x is not available.
         - Ability to configure a Windows node pool to use Group Managed Service Accounts.
         - Ability to upgrade a CAPI Cluster with atleast one Ubuntu worker nodes from VKr 1.32.x --> 1.33.x
-        - Cluster class 3.4.0 and VKr 1.33.x and higher.
+        - ClusterClass 3.4.0 onwards, VKr 1.33.x and higher.
 
 - You must uninstall version 1.0.x before using the 9.0.x version of LCI. Failure to do so will result in the interface not starting correctly when looking at the `Resources` tab for a namespace.
 
 - The UI allows users to publish VKS cluster VMs that are currently deployed. The published image will not be usable and users should not leverage this feature for such VMs.
 
-- When using the VKS IaaS plugin, you must enter a new value on the volume dialog when adding a volume.
+- In VKS IaaS plugin:
+    - You must enter a new value on the volume dialog when adding a volume.
+    - To upgrade a Cluster created from a retired TKC, first remove "kubernetes.vmware.com/skip-auto-cc-rebase: ''" annotation from Cluster yaml before proceeding to upgrade the Cluster.
+    - To upgrade a Cluster to a VKR containing multiple Ubuntu OS versions, first edit the Cluster YAML and add 'os-version' field to the annotation before proceeding to upgrade the Cluster.
 
 - Resource updates will not automatically refresh in the UI. Users need to use the reload button to refresh the views on the resources.
 
