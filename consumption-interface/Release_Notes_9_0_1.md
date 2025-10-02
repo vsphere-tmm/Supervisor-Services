@@ -34,8 +34,8 @@
 
 - In VKS IaaS plugin:
     - You must enter a new value on the volume dialog when adding a volume.
-    - To upgrade a Cluster created from a retired TKC, first remove "kubernetes.vmware.com/skip-auto-cc-rebase: ''" annotation from Cluster yaml before proceeding to upgrade the Cluster.
-    - To upgrade a Cluster to a VKR containing multiple Ubuntu OS versions, first edit the Cluster YAML and add 'os-version' field to the annotation before proceeding to upgrade the Cluster.
+    - To upgrade a Cluster created from a retired TKC, first remove "kubernetes.vmware.com/skip-auto-cc-rebase: ''" annotation by editing (and saving) the Cluster YAML via the YAML editor shown on click of "View Yaml" button, before proceeding to upgrade the Cluster.
+    - To upgrade a Cluster to a VKR containing multiple Ubuntu OS versions, add 'os-version' field to the annotations by editing (and saving) the Cluster YAML via the YAML editor shown on click of "View Yaml" button, before proceeding to upgrade the Cluster.
 
 - Resource updates will not automatically refresh in the UI. Users need to use the reload button to refresh the views on the resources.
 
