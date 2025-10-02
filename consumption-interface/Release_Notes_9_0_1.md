@@ -33,7 +33,7 @@
 - The UI allows users to publish VKS cluster VMs that are currently deployed. The published image will not be usable and users should not leverage this feature for such VMs.
 
 - In VKS IaaS plugin:
-    - You must enter a new value on the volume dialog when adding a volume.
+    - You must enter or modify a new value on any field in the dialog when adding a volume.
     - To upgrade a Cluster created from a retired TKC, first remove "kubernetes.vmware.com/skip-auto-cc-rebase: ''" annotation by editing (and saving) the Cluster YAML via the YAML editor shown on click of "View Yaml" button, before proceeding to upgrade the Cluster.
     - To upgrade a Cluster to a VKR containing multiple Ubuntu OS versions, add 'os-version' field to the annotations by editing (and saving) the Cluster YAML via the YAML editor shown on click of "View Yaml" button, before proceeding to upgrade the Cluster.
 
