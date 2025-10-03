@@ -24,6 +24,8 @@ Known Issues
 
 - There is a known issue in the TKG cluster creation wizard. If a user works backward through the wizard, some configuration may be lost. Users should execute the wizard end-to-end in sequence.
 
+- In 8.0U3 installations, LCI 1.0.2 does not support the features introduced in VKS 3.2 or higher. These features are supported in newer releases of LCI i.e. from LCI [9.0.0](./Release_Notes_9_0_0.md) onwards.
+
 - Resource updates will not automatically refresh in the UI. Users need to use the reload button to refresh the views on the resources.
 
 - [Previous release notes](./Release_Notes_1_0_1.md)

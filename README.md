@@ -67,8 +67,8 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 
   - [vSphere Kubernetes Service (VKS)](#vsphere-kubernetes-service)
     - [vSphere Kubernetes Service (VKS) Versions](#vsphere-kubernetes-service-versions)
-  - [Local Consumption Interface](#consumption-interface)
-    - [Local Consumption Interface Versions](#consumption-interface-versions)
+  - [Local Consumption Interface](#local-consumption-interface)
+    - [Local Consumption Interface Versions](#local-consumption-interface-versions)
   - [vSAN Data Persistence Platform (vDPP) Services:](#vsan-data-persistence-platform-vdpp-services)
   - [Backup \& Recovery Service](#backup--recovery-service)
     - [Velero vSphere Operator CLI Versions](#velero-vsphere-operator-cli-versions)
