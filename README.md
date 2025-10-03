@@ -339,15 +339,18 @@ Supervisor Management Proxy is required when there is isolation between manageme
 Supervisor Management Proxy supports following usecases:
 - Antrea-NSX adapter in VKS cluster to reach NSX manager. (Same as NSX Management Proxy)
 - Send metrics from VKS Clusters to VCF Ops when monitoring VKS Clusters in VCF Ops.
+- Callback into VKSM from auto-attach service and VKS clusters. (added in v0.4.0)
+- Allow DPCA, VCFA and VC to be connected from the workload network. (added in v0.4.0)
 
 ### Supervisor Management Proxy Versions
-  
+
+- v0.4.0 (requires vSphere 9.0.1 or later)
 - v0.3.0 (requires vSphere 9.0 or later)
 
 Supervisor Management Proxy Sample `values.yaml`
 - Download sample values.yaml from the same location as Service yaml.
 - For Antrea-NSX usecase, make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
-- For VKS monitoring usecase, no need to fill any property in data values to configure the Supervisor Management Proxy.
+- For other usecases, no need to fill any property in data values to configure the Supervisor Management Proxy.
 
 ## [NSX Management Proxy](https://support.broadcom.com)
 
@@ -364,7 +367,6 @@ NSX Management Proxy is deprecated since vSphere 9.0. We still maintain it for v
   - v0.2.2
 - For vSphere 8.0 Update 3
   - v0.2.1
-  - v0.2.0
   - v0.1.1
 
 NSX Management Proxy Sample `values.yaml`
