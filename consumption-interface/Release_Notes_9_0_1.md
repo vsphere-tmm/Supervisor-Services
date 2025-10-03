@@ -22,7 +22,7 @@
 
 - For 8.0U3 installations: 
     - Occasionally, the plug-in may fail to load on the initial attempt. To check if the plug-in has loaded correctly, click the **vSphere Client** menu icon, then to **Administration** -> **Client** -> **Plug-ins**. Check the Status column of the VMware Local Consumption Interface plug-in, and in case you see a *Plug-in Configuration with Reverse Proxy failed.* message, reinstall the plug-in.
-    - VKS will not support following features:
+    - Following features for VKS are not supported:
         - Ability to retire a TKC and upgrade a TKC from VKr 1.32.x --> 1.33.x is not available.
         - Ability to configure a Windows node pool to use Group Managed Service Accounts.
         - Ability to upgrade a CAPI Cluster with atleast one Ubuntu worker nodes from VKr 1.32.x --> 1.33.x
@@ -34,7 +34,7 @@
 
 - In VKS IaaS plugin:
     - You must enter or modify a new value on any field in the dialog when adding a volume.
-    - To upgrade a Cluster created from a retired TKC, first remove "kubernetes.vmware.com/skip-auto-cc-rebase: ''" annotation by editing (and saving) the Cluster YAML via the YAML editor shown on click of "View Yaml" button, before proceeding to upgrade the Cluster.
+    - If you want to update the Cluster to newer ClusterClass post retiring its TKC, first remove "kubernetes.vmware.com/skip-auto-cc-rebase: ''" annotation by editing (and saving) the Cluster YAML via the YAML editor shown on click of "View Yaml" button, before proceeding to upgrade the Cluster.
     - To upgrade a Cluster to a VKR containing multiple Ubuntu OS versions, add 'os-version' field to the annotations by editing (and saving) the Cluster YAML via the YAML editor shown on click of "View Yaml" button, before proceeding to upgrade the Cluster.
 
 - Resource updates will not automatically refresh in the UI. Users need to use the reload button to refresh the views on the resources.
