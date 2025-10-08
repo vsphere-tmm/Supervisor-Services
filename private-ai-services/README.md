@@ -38,6 +38,6 @@ Then you can customize and apply:
 
 [kubectl-explain]: https://kubernetes.io/docs/reference/kubectl/generated/kubectl_explain/
 [official-blog-post]: https://blogs.vmware.com/cloud-foundation/2025/06/19/private-ai-services-new-in-vmware-private-ai-foundation-with-nvidia-in-vcf-9-0/
-[pais-2.0-download]: https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Private%20AI%20Services
+[pais-2.0-download]: ../README.md#how-to-find-and-install-supervisor-services
 [pdf-docs]: https://techdocs.broadcom.com/content/dam/broadcom/techdocs/us/en/pdf/vmware/private-ai/private-ai-nvidia/vmware-private-ai-foundation-with-nvidia-9-0.pdf
 [wlam-blog]: https://williamlam.com/category/private-ai-services
