@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dra-gpu-example
+  namespace: gpu-test1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dra-gpu-example
+  template:
+    metadata:
+      labels:
+        app: dra-gpu-example
+    spec:
+      containers:
+      - name: ctr
+        image: ubuntu:22.04
+        command: ["bash", "-c"]
+        args: ["while [ 1 ]; do date; echo $(nvidia-smi -L || echo Waiting...); sleep 60; done"]
+        resources:
+          claims:
+          - name: single-gpu
+      resourceClaims:
+      - name: single-gpu
+        resourceClaimTemplateName: gpu-claim-template
+      tolerations:
+      - key: "nvidia.com/gpu"
+        operator: "Exists"
+        effect: "NoSchedule"
