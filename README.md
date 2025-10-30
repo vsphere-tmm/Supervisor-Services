@@ -2,6 +2,10 @@
 
 Explore VCF services purpose-built to accelerate modern application delivery and elevate private cloud consumption, with new capabilities continuously added to expand your service portfolio.
 
+## Table of Contents
+1. [Install Supervisor Services](#install-supervisor-services)
+2. [Supervisor Services Catalog](#supervisor-services-catalog)
+
 ## Install Supervisor Services
 
 > 📢 Download links for Service artifacts have moved to [support.broadcom.com](https://support.broadcom.com)
@@ -25,7 +29,7 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 *\* The embedded Harbor Registry and vSphere Kubernetes Service features are still available and supported on vSphere 7 and onwards.*
 
 
-## How to find and install Supervisor Services
+### How to find and install Supervisor Services
 
 1. Log in to [support.broadcom.com](https://support.broadcom.com)
 
@@ -69,7 +73,7 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
     - [vSphere Kubernetes Service (VKS) Versions](#vsphere-kubernetes-service-versions)
   - [Local Consumption Interface](#local-consumption-interface)
     - [Local Consumption Interface Versions](#local-consumption-interface-versions)
-  - [vSAN Data Persistence Platform (vDPP) Services:](#vsan-data-persistence-platform-vdpp-services)
+  - [vSAN Data Persistence Platform (vDPP) Services](#vsan-data-persistence-platform-vdpp-services)
   - [Backup \& Recovery Service](#backup--recovery-service)
     - [Velero vSphere Operator CLI Versions](#velero-vsphere-operator-cli-versions)
     - [Velero Versions](#velero-versions)
@@ -102,15 +106,14 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
   - [KEDA](#keda)
     - [KEDA Versions](#keda-versions)
 
-
-
-## [vSphere Kubernetes Service](https://support.broadcom.com)
+## [vSphere Kubernetes Service](https://support.broadcom.com) <a id='vsphere-kubernetes-service'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
 VMware vSphere Kubernetes Service (VKS, formerly known as the VMware Tanzu Kubernetes Grid Service or TKG Service) lets you deploy Kubernetes workload clusters on the vSphere Supervisor (formerly known as the vSphere IaaS control plane). Starting with vSphere 8.0 Update 3, VKS is installed as a Supervisor Service. This architectural change decouples VKS from Supervisor releases and lets you upgrade VKS independently of vCenter Server and Supervisor.
 
 - Service install [documentation](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-iaas-cp-update/GUID-2005FFCD-07F4-450E-BAE5-445BE9D629AE.html)
+- Latest [API reference](https://developer.broadcom.com/xapis/vmware-vsphere-kubernetes-service/latest/)
 
 ### vSphere Kubernetes Service Versions
 
@@ -141,7 +144,7 @@ The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperabilit
   - [OSS Information](https://packages.broadcom.com/artifactory/vsphere-distro/vsphere/iaas/kubernetes-service/3.1.0-package.open_source_license.txt)
 
 
-## [Local Consumption Interface](https://support.broadcom.com)
+## [Local Consumption Interface](https://support.broadcom.com) <a id='local-consumption-interface'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -169,7 +172,7 @@ Installation instructions for installing the supervisor service can be found in 
 
 OSS information is available on the Broadcom Customer Portal.
 
-## [vSAN Data Persistence Platform (vDPP) Services](https://support.broadcom.com)
+## [vSAN Data Persistence Platform (vDPP) Services](https://support.broadcom.com) <a id='vsan-data-persistence-platform-vdpp-services'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -186,7 +189,7 @@ Available vDPP Services
     - 2.0.10
 
 
-## [Backup & Recovery Service](https://support.broadcom.com)
+## [Backup & Recovery Service](https://support.broadcom.com) <a id='backup--recovery-service'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -224,7 +227,7 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
     - v1.2.0
     - v1.1.0
 
-## [Certificate Management Service](https://support.broadcom.com)
+## [Certificate Management Service](https://support.broadcom.com) <a id='certificate-management-service'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -244,7 +247,7 @@ CA Cluster Issuer Sample `values.yaml`
 
 - We do not provide any default values for this package. Instead, we encourage that you generate certificates. Please read [How-To Deploy a self-signed CA Issuer and Request a Certificate](https://github.com/vsphere-tmm/vsphere-with-tanzu-dev-center/tree/main/cert-manager#how-to-deploy-a-self-signed-ca-issuer-and-request-a-certificate) for information on how to create a self-signed certificate.
 )
-## [Cloud Native Registry Service](https://support.broadcom.com)
+## [Cloud Native Registry Service](https://support.broadcom.com) <a id='cloud-native-registry-service'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -268,7 +271,7 @@ Harbor Sample `values.yaml`
 - Version: values for v2.12.4 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.12.4.md).
 - Version: values for v2.11.2 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.11.2.md).
 
-## [Kubernetes Ingress Controller Service](https://support.broadcom.com)
+## [Kubernetes Ingress Controller Service](https://support.broadcom.com) <a id='kubernetes-ingress-controller-service'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -289,7 +292,7 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 Contour Sample `values.yaml`
 - Sample values can be downloaded from the same location as service yaml. These values can be used _as-is_ and require no configuration changes.
 
-## [External DNS Service](https://support.broadcom.com)
+## [External DNS Service](https://support.broadcom.com) <a id='external-dns-service'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -330,7 +333,7 @@ deployment:
 Validated Supported DNS Server Example:
 - RFC2136 BIND DNS Server: Sample values can be downloaded from the same location as service.yaml. Replace the values indicated by the comments with your own DNS server details.
 
-## [Supervisor Management Proxy](https://support.broadcom.com)
+## [Supervisor Management Proxy](https://support.broadcom.com) <a id='supervisor-management-proxy'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -352,7 +355,7 @@ Supervisor Management Proxy Sample `values.yaml`
 - For Antrea-NSX usecase, make sure to fill the property `nsxManagers` with your NSX Manager IP(s).
 - For other usecases, no need to fill any property in data values to configure the Supervisor Management Proxy.
 
-## [NSX Management Proxy](https://support.broadcom.com)
+## [NSX Management Proxy](https://support.broadcom.com) <a id='nsx-management-proxy'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -376,7 +379,7 @@ NSX Management Proxy Sample `values.yaml`
 - NSX Load Balancer is configured as load balancing solution.
 - NSX Gateway Firewall is enabled.
 
-## [Data Services Manager Consumption Operator](https://support.broadcom.com)
+## [Data Services Manager Consumption Operator](https://support.broadcom.com) <a id='data-services-manager-consumption-operator'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -421,7 +424,7 @@ Data Services Manager Consumption Operator Sample values. yaml
   If you are upgrading from these older versions to v2.2.X, do not uninstall the existing version. Instead, we highly recommend contacting GSS for guidance and support. This will ensure a smooth upgrade process and prevent potential disruptions.
   For additional help, please refer to the support documentation or reach out to our technical support team.
 
-## [Secret Store Service](https://support.broadcom.com)
+## [Secret Store Service](https://support.broadcom.com) <a id='secret-store-service'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
@@ -436,7 +439,7 @@ Secret Store Service is a comprehensive solution for managing secrets in vSphere
 Secret Store Service sample `values.yaml`
 - Sample values can be downloaded from the same location as service yaml. Make sure to fill the property `storageClassName` with storage policy name.
 
-## [ArgoCD Service](https://support.broadcom.com)
+## [ArgoCD Service](https://support.broadcom.com) <a id='argocd-service'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
