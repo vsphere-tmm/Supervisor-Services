@@ -14,20 +14,23 @@ Explore VCF services purpose-built to accelerate modern application delivery and
 
 Prior to vSphere 8 Update 1, the Supervisor Services are only available with Supervisor Clusters enabled using VMware NSX-T. With vSphere 8 U1, Supervisor Services are also supported when using the vSphere Distributed Switch (VDS) networking stack.
 
-| Supervisor Service | vSphere 7 | vSphere 8 |
-| :--: | :--: | :--: |
-| vSphere Kubernetes Service | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
-| Local Consumption Interface | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later_|
-| vSAN Data Persistence Platform Services - MinIO | ✅ | ✅ |
-| Backup \& Recovery Service - Velero | ✅ | ✅ |
-| Certificate Management Service - cert-manager | ❌ | ✅ |
-| Cloud Native Registry Service - Harbor | ❌ * | ✅ |
-| Kubernetes Ingress Controller Service - Contour | ❌ | ✅ |
-| External DNS Service - ExternalDNS | ❌ | ✅ |
-| NSX Management Proxy | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with Supervisor Clusters enabled using VMware NSX-T_  |
-| Data Services Manager Consumption Operator | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with additional configuration.<br> Please contact Global Support Services (GSS) for the additional configuration_ |
-*\* The embedded Harbor Registry and vSphere Kubernetes Service features are still available and supported on vSphere 7 and onwards.*
+| Supervisor Service | vSphere 7 | vSphere 8 | VCF 9 |
+| :--: | :--: | :--: | :--: |
+| vSphere Kubernetes Service | ❌ * | ✅ <br> _requires vSphere 8.0 Update 3 or later_| ✅ |
+| Local Consumption Interface | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later_| ✅ |
+| vSAN Data Persistence Platform Services - MinIO | ✅ | ✅ | ✅ |
+| Backup \& Recovery Service - Velero | ✅ | ✅ | ✅ |
+| CA Cluster Issuer | ❌ | ✅ | ✅ |
+| Cloud Native Registry Service - Harbor | ❌ * | ✅ | ✅ |
+| Kubernetes Ingress Controller Service - Contour | ❌ | ✅ | ✅ |
+| External DNS Service - ExternalDNS | ❌ | ✅ | ✅ |
+| NSX Management Proxy | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with Supervisor Clusters enabled using VMware NSX-T_  | ✅ <br> _Use Supervisor Management Proxy instead_ |
+| Supervisor Management Proxy | ❌ | ❌ | ✅ |
+| Data Services Manager Consumption Operator | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with additional configuration.<br> Please contact Global Support Services (GSS) for the additional configuration_ | ✅ |
+| Secret Service | ❌ | ❌ | ✅ |
+| ArgoCD Service | ❌ | ✅ <br> _requires vSphere 8.0 Update 3h  or later_| ✅ <br> _requires VCF 9.0 Update 2 or later_|
 
+*\* The embedded Harbor Registry and vSphere Kubernetes Service features are still available and supported on vSphere 7 and onwards.*
 
 ### How to find and install Supervisor Services
 
