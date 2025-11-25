@@ -1,6 +1,6 @@
 # CA Cluster Issuer Configuration
 
-**Note:** CA cluster issuer only to be utilized in single-tenant environments. For multi-tenant environments, namespace scoped issuers could be leveraged.
+**Note:** CA cluster issuer only to be utilized in single-tenant environments. For multi-tenant environments, namespace scoped issuers should be leveraged.
 
 This guide assumes that you have already generated your root certificate and
 key. 
