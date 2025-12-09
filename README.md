@@ -453,10 +453,12 @@ ArgoCD Service provides the entire lifecycle of Argo CD instance, including crea
 - Service installation and Configuration [documentation](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/using-supervisor-services/using-argo-cd-service.html)
 
 ### ArgoCD Service Versions
+- v1.1.0
+  - [Release Notes](argocd-service/release-notes-v1.1.0.md)
+- v1.0.1
+  - [Release Notes](argocd-service/release-notes-v1.0.1.md)
 - v1.0.0
   - [Release Notes](argocd-service/release-notes-v1.0.0.md) 
-- v1.0.1
-  - [Release Notes](argocd-service/release-notes-v1.0.1.md) 
 
 ---
 
