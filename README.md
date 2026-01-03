@@ -336,6 +336,18 @@ deployment:
 Validated Supported DNS Server Example:
 - RFC2136 BIND DNS Server: Sample values can be downloaded from the same location as service.yaml. Replace the values indicated by the comments with your own DNS server details.
 
+## ExternalDNS Package Limitations
+Use the External-DNS Supervisor Service for shared Supervisor cluster deployments. External-DNS is not suitable for multi-tenancy because it does not provide the isolation that is required for tenant-specific use cases.
+   
+For example, we have 2 zones in same provide DNS server: t1.k8s.com for tenant1 & t2.bc.com for tenant2, current External-DNS workflow is:
+```
+A. tenant1 user only can use zone t1.k8s.com
+B. tenant2 user only can use zone t2.bc.com
+C. If tenant2 try to use t1.k8s.com or tenant1 user try to use t2.bc.com both are allowed and records will be reconciled and updated accordingly
+```
+Also can refer to diagram shows:
+[external-dns/package-limitation_multi-tenancy.png](external-dns/package-limitation_multi-tenancy.png)
+
 ## [Supervisor Management Proxy](https://support.broadcom.com) <a id='supervisor-management-proxy'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
