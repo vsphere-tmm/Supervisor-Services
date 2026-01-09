@@ -5,9 +5,9 @@
 ## vSphere Kubernetes Service (VKS)
 - LCI 9.0.2 supports features introduced in VKS 3.5 (and continues to support VKS 3.3 and 3.4)
 - Other updates:
-    - Cluster Auto-scaler: We can configure Cluster Auto-scaler add-on during creation and in Day-2 actions of a VKS Cluster.
+    - Cluster Auto-scaler: You can configure cluster Auto-scaler add-on during Cluster creation and update.
     - Clusters can now be created using cluster.x-k8s.io/v1beta2 API version.
-    - Kubernetes Releases are listed based on the selected ClusterClass.
+    - Kubernetes Releases are filtered based on the selected ClusterClass.
 
 # Known Issues and Limitations
 - For 8.0U3 installations: Occasionally, the plug-in may fail to load on the initial attempt. To check if the plug-in has loaded correctly, click the **vSphere Client** menu icon, then to **Administration** -> **Client** -> **Plug-ins**. Check the Status column of the VMware Local Consumption Interface plug-in, and in case you see a *Plug-in Configuration with Reverse Proxy failed.* message, reinstall the plug-in.
