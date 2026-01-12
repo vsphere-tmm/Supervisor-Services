@@ -18,7 +18,8 @@
 
 - In VKS IaaS plugin:
     - If you want to update the Cluster to newer ClusterClass post retiring its TKC, first remove "kubernetes.vmware.com/skip-auto-cc-rebase: ''" annotation by editing (and saving) the Cluster YAML via the YAML editor shown on click of "View Yaml" button, before proceeding to upgrade the Cluster.
-    - To upgrade a Cluster to a VKR containing multiple Ubuntu OS versions, add 'os-version' field to the annotations by editing (and saving) the Cluster YAML via the YAML editor shown on click of "View Yaml" button, before proceeding to upgrade the Cluster.
+    - To upgrade a Cluster to a VKR containing multiple Ubuntu OS versions, add 'os-version' field to the annotations by editing (and saving) the Cluster YAML via the YAML editor shown on click of "View Yaml" button, before proceeding to upgrade the Cluster. This is applicable for Cluster with at least one Ubuntu worker node when upgrading from VKr 1.32.x --> 1.33.x version.
+    - When using Windows worker node with Cluster Autoscaler enabled, specific annotations need to be configured. Please see https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/managing-vsphere-kuberenetes-service-clusters-and-workloads/autoscaling-tkg-service-clusters/about-cluster-autoscaling.html for more details.
 
 - Resource updates will not automatically refresh in the UI. Users need to use the reload button to refresh the views on the resources.
 
@@ -28,6 +29,5 @@
 - For 8.0U3 installations using VKS-3.4 or higher, the following features are now available (previously unsupported in 9.0.1):
     - Ability to retire a TKC and upgrade a TKC from VKr 1.32.x --> 1.33.x
     - Ability to configure a Windows node pool to use Group Managed Service Accounts
-    - Ability to upgrade a CAPI Cluster with at least one Ubuntu worker node from VKr 1.32.x --> 1.33.x
     - Support for ClusterClass 3.4.0 onwards, VKr 1.33.x and higher
 - Creation of a Kubernetes Cluster with zero nodepools is allowed.
