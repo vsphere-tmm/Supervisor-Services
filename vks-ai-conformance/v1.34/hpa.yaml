@@ -10,14 +10,10 @@ spec:
   minReplicas: 1
   maxReplicas: 3
   metrics:
-    - type: Object
-      object:
+    - type: Pods
+      pods:
         metric:
-          name: cuda_gpu
-        describedObject:
-          kind: Deployment
-          apiVersion: apps/v1
-          name: cuda
+          name: DCGM_FI_DEV_FB_FREE
         target:
-          type: Value
-          value: 5
+          type: AverageValue
+          averageValue: "10000" 

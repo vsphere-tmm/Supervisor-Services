@@ -14,8 +14,6 @@ References:
 
 - https://techdocs.broadcom.com/us/en/vmware-cis/private-ai/foundation-with-nvidia/9-0/private-ai-foundation-9-x/deploying-ai-workloads-on-tkg-clusters/deploy-a-gpu-accelerated-tkg-cluster-with-kubectl-connected.html
 
-- https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/managing-vsphere-kuberenetes-service-clusters-and-workloads/deploying-ai-ml-workloads-on-tkg-service-clusters/cluster-operator-workflow-for-deploying-ai-ml-workloads-on-tkg-service-clusters.html
-
 ### Install KubeRay Operator
 
 Add the following helm repos and install the kuberay-operator
