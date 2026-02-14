@@ -264,16 +264,16 @@ Harbor is an open source trusted cloud native registry project that stores, sign
 
 ### Harbor Versions
 
+- v2.14.2
 - v2.13.1
 - v2.12.4
-- v2.11.2
 
 Harbor Sample `values.yaml`
   Sample values can be downloaded from the same location as Service yamls.
 
+- Version: values for v2.14.2 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.14.2.md).
 - Version: values for v2.13.1 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.13.1.md).
 - Version: values for v2.12.4 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.12.4.md).
-- Version: values for v2.11.2 - For details about each of the required properties, [see the configuration details page](harbor/README-v2.11.2.md).
 
 ## [Kubernetes Ingress Controller Service](https://support.broadcom.com) <a id='kubernetes-ingress-controller-service'></a>
 
