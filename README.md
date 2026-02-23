@@ -40,33 +40,28 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 
 <img src="main.png" width="750" height="300"  title="Home" id="home">
 
-3. Select `My Downloads` on the left hand side navigation.
-
-4. Select `Free Software Downloads available HERE`, if you are looking for free services or have a VVF or legacy entitlements. Search for `vSphere Supervisor Services`
-
-<img src="free.png" width="750" height="300"  title="Home" id="home">
-
-5. Services that are **available with VCF entitlements** can be downloaded directly from `My Downloads`. Search for `vSphere Supervisor Services`.
+3. All services are entitled under VCF or legacy SKUs and can be downloaded directly from `My Downloads`.
+Select `My Downloads` on the left hand side navigation and search for `vSphere Supervisor Services`.
 
 <img src="vcf-entitlement.png" width="750" height="300"  title="Home" id="home">
 
-6. If you are looking to download VMware Private AI Services, go to `My Downloads` and then search for `VMware Private AI Services`.
+4. If you are looking to download VMware Private AI Services, go to `My Downloads` and then search for `VMware Private AI Services`.
 
-7. Next navigate to the service of choice and version you are looking to install.
+5. Next navigate to the service of choice and version you are looking to install.
 
-8. To download files, first you need to click `Terms and Conditions` to activate the checkbox.
+6. To download files, first you need to click `Terms and Conditions` to activate the checkbox.
 
 <img src="terms-and-conditions.png" width="750" height="300"  title="Select Terms and Condtions" id="terms-and-conditions">
 
-9. Go through the `Terms and Conditions`. Once you agree, select the checkbox to activate the download icon. 
+7. Go through the `Terms and Conditions`. Once you agree, select the checkbox to activate the download icon. 
 
 <img src="download.png" width="750" height="300" title="How to Download" id="download">
 
-10. Click on the download icon on the service definition as well as any additional files (such as values.yaml files, etc.)
+8. Click on the download icon on the service definition as well as any additional files (such as values.yaml files, etc.)
 
 > ⚠️ Service configuration value fields may change for each version. If a `values.yaml` manifest is available under the selected service version, consider downloading it, editing it if needed, and providing it when installing or upgrading to that service version.
 
-11. You can now proceed to install your service.
+9. You can now proceed to install your service.
 
 #### Please check [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) to find out which service version is compatible with which Supervisor version.
 
