@@ -1,0 +1,19 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: cuda
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    name: cuda
+    apiVersion: apps/v1
+  minReplicas: 1
+  maxReplicas: 3
+  metrics:
+    - type: Pods
+      pods:
+        metric:
+          name: DCGM_FI_DEV_FB_FREE
+        target:
+          type: AverageValue
+          averageValue: "10000" 
