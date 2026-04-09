@@ -29,6 +29,8 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 | Data Services Manager Consumption Operator | ❌ | ✅ <br> _requires vSphere 8.0 Update 3 or later with additional configuration.<br> Please contact Global Support Services (GSS) for the additional configuration_ | ✅ |
 | Secret Service | ❌ | ❌ | ✅ |
 | ArgoCD Service | ❌ | ✅ <br> _requires vSphere 8.0 Update 3g or later with a VCF entitlement_| ✅ <br> _requires 'vSphere Supervisor 9.0.0.0100'/'VCF 9.0.1.0' or later_|
+| SRE Supervisor Role Service | ❌ | ✅ <br> _requires vSphere 8.0 Update 3g or later_| ✅ |
+
 
 *\* The embedded Harbor Registry and vSphere Kubernetes Service features are still available and supported on vSphere 7 and onwards.*
 
@@ -93,6 +95,8 @@ Select `My Downloads` on the left hand side navigation and search for `vSphere S
     - [Secret Store Service versions](#secret-store-service-versions)
   - [ArgoCD Service](#argocd-service)
     - [ArgoCD Service versions](#argocd-service-versions)
+  - [SRE Supervisor Role](#sre-supervisor-role)
+    - [SRE Supervisor Role Service versions](#sre-supervisor-role-service-versions)
 ---
 - [Supervisor Services Labs Catalog](#supervisor-services-labs-catalog)
   - [External Secrets Operator](#external-secrets-operator)
@@ -468,6 +472,15 @@ ArgoCD Service provides the entire lifecycle of Argo CD instance, including crea
 - v1.0.0
   - [Release Notes](argocd-service/release-notes-v1.0.0.md) 
 
+
+## SRE Supervisor Role <a id='sre-role'></a>
+
+The SRE Supervisor Role Service facilitates the configuration of specialized ClusterRoles and ClusterRoleBindings tailored for auditing and debugging. By streamlining access to the Supervisor Cluster and its services, it ensures that SREs and Platform Operators can manage resources securely and effectively eliminating the need for direct SSH access into controlled systems.
+
+### SRE Supervisor Role Service Versions
+- [v1.0.1](projects.packages.broadcom.com/vsphere-labs/sre-supervisor-role/1.0.1@sha256:ae57551393f9d116a58be85a9e657f0f74f9b5426390d4b485a786271a9fcbf7)
+
+
 ---
 
 # Supervisor Services Labs Catalog
@@ -477,6 +490,7 @@ ArgoCD Service provides the entire lifecycle of Argo CD instance, including crea
 The following Supervisor Services Labs catalog is only provided for testing and educational purposes. Please do not use these services in a production environment. These services are intended to demonstrate Supervisor Services' capabilities and usability. VMware will strive to provide regular updates to these services. The Labs services have been tested starting from vSphere 8.0. Over time, depending on usage and customer needs, some of these services may be included in the core product.
 
 **WARNING** - By downloading and using these solutions from the Supervisor Services Labs catalog, you explicitly agree to the conditional use **[license agreement](supervisor-services-labs/licence-agreement.md)**.
+
 
 ## External Secrets Operator
 
