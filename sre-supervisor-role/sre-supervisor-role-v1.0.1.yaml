@@ -1,0 +1,51 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  creationTimestamp: null
+  name: sre-supervisor-role.fling.vsphere.vmware.com
+spec:
+  categories:
+  - CI/CD
+  - GitOps
+  displayName: Supervisor Troubleshooting Access
+  iconSVGBase64: none
+  longDescription: This Supervisor Service is used to set up advanced clusterroles
+    and clusterrolebindings that are specific to debugging and auditing purposes.
+  maintainers:
+  - name: supervisor-services-labs.pdl@broadcom.com
+  providerName: Broadcom Inc.
+  shortDescription: This Supervisor Service is used to set up advanced clusterroles
+    and clusterrolebindings.
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: sre-supervisor-role.fling.vsphere.vmware.com.1.0.1
+spec:
+  refName: sre-supervisor-role.fling.vsphere.vmware.com
+  releasedAt: "2026-02-24T16:05:21Z"
+  template:
+    spec:
+      deploy:
+      - kapp: {}
+      fetch:
+      - imgpkgBundle:
+          image: projects.packages.broadcom.com/vsphere-labs/sre-supervisor-role/1.0.1@sha256:ae57551393f9d116a58be85a9e657f0f74f9b5426390d4b485a786271a9fcbf7
+      template:
+      - ytt:
+          paths:
+          - ./config
+      - kbld:
+          paths:
+          - '-'
+          - .imgpkg/images.yml
+  valuesSchema:
+    openAPIv3:
+      properties:
+        group:
+          default: administrator@vsphere.local
+          description: The SSO group that is the Subject for the ClusterRoleBinding.
+            Only a single SSO Group is currently allowed.
+          type: string
+  version: 1.0.1

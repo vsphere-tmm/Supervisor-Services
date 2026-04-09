@@ -478,7 +478,7 @@ ArgoCD Service provides the entire lifecycle of Argo CD instance, including crea
 The SRE Supervisor Role Service facilitates the configuration of specialized ClusterRoles and ClusterRoleBindings tailored for auditing and debugging. By streamlining access to the Supervisor Cluster and its services, it ensures that SREs and Platform Operators can manage resources securely and effectively eliminating the need for direct SSH access into controlled systems.
 
 ### SRE Supervisor Role Service Versions
-- [v1.0.1](https://projects.packages.broadcom.com/vsphere-labs/sre-supervisor-role/1.0.1@sha256:ae57551393f9d116a58be85a9e657f0f74f9b5426390d4b485a786271a9fcbf7)
+- [v1.0.1](/Supervisor-Services/sre-supervisor-role/sre-supervisor-role-v1.0.1.yaml)
 
 
 ---
