@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  namespace: team-a # Job under team-a namespace
+  generateName: sample-job-team-a-
+  annotations:
+    kueue.x-k8s.io/queue-name: lq-team-a 
+spec:
+  ttlSecondsAfterFinished: 60 
+  parallelism: 3 
+  completions: 3 
+  suspend: true 
+  template:
+    spec:
+      nodeSelector:
+        nvidia.com/gpu.product: "GRID-A100-8C"
+      containers:
+      - name: dummy-job
+        image: gcr.io/k8s-staging-perf-tests/sleep:latest
+        args: ["10s"] # Sleep for 10 seconds
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
+            ephemeral-storage: "512Mi"
+            nvidia.com/gpu: "1"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+            ephemeral-storage: "512Mi"
+            nvidia.com/gpu: "1"
+      restartPolicy: Never
