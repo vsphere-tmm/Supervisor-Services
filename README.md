@@ -284,6 +284,7 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 ### Contour Versions
 
+- v1.33.1
 - v1.32.0
 - v1.31.1
 - v1.30.3
@@ -305,6 +306,7 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 
 ### ExternalDNS Versions
 
+- v0.18.0
 - v0.16.1+vmware.2
 - v0.14.2
 
@@ -312,6 +314,7 @@ ExternalDNS data `values.yaml`
 
 - Because of the large list of supported DNS providers, we do not supply complete sample configuration values here. If you're deploying ExternalDNS with Harbor and Contour, make sure to include `source=contour-httpproxy` in the configuration values. An *incomplete* example of the service configuration is included below. Make sure to setup API access to your DNS server and include authentication details with the service configuration.
 - Enabled RFC2136 TLS Connection Configuration from release 0.16.1. Detailed parameters refer to [external-dns/README-0.16.1.md](external-dns/README-0.16.1.md).
+- Enabled RFC2136 deployment container cpu & memory resources configurable from release 0.18.0. Detailed parameters refer to [external-dns/README-0.18.0.md](external-dns/README-0.18.0.md).
 
 ```yaml
 ---
@@ -329,6 +332,14 @@ deployment:
   - --source=contour-httpproxy
   - --source=service
   - --log-level=debug
+  #! Re-define the resource quota of external-dns pod/container if need
+  resources:
+    requests:
+      cpu: "150m"
+      memory: "256Mi"
+    limits:
+      cpu: "300m"
+      memory: "512Mi"
 ```
 
 Validated Supported DNS Server Example:
