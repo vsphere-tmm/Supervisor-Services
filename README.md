@@ -99,6 +99,8 @@ Select `My Downloads` on the left hand side navigation and search for `vSphere S
     - [SRE Supervisor Role Service versions](#sre-supervisor-role-service-versions)
 ---
 - [Supervisor Services Labs Catalog](#supervisor-services-labs-catalog)
+  - [Headlamp](#headlamp)
+    - [Headlamp Versions](#headlamp-versions)
   - [External Secrets Operator](#external-secrets-operator)
     - [External Secrets Operator Versions](#external-secrets-operator-versions)
   - [RabbitMQ Cluster Kubernetes Operator](#rabbitmq-cluster-kubernetes-operator)
@@ -493,6 +495,31 @@ The following Supervisor Services Labs catalog is only provided for testing and 
 
 **WARNING** - By downloading and using these solutions from the Supervisor Services Labs catalog, you explicitly agree to the conditional use **[license agreement](supervisor-services-labs/licence-agreement.md)**.
 
+## Headlamp
+
+<img src="supervisor-services-labs/headlamp/headlamp.png" width="200" title="Headlamp Logo" id="headlamp">
+
+Headlamp is an easy-to-use and extensible Kubernetes web UI. Headlamp was created to blend the traditional feature set of other web UIs/dashboards (i.e., listing and viewing resources) with additional functionality. Headlamp can be used in-cluster, via a web browser, or as a desktop application (using the information defined in the user’s kubeconfig). For a detailed description of Headlamp, visit [Headlamp](https://headlamp.dev/)
+
+### Headlamp Versions
+
+- Download latest version: [Headlamp 0.41.0](supervisor-services-labs/headlamp/v0.41.0/headlamp.yaml)
+
+Headlamp Sample [values.yaml](supervisor-services-labs/headlamp/v0.41.0/values.yaml) 
+
+#### Usage:
+- The current Supervisor Service uses an in-cluster approach, providing users with an easy-to-use web UI. It needs Internet access to download the Headlamp image and the CertManager and ClusterAPI plugins. The CertManager plugin provides certificate management and observability, while the ClusterAPI plugin manages VKS clusters via the Headlamp UI. Future versions will let users download these images and binaries from an airgapped environment.
+- The `values.yaml` file is optional. If you want to provide your own TLS certificate and key, you can override the default self-signed certificate using these options. TLS certificates and keys must be BASE64 encoded.
+- Headlamp is now exposed as a `LoadBalancer` service. In future versions, you will be able to use an L7 object to front-end the service. Get the LoadBalancer IP with this command:
+```
+kubectl get service headlamp-supervisor -n svc-headlamp-domain-xxxx 
+```
+- Get the token from your `kubeconfig` file - with the *current context* set to the Supervisor. 
+```
+kubectl config view --flatten --minify -o jsonpath='{.users[0].user.token}'
+```
+- Open a browser to the service's IP address and enter the token to successfully authenticate.
+- The number of clusters in the Supervisor can affect how long it takes the ClusterAPI plugin to become fully functional. Make sure the ClusterAPI plugin is installed for cluster management. For more details, [visit here](https://github.com/headlamp-k8s/plugins/tree/main/cluster-api)
 
 ## External Secrets Operator
 
