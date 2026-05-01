@@ -99,6 +99,8 @@ Select `My Downloads` on the left hand side navigation and search for `vSphere S
     - [SRE Supervisor Role Service versions](#sre-supervisor-role-service-versions)
 ---
 - [Supervisor Services Labs Catalog](#supervisor-services-labs-catalog)
+  - [Headlamp](#headlamp)
+    - [Headlamp Versions](#headlamp-versions)
   - [External Secrets Operator](#external-secrets-operator)
     - [External Secrets Operator Versions](#external-secrets-operator-versions)
   - [RabbitMQ Cluster Kubernetes Operator](#rabbitmq-cluster-kubernetes-operator)
