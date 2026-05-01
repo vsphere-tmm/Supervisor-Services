@@ -1,0 +1,6 @@
+# [Optional] Location of Headlamp image:tag
+image: ghcr.io/headlamp-k8s/headlamp:v0.41.0
+# [Optional] TLS Certificate in base64-encoded PEM format
+tlsCert: SDSDSDDS..........SJDHJKSDHJDKD
+# [Optional] TLS private key in base64-encoded PEM format
+tlsKey: SDSDSDDS..........SJDHJKSDHJDKD

@@ -1,0 +1,54 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  creationTimestamp: null
+  name: headlamp.fling.vsphere.vmware.com
+spec:
+  categories:
+  - CI/CD
+  - GitOps
+  displayName: Headlamp-project
+  iconSVGBase64: none
+  longDescription: Headlamp is a user-friendly Kubernetes UI focused on extensibility
+  maintainers:
+  - name: supervisor-services-labs.pdl@broadcom.com
+  providerName: VMware by Broadcom Flings
+  shortDescription: Headlamp is a user-friendly Kubernetes UI focused on extensibility
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: headlamp.fling.vsphere.vmware.com.0.41.0
+spec:
+  refName: headlamp.fling.vsphere.vmware.com
+  releasedAt: "2026-04-28T03:36:04Z"
+  template:
+    spec:
+      deploy:
+      - kapp: {}
+      fetch:
+      - imgpkgBundle:
+          image: projects.packages.broadcom.com/vsphere-labs/headlamp/0.41.0-1/headlamp:build-1777345361
+      template:
+      - ytt:
+          paths:
+          - ./config
+      - kbld:
+          paths:
+          - '-'
+          - .imgpkg/images.yml
+  valuesSchema:
+    openAPIv3:
+      properties:
+        image:
+          default: ghcr.io/headlamp-k8s/headlamp:v0.41.0
+          description: The Headlamp image to deploy.
+          type: string
+        tlsCert:
+          description: "TLS certificate in base64-encoded PEM format"
+          type: string
+        tlsKey:
+          description: "TLS private key in base64-encoded PEM format"
+          type: string
+      title: headlamp.vsp

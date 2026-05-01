@@ -493,6 +493,30 @@ The following Supervisor Services Labs catalog is only provided for testing and 
 
 **WARNING** - By downloading and using these solutions from the Supervisor Services Labs catalog, you explicitly agree to the conditional use **[license agreement](supervisor-services-labs/licence-agreement.md)**.
 
+## Headlamp
+
+<img src="supervisor-services-labs/headlamp/headlamp.png" width="200" title="Headlamp Logo" id="headlamp">
+
+Headlamp is an easy-to-use and extensible Kubernetes web UI. Headlamp was created to blend the traditional feature set of other web UIs/dashboards (i.e., listing and viewing resources) with additional functionality. Headlamp can be used in-cluster, via a web browser, or as a desktop application (using the information defined in the user’s kubeconfig). For a detailed description of Headlamp, visit [Headlamp](https://headlamp.dev/)
+
+### Headlamp Versions
+
+- Download latest version: [Headlamp 0.41.0](supervisor-services-labs/headlamp/v0.41.0/headlamp.yaml)
+
+Headlamp Sample [values.yaml](supervisor-services-labs/headlamp/v0.41.0/values.yaml) 
+
+#### Usage:
+- The current implementation of the Supervisor Service uses an in-cluster approach to provide users with an easy-to-use web UI. It requires access to the Internet to download the Headlamp container image and the CertManager and ClusterAPI plugins. Future versions will allow downloading these images and binaries from an airgapped environment. 
+- The `values.yaml` file is optional. If the user wants to provide their own TLS certificate and key, they can override the default self-signed certificate using these options. Note that the values of these TLS certificates and keys should be BASE64 encoded.
+- * Headlamp is currently exposed as a service of type `LoadBalancer`. Future versions will have options to frontend the service with an L7 object. Get the IP of the LoadBalancer by executing the following command :
+```
+kubectl get service headlamp-supervisor -n svc-headlamp-domain-xxxx 
+```
+- Get the token from your `kubeconfig` file - with the *current context* set to the Supervisor. 
+```
+kubectl config view --flatten --minify -o jsonpath='{.users[0].user.token}'
+```
+- Open a browser to the service's IP address and enter the token to successfully authenticate.
 
 ## External Secrets Operator
 
