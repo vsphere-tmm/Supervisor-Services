@@ -508,9 +508,9 @@ Headlamp is an easy-to-use and extensible Kubernetes web UI. Headlamp was create
 Headlamp Sample [values.yaml](supervisor-services-labs/headlamp/v0.41.0/values.yaml) 
 
 #### Usage:
-- The current implementation of the Supervisor Service uses an in-cluster approach to provide users with an easy-to-use web UI. It requires access to the Internet to download the Headlamp container image and the CertManager and ClusterAPI plugins. Future versions will allow downloading these images and binaries from an airgapped environment. 
-- The `values.yaml` file is optional. If the user wants to provide their own TLS certificate and key, they can override the default self-signed certificate using these options. Note that the values of these TLS certificates and keys should be BASE64 encoded.
-- * Headlamp is currently exposed as a service of type `LoadBalancer`. Future versions will have options to frontend the service with an L7 object. Get the IP of the LoadBalancer by executing the following command :
+- The current Supervisor Service uses an in-cluster approach, providing users with an easy-to-use web UI. It needs Internet access to download the Headlamp image and the CertManager and ClusterAPI plugins. The CertManager plugin provides certificate management and observability, while the ClusterAPI plugin manages VKS clusters via the Headlamp UI. Future versions will let users download these images and binaries from an airgapped environment.
+- The `values.yaml` file is optional. If you want to provide your own TLS certificate and key, you can override the default self-signed certificate using these options. TLS certificates and keys must be BASE64 encoded.
+- Headlamp is now exposed as a `LoadBalancer` service. In future versions, you will be able to use an L7 object to front-end the service. Get the LoadBalancer IP with this command:
 ```
 kubectl get service headlamp-supervisor -n svc-headlamp-domain-xxxx 
 ```
@@ -519,6 +519,7 @@ kubectl get service headlamp-supervisor -n svc-headlamp-domain-xxxx
 kubectl config view --flatten --minify -o jsonpath='{.users[0].user.token}'
 ```
 - Open a browser to the service's IP address and enter the token to successfully authenticate.
+- The number of clusters in the Supervisor can affect how long it takes the ClusterAPI plugin to become fully functional. Make sure the ClusterAPI plugin is installed for cluster management. For more details, [visit here](https://github.com/headlamp-k8s/plugins/tree/main/cluster-api)
 
 ## External Secrets Operator
 
