@@ -51,4 +51,5 @@ spec:
         tlsKey:
           description: "TLS private key in base64-encoded PEM format"
           type: string
-      title: headlamp.vsp
+      title: headlamp.vsphere.vmware.com.0.41.0 values schema
+  version: 0.41.0
