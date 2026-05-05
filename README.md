@@ -495,6 +495,8 @@ The following Supervisor Services Labs catalog is only provided for testing and 
 
 **WARNING** - By downloading and using these solutions from the Supervisor Services Labs catalog, you explicitly agree to the conditional use **[license agreement](supervisor-services-labs/licence-agreement.md)**.
 
+**WARNING** - All Supervisor Services Labs are unsigned and should be used in conjuction with the descriptions above.
+
 ## Headlamp
 
 <img src="supervisor-services-labs/headlamp/headlamp.png" width="200" title="Headlamp Logo" id="headlamp">
