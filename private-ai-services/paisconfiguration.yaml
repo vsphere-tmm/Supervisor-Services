@@ -16,8 +16,6 @@ metadata:
   name: default
   namespace: my-namespace-on-supervisor
 spec:
-  worker:
-    storageClassName: my-preferred-storage-class
   clientTls:
     # These are optional
     # Each should be a ConfigMap in this namespace with a single "ca.crt" field
@@ -72,3 +70,16 @@ spec:
       # Use this to customize the gpu-operator Helm chart
       # see: https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/getting-started.html#common-chart-customization-options
       name: my-gpu-operator-chart-values
+
+  # This will become a required field in future versions. All other storageClassName fields are now
+  # optional and the respective components will default to the value of this field.
+  defaultStorageClassName: my-preferred-storage-class
+
+  # [Introduced in PAIS 2.1.0.]
+  # Observability configuration is optional. Following prometheusRuntime configuration enables metrics
+  # collection from various PAIS components into a prometheus-server deployed within the same namespace,
+  # with specified metrics retention period on storage backed by a PVC provisioned from the given storage
+  # class. See [README.md "Observability: Metrics"](README.md#observability-metrics) section for more details.
+  #observability:
+  #  prometheusRuntime:
+  #    metricsRetention: 30d
