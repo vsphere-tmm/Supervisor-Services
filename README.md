@@ -12,6 +12,8 @@ Explore VCF services purpose-built to accelerate modern application delivery and
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
+Starting VCF 9.1.0, the compatible service versions with which Supervisor versions can be found in [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability).
+
 Prior to vSphere 8 Update 1, the Supervisor Services are only available with Supervisor Clusters enabled using VMware NSX-T. With vSphere 8 U1, Supervisor Services are also supported when using the vSphere Distributed Switch (VDS) networking stack.
 
 | Supervisor Service | vSphere 7 | vSphere 8 | VCF 9 |
@@ -38,18 +40,19 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 
 1. Log in to [support.broadcom.com](https://support.broadcom.com)
 
-2. Select `Enterprise Software` on the left hand side navigation.
+2. Select `Software` on the left hand side navigation, and click on `Enterprise Software`, then click on `My Downloads`.
 
 <img src="main.png" width="750" height="300"  title="Home" id="home">
 
 3. All services are entitled under VCF or legacy SKUs and can be downloaded directly from `My Downloads`.
-Select `My Downloads` on the left hand side navigation and search for `vSphere Supervisor Services`.
+Search for `vSphere Supervisor Services` under `My Downloads`.
 
 <img src="vcf-entitlement.png" width="750" height="300"  title="Home" id="home">
 
 4. If you are looking to download VMware Private AI Services, go to `My Downloads` and then search for `VMware Private AI Services`.
 
 5. Next navigate to the service of choice and version you are looking to install.
+#### Please check [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) to find out which service version is compatible with which Supervisor version.
 
 6. To download files, first you need to click `Terms and Conditions` to activate the checkbox.
 
@@ -61,11 +64,12 @@ Select `My Downloads` on the left hand side navigation and search for `vSphere S
 
 8. Click on the download icon on the service definition as well as any additional files (such as values.yaml files, etc.)
 
+> ⚠️ Services released with VCF 9.1.0 or later may include two YAML definitions: a 'legacy' version (file name contains word `legacy`) for pre-9.1.0 VCF deployments or air-gapped VCF environments, and a standard version for VCF 9.1.0+ deployments with VCF Software Depot supported.
+
 > ⚠️ Service configuration value fields may change for each version. If a `values.yaml` manifest is available under the selected service version, consider downloading it, editing it if needed, and providing it when installing or upgrading to that service version.
+<img src="legacy-download.png" width="750" height="300" title="How to Download legacy YAML" id="legacy-download">
 
 9. You can now proceed to install your service.
-
-#### Please check [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) to find out which service version is compatible with which Supervisor version.
 
 ## Supervisor Services Catalog
 
@@ -121,7 +125,7 @@ VMware vSphere Kubernetes Service (VKS, formerly known as the VMware Tanzu Kuber
 
 ### vSphere Kubernetes Service Versions
 
-The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,18034,18430,18431,18448,18667,18589,18562,19031,19029,19027,19025&row=2,%261794,&isHidePatch=false&isHideLegacyReleases=false) shows each VKS version below, including compatible Kubernetes releases and the vCenter Server versions containing compatible Supervisor versions. Note that some compatible Kubernetes releases may have reached End of Service; refer to the [Product Lifecycle](https://support.broadcom.com/group/ecx/productlifecycle) tool (Division: "VMware Cloud Foundation", Product Name: "vSphere Kubernetes releases") to view End of Service dates for Kubernetes releases.
+The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,18034,18430,18431,18448,18667,18589,18562,19031,19029,19027,19025&row=2,%261794,&isHidePatch=false&isHideLegacyReleases=false) shows each VKS version below, including compatible Kubernetes releases and the vCenter Server versions containing compatible Supervisor versions. Please refer to [VKS release notes doc](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-166807c0-799a-4122-a5de-59c5d158b3e3-en_id-04d505aa-c276-45f3-8c00-b0c3657a956c) for newer VKS releases. Note that some compatible Kubernetes releases may have reached End of Service; refer to the [Product Lifecycle](https://support.broadcom.com/group/ecx/productlifecycle) tool (Division: "VMware Cloud Foundation", Product Name: "vSphere Kubernetes releases") to view End of Service dates for Kubernetes releases.
 
 - VKS v3.4.0
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-166807c0-799a-4122-a5de-59c5d158b3e3-en_id-e41377ae-b95a-4df2-8e72-f2424c8af0c3)
