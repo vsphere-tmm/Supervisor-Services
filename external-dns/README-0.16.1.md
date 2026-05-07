@@ -1,6 +1,6 @@
 # External-DNS 0.16.1 Configuration
 
-The table below highlights the required fields for the External-DNS data values file. 
+The table below highlights the new supported fields for the External-DNS data values file from 0.16.1 release. 
 
 | Property	                                                        | Value	                          | Description                                                                                                                                                         |  
 |------------------------------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
