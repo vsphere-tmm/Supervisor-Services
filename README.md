@@ -81,7 +81,7 @@ Search for `vSphere Supervisor Services` under `My Downloads`.
   - [Backup \& Recovery Service](#backup--recovery-service)
     - [Velero vSphere Operator CLI Versions](#velero-vsphere-operator-cli-versions)
     - [Velero Versions](#velero-versions)
-  - [Certificate Management Service](#certificate-management-service)
+  - [CA Cluster Issuer Service](#ca-cluster-issuer-service)
     - [CA Cluster Issuer Versions](#ca-cluster-issuer-versions)
   - [Cloud Native Registry Service](#cloud-native-registry-service)
     - [Harbor Versions](#harbor-versions)
@@ -237,7 +237,7 @@ Velero vSphere Operator helps users install Velero and its vSphere plugin on a v
     - v1.2.0
     - v1.1.0
 
-## [Certificate Management Service](https://support.broadcom.com) <a id='certificate-management-service'></a>
+## [CA Cluster Issuer Service](https://support.broadcom.com) <a id='ca-cluster-issuer-service'></a>
 
 #### Please refer to [How to find and install Supervisor Services](#how-to-find-and-install-supervisor-services) to find and install supervisor services.
 
