@@ -125,7 +125,7 @@ VMware vSphere Kubernetes Service (VKS, formerly known as the VMware Tanzu Kuber
 
 ### vSphere Kubernetes Service Versions
 
-The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,18034,18430,18431,18448,18667,18589,18562,19031,19029,19027,19025&row=2,%261794,&isHidePatch=false&isHideLegacyReleases=false) shows each VKS version below, including compatible Kubernetes releases and the vCenter Server versions containing compatible Supervisor versions. Please refer to [VKS release notes doc](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-166807c0-799a-4122-a5de-59c5d158b3e3-en_id-04d505aa-c276-45f3-8c00-b0c3657a956c) for newer VKS releases. Note that some compatible Kubernetes releases may have reached End of Service; refer to the [Product Lifecycle](https://support.broadcom.com/group/ecx/productlifecycle) tool (Division: "VMware Cloud Foundation", Product Name: "vSphere Kubernetes releases") to view End of Service dates for Kubernetes releases.
+The [Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability?col=820,18034,18430,18431,18448,18667,18589,18562,19031,19029,19027,19025&row=2,%261794,&isHidePatch=false&isHideLegacyReleases=false) shows each VKS version below, including compatible Kubernetes releases and the vCenter Server versions containing compatible Supervisor versions. Please refer to [VKS release notes documentation](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-166807c0-799a-4122-a5de-59c5d158b3e3-en_id-04d505aa-c276-45f3-8c00-b0c3657a956c) for newer VKS releases. Note that some compatible Kubernetes releases may have reached End of Service; refer to the [Product Lifecycle](https://support.broadcom.com/group/ecx/productlifecycle) tool (Division: "VMware Cloud Foundation", Product Name: "vSphere Kubernetes releases") to view End of Service dates for Kubernetes releases.
 
 - VKS v3.4.0
   - [Release Notes](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/release-notes/vmware-tanzu-kubernetes-grid-service-release-notes.html#GUID-166807c0-799a-4122-a5de-59c5d158b3e3-en_id-e41377ae-b95a-4df2-8e72-f2424c8af0c3)
@@ -172,6 +172,7 @@ Installation instructions for installing the supervisor service can be found in 
 [Release 8.0U3](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html)
 
 - Version:
+    - 9.1.0
     - 9.0.2 [Release notes](./consumption-interface/Release_Notes_9_0_2.md)
     - 9.0.1 [Release notes](./consumption-interface/Release_Notes_9_0_1.md)
     - 9.0.0 [Release notes](./consumption-interface/Release_Notes_9_0_0.md)
@@ -294,6 +295,7 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 ### Contour Versions
 
+- v1.33.1
 - v1.32.0
 - v1.31.1
 - v1.30.3
@@ -315,6 +317,7 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 
 ### ExternalDNS Versions
 
+- v0.18.0
 - v0.16.1+vmware.2
 - v0.14.2
 
@@ -370,6 +373,7 @@ Supervisor Management Proxy supports following usecases:
 
 ### Supervisor Management Proxy Versions
 
+- v0.4.1 (requires vSphere 9.1.0 or later)
 - v0.4.0 (requires vSphere 9.0.1 or later)
 - v0.3.0 (requires vSphere 9.0 or later)
 
@@ -414,6 +418,7 @@ The Data Services Manager(DSM) Consumption Operator facilitates native, self-ser
 
 ### Data Services Manager Consumption Operator Versions
 
+- v9.1.0.0
 - v9.0.0.0
 - v2.2.1
 - v2.2.0
@@ -457,6 +462,7 @@ Secret Store Service is a comprehensive solution for managing secrets in vSphere
 
 ### Secret Store Service Versions 
 
+- v9.1.0.0
 - v9.0.0
 
 Secret Store Service sample `values.yaml`
