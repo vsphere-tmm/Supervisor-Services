@@ -32,6 +32,7 @@ Prior to vSphere 8 Update 1, the Supervisor Services are only available with Sup
 | Secret Service | ❌ | ❌ | ✅ |
 | ArgoCD Service | ❌ | ✅ <br> _requires vSphere 8.0 Update 3g or later with a VCF entitlement_| ✅ <br> _requires 'vSphere Supervisor 9.0.0.0100'/'VCF 9.0.1.0' or later_|
 | SRE Supervisor Role Service | ❌ | ✅ <br> _requires vSphere 8.0 Update 3g or later_| ✅ |
+| Private AI Services | ❌ | ❌ | ✅ |
 
 
 *\* The embedded Harbor Registry and vSphere Kubernetes Service features are still available and supported on vSphere 7 and onwards.*
@@ -101,6 +102,8 @@ Search for `vSphere Supervisor Services` under `My Downloads`.
     - [ArgoCD Service versions](#argocd-service-versions)
   - [SRE Supervisor Role](#sre-supervisor-role)
     - [SRE Supervisor Role Service versions](#sre-supervisor-role-service-versions)
+  - [Private AI Services](private-ai-services/README.md)
+    - [Private AI Services versions](private-ai-services/README.md#private-ai-services)
 ---
 - [Supervisor Services Labs Catalog](#supervisor-services-labs-catalog)
   - [Headlamp](#headlamp)
@@ -512,7 +515,6 @@ The SRE Supervisor Role Service facilitates the configuration of specialized Clu
 
 ### SRE Supervisor Role Service Versions
 - [v1.0.1](sre-supervisor-role/sre-supervisor-role-v1.0.1.yaml)
-
 
 ---
 
