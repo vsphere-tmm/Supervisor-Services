@@ -298,6 +298,7 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 ### Contour Versions
 
+- v1.33.5
 - v1.33.1
 - v1.32.0
 - v1.31.1
@@ -320,6 +321,7 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 
 ### ExternalDNS Versions
 
+- v0.21.0+vmware.2
 - v0.21.0+vmware.1
 - v0.18.0
 - v0.16.1+vmware.2
@@ -333,6 +335,7 @@ ExternalDNS data `values.yaml`
 - Starting with the v0.21.0 release, we are implementing 2 changes:
    - Deprecating the `deployment.args "--rfc2136-tsig-secret"` flag and introduce the new configuration `rfc2136.tsigSecret`. This change aims to prevent the TSIG key from appearing in Pod specifications, audit logs, or process command lines. Detailed parameters refer to [external-dns/README-0.21.0.md](external-dns/README-0.21.0.md).
    - The `HMAC-SHA1` algorithm has been removed from the TSIG secret support list, requiring users to upgrade their algorithm if they were previously using the removed version.
+- Starting with the v0.21.0+vmware.2 release, we have removed NS1, PowerDNS and Pihole from the downstream provider list.
 
 ```yaml
 ---
