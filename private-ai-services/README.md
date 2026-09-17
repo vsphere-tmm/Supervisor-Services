@@ -9,6 +9,7 @@ The following versions of PAIS Supervisor Services are available:
 | ---------------------------------- | ------ |
 | 9.0.\*                             | [2.0][pais-download] |
 | 9.0.\*, 9.1.\*                     | [2.1][pais-download] |
+| 9.1.\*                             | [3.0][pais-download] |
 
 ## PAIS CRDs
 PAIS is operated via two Kubernetes Custom Resource Definitions (CRDs) available in your Supervisor cluster:
