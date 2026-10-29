@@ -4,7 +4,8 @@
 
 ## Container Service
 
-LCI 9.1.0 introduces Container Service for provisioning and managing container instances backed by Kubernetes StatefulSets and Deployments running on PodVMs.
+LCI 9.1.0 introduces a major enhancement with Container Service, a new service dedicated to provisioning and managing container instances. Container Service supports standard Kubernetes **StatefulSet** and **Deployment** workloads, using **PodVMs** as the underlying execution environment.
+Users can provision and manage these workloads as container instances within LCI, bringing container orchestration and VM-based infrastructure together through a unified control plane.
 
 - **Create**: Configure container images and authentication, replicas, CPU and memory resources, PVCs, ConfigMaps, Secrets, load balancers, runtime settings, and sidecar and init containers.
 - **List**: View deployed container instances and their current state.
@@ -16,7 +17,7 @@ For more information, see [Container Service](https://techdocs.broadcom.com/us/e
 
 ## VM Service
 
-LCI 9.1.0 adds VM network and storage configuration options, VM management workflows, and consumer VM snapshots.
+LCI 9.1.0 introduces key enhancements and additional capabilities for VM workload management through the Virtual Machine Service. Key features include **additional configuration options** for the VM’s network and storage, **additional UI workflows** for configuring and operation on a VM, and **consumer VM snapshots** for managing point-in-time states.
 
 - **Consumer VM Snapshots**: You can now create, manage, and delete snapshots of VM Service VMs.
 - **Edit VM Guest Customization**: You can now edit guest customization settings for existing VMs.
