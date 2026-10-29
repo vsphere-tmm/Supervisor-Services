@@ -4,7 +4,7 @@
 
 ## vSphere Kubernetes Service (VKS)
 
-LCI 9.1.1 introduces support for VKS 3.7 and the following features:
+LCI 9.1.1 introduces support for VKS 3.7 with the following features:
 
 - **ClusterClass 3.7 Support**: Includes schema changes and consumes variable metadata.
 - **Cluster Scaling Enhancements**: Increased the worker node ceiling to 250 and added Pod CIDR limit adjustments.

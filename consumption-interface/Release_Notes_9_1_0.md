@@ -31,7 +31,7 @@ LCI 9.1.0 introduces key enhancements and additional capabilities for VM workloa
 
 ## vSphere Kubernetes Service (VKS)
 
-LCI 9.1.0 supports features introduced in VKS 3.6:
+LCI 9.1.0 introduces support for VKS 3.6 with the following features:
 
 - **Multi-Networking Support**: You can now use multi-NIC and multi-network setups in your VKS Clusters, providing greater network flexibility.
 - **RHEL Compatibility**: Worker nodes in VKS Clusters now support the Red Hat Enterprise Linux (RHEL) operating system.
@@ -44,8 +44,6 @@ LCI 9.1.0 supports features introduced in VKS 3.6:
 - **ClusterClass Deprecation Indicator**: If a ClusterClass is based on an old VKS version, you'll see a visual warning to help guide you to the latest best practices.
 
 # Fixed Issues
-
-Previously known issues in 9.0.2:
 
 - **In VM Service IaaS plugin**: The UI no longer allows publishing images of currently deployed VKS cluster VMs.
 - **In VKS IaaS plugin**: You can now upgrade a Cluster to a VKr (1.33.1 or higher) that supports multiple Ubuntu OS versions without first adding the 'os-version' annotation to the Cluster YAML.
