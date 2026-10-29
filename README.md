@@ -176,15 +176,22 @@ Installation instructions for installing the supervisor service can be found in 
 
 [Release 8.0U3](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html)
 
-- Version:
-    - 9.1.3 [Release notes](./consumption-interface/Release_Notes_9_1_3.md)
-    - 9.1.2 [Release notes](./consumption-interface/Release_Notes_9_1_2.md)
-    - 9.1.1 [Release notes](./consumption-interface/Release_Notes_9_1_1.md)
-    - 9.1.0 [Release notes](./consumption-interface/Release_Notes_9_1_0.md)
-    - 9.0.2 [Release notes](./consumption-interface/Release_Notes_9_0_2.md)
-    - 9.0.1 [Release notes](./consumption-interface/Release_Notes_9_0_1.md)
-    - 9.0.0 [Release notes](./consumption-interface/Release_Notes_9_0_0.md)
-    - 1.0.2 [Release notes](./consumption-interface/Release_Notes_1_0_2.md)
+- v9.1.3
+  - [Release Notes](./consumption-interface/Release_Notes_9_1_3.md)
+- v9.1.2
+  - [Release Notes](./consumption-interface/Release_Notes_9_1_2.md)
+- v9.1.1
+  - [Release Notes](./consumption-interface/Release_Notes_9_1_1.md)
+- v9.1.0
+  - [Release Notes](./consumption-interface/Release_Notes_9_1_0.md)
+- v9.0.2
+  - [Release Notes](./consumption-interface/Release_Notes_9_0_2.md)
+- v9.0.1
+  - [Release Notes](./consumption-interface/Release_Notes_9_0_1.md)
+- v9.0.0
+  - [Release Notes](./consumption-interface/Release_Notes_9_0_0.md)
+- v1.0.2
+  - [Release Notes](./consumption-interface/Release_Notes_1_0_2.md)
 
 ### OSS information
 
