@@ -31,11 +31,7 @@ Provides Terraform configurations using the Kubernetes provider to declaratively
 
 A single ArgoCD instance now supports managing up to **100 vSphere Namespaces** or **200 VKS clusters**. When managing both types, the combined total is limited to **200**, and the vSphere Namespace count is limited to **100**. Each vSphere Namespace and each VKS cluster counts as one managed cluster in Argo CD.
 
-### 7. Security Updates
-
-Includes security hardening and dependency updates to address vulnerabilities.
-
 ## Upgrade and Operational Notes
 
-- **VCF ArgoCD CLI plugin:** Upgrade the `vcf argocd` CLI plugin to **v1.3.0** to fully use the new features in ArgoCD Service v1.3.0, including high availability and cascading deletion.
+- **VCF ArgoCD CLI plugin:** Upgrade the `vcf argocd` CLI plugin to **v1.3.0** to fully use the new features in ArgoCD Service v1.3.0.
 - **Service upgrade:** Upgrades to v1.3.0 are supported from ArgoCD Service v1.2.x. Before upgrading the service, upgrade Argo CD instances running versions earlier than v3.4 to an available v3.4.x version through ArgoCD Service v1.2.x.
