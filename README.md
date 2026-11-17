@@ -176,6 +176,8 @@ Installation instructions for installing the supervisor service can be found in 
 
 [Release 8.0U3](https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-with-tanzu-services-workloads/GUID-4843E6C6-747E-43B1-AC55-8F02299CC10E.html)
 
+- v9.1.8
+  - [Release Notes](./consumption-interface/Release_Notes_9_1_8.md)
 - v9.1.3
   - [Release Notes](./consumption-interface/Release_Notes_9_1_3.md)
 - v9.1.2
