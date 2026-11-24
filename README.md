@@ -310,6 +310,7 @@ Contour is an Ingress controller for Kubernetes that works by deploying the Envo
 
 ### Contour Versions
 
+- v1.33.7
 - v1.33.5
 - v1.33.1
 - v1.32.0
@@ -333,6 +334,7 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 
 ### ExternalDNS Versions
 
+- v0.22.0
 - v0.21.0+vmware.2
 - v0.21.0+vmware.1
 - v0.18.0
@@ -342,12 +344,18 @@ ExternalDNS publishes DNS records for applications to DNS servers, using a decla
 ExternalDNS data `values.yaml`
 
 - Because of the large list of supported DNS providers, we do not supply complete sample configuration values here. If you're deploying ExternalDNS with Harbor and Contour, make sure to include `source=contour-httpproxy` in the configuration values. An *incomplete* example of the service configuration is included below. Make sure to setup API access to your DNS server and include authentication details with the service configuration.
-- Enabled RFC2136 TLS Connection Configuration from release 0.16.1. Detailed parameters refer to [external-dns/README-0.16.1.md](external-dns/README-0.16.1.md).
-- Enabled RFC2136 deployment container cpu & memory resources configurable from release 0.18.0. Detailed parameters refer to [external-dns/README-0.18.0.md](external-dns/README-0.18.0.md).
-- Starting with the v0.21.0 release, we are implementing 2 changes:
+
+- Starting with **v0.22.0**, introduces 2 main changes of RFC2136 supports:
+  - Upstream v0.22.0 ExternalDNS changed its default annotation prefix from `external-dns.alpha.kubernetes.io/` to `external-dns.kubernetes.io/`, without falling back to the old prefix. To preserve existing deployments, the downstream package sets `--annotation-prefix=external-dns.alpha.kubernetes.io/` when no annotation prefix is supplied in `deployment.args`. Existing annotations such as `external-dns.alpha.kubernetes.io/hostname` therefore continue to work by default.
+  - To use the new prefix, migrate the ExternalDNS annotations on your resources to `external-dns.kubernetes.io/` and set `--annotation-prefix=external-dns.kubernetes.io/` in `deployment.args`. An explicitly supplied custom prefix is also respected. ExternalDNS reads annotations using the configured prefix, so coordinate the configuration change with the annotation migration.
+  - Upstream v0.22.0 also requires an explicit `--policy`. The downstream package supplies `--policy=upsert-only` when no policy is specified. If using `--policy=sync`, an annotation prefix mismatch can cause DNS records to be deleted. Review the [upstream v0.22.0 upgrade guidance](https://github.com/kubernetes-sigs/external-dns/releases/tag/v0.22.0) and use `--dry-run=true` with `--policy=create-only` to preview changes before migration.
+
+- Starting with the **v0.21.0+vmware.2** release, we have removed NS1, PowerDNS and Pihole from the downstream provider list.
+- Starting with the **v0.21.0** release, we are implementing 2 changes:
    - Deprecating the `deployment.args "--rfc2136-tsig-secret"` flag and introduce the new configuration `rfc2136.tsigSecret`. This change aims to prevent the TSIG key from appearing in Pod specifications, audit logs, or process command lines. Detailed parameters refer to [external-dns/README-0.21.0.md](external-dns/README-0.21.0.md).
    - The `HMAC-SHA1` algorithm has been removed from the TSIG secret support list, requiring users to upgrade their algorithm if they were previously using the removed version.
-- Starting with the v0.21.0+vmware.2 release, we have removed NS1, PowerDNS and Pihole from the downstream provider list.
+- Enabled RFC2136 deployment container cpu & memory resources configurable from release **0.18.0**. Detailed parameters refer to [external-dns/README-0.18.0.md](external-dns/README-0.18.0.md).
+- Enabled RFC2136 TLS Connection Configuration from release **0.16.1**. Detailed parameters refer to [external-dns/README-0.16.1.md](external-dns/README-0.16.1.md).
 
 ```yaml
 ---
